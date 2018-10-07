@@ -2,5 +2,153 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <variable comment="Name of the layer where the player belongs" constant="1" name="LAYER_PLAYER" sid="749690393006807" static="0" type="text">LPlayer</variable>
+        <variable constant="0" name="SCROLL_SPEED" sid="710629510946635" static="0" type="number">2</variable>
+        <event-block sid="123069846995572">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="975002566356283" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="821071898669734" type="Scroller">
+                    <param id="0" name="X">OriginalWindowWidth / 2</param>
+                    <param id="1" name="Y">LayoutHeight - (OriginalWindowHeight / 2)</param>
+                </action>
+                <action disabled="1" id="-13" name="Set boolean" sid="128954628199427" type="Scroller">
+                    <param id="0" name="Instance variable">IsActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="544988159668147" type="ScrollerStoper">
+                    <param id="0" name="X">OriginalWindowWidth / 2</param>
+                    <param id="1" name="Y">(OriginalWindowHeight / 2) - ScrollerStoper.Height</param>
+                </action>
+                <action id="-3" name="Set position" sid="311510345395352" type="Player">
+                    <param id="0" name="X">OriginalWindowWidth / 2</param>
+                    <param id="1" name="Y">LayoutHeight + Player.Height</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="453896717595148" title="Player behaviour">
+            <sub-events>
+                <event-block sid="199566344620245">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="186168497227704" type="Player">
+                            <param id="0" name="Instance variable">IsActive</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="491763491337124" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">LayoutHeight - (Player.Height * 2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="693369264345788" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="425188894683003" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="108574171573844" type="Player">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When active, maintain player inside the viewport.</comment>
+                <event-block sid="326084836898510">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="544592709409714" type="Player">
+                            <param id="0" name="Instance variable">IsActive</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="531772095766920">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="560433839380379" type="Player">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">ViewportLeft(LAYER_PLAYER) + (Player.Width / 2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="339828933293001" type="Player">
+                                    <param id="0" name="X">ViewportLeft(LAYER_PLAYER) + (Player.Width / 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="172019879366306">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="370733445938169" type="Player">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">ViewportRight(LAYER_PLAYER) - (Player.Width / 2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="560959923502532" type="Player">
+                                    <param id="0" name="X">ViewportRight(LAYER_PLAYER) - (Player.Width / 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="135490723823470">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="673411172928773" type="Player">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">ViewportTop(LAYER_PLAYER) + (Player.Height / 2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="463813918753170" type="Player">
+                                    <param id="0" name="Y">ViewportTop(LAYER_PLAYER) + (Player.Height / 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="903099983399502">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="780172940746271" type="Player">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(LAYER_PLAYER) - (Player.Height / 2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="755901806511440" type="Player">
+                                    <param id="0" name="Y">ViewportBottom(LAYER_PLAYER) - (Player.Height / 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="930200537334590" title="Scroller control">
+            <sub-events>
+                <event-block sid="146421023934974">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="981194962409419" type="Scroller">
+                            <param id="0" name="Instance variable">IsActive</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="263909841572069" type="Scroller">
+                            <param id="0" name="Distance">SCROLL_SPEED</param>
+                        </action>
+                        <action id="-17" name="Move forward" sid="381586020716337" type="Player">
+                            <param id="0" name="Distance">SCROLL_SPEED</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="252544290894751">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="785327851700704" type="Scroller">
+                            <param id="0" name="Object">ScrollerStoper</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="755591623976663" type="Scroller">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>
