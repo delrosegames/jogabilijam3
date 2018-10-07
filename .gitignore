@@ -1,0 +1,9 @@
+# Construct 2 local files
+*.uistate.xml
+*.capx.backup1
+*.capx.autosave
+
+# Visual Studio 2015 cache directory
+/.vs/
+
+/_package/
