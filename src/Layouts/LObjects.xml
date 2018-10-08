@@ -61,13 +61,15 @@
                     <instance-variables>
                         <IsActive>false</IsActive>
                         <Speed>500</Speed>
+                        <MainGunFireRate>1</MainGunFireRate>
+                        <MainGunDamage>5</MainGunDamage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
                             <properties>
                                 <max-speed>500</max-speed>
-                                <acceleration>1800</acceleration>
-                                <deceleration>1500</deceleration>
+                                <acceleration>2500</acceleration>
+                                <deceleration>2500</deceleration>
                                 <directions>8 directions</directions>
                                 <set-angle>No</set-angle>
                                 <default-controls>Yes</default-controls>
@@ -161,11 +163,82 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <HitPoints>100</HitPoints>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>180</x>
                         <y>180</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerBullet" uid="33">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Damage>0</Damage>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>1000</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>60</x>
+                        <y>20</y>
+                        <z>0</z>
+                        <width>6</width>
+                        <height>4</height>
+                        <depth>0</depth>
+                        <hotspotX>0.833333313</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy_Example_HP" uid="43">
+                    <properties>
+                        <text>000</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-13,400,0</font>
+                        <color>0,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200</x>
+                        <y>160</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>

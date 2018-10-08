@@ -3,9 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ELevel</name>
     <events>
-        <variable comment="Name of the layer where the guide objects belongs" constant="1" name="LAYER_GUIDES" sid="715241701992861" static="0" type="text">Guides</variable>
-        <variable comment="Name of the layer where the player belongs" constant="1" name="LAYER_PLAYER" sid="749690393006807" static="0" type="text">Player</variable>
-        <variable constant="0" name="SCROLL_SPEED" sid="710629510946635" static="0" type="number">1</variable>
         <event-block sid="123069846995572">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="975002566356283" type="System" />
@@ -28,6 +25,14 @@
                     <param id="1" name="Layer">LAYER_PLAYER</param>
                     <param id="2" name="X">OriginalWindowWidth / 2</param>
                     <param id="3" name="Y">LayoutHeight + Player.Height</param>
+                </action>
+                <action id="-10" name="Set value" sid="605831421660548" type="Player">
+                    <param id="0" name="Instance variable">MainGunFireRate</param>
+                    <param id="1" name="Value">PLAYER_INITIAL_MAIN_GUN_FIRE_RATE</param>
+                </action>
+                <action id="-10" name="Set value" sid="190742089156260" type="Player">
+                    <param id="0" name="Instance variable">MainGunDamage</param>
+                    <param id="1" name="Value">PLAYER_INITIAL_MAIN_GUN_DAMAGE</param>
                 </action>
             </actions>
         </event-block>
@@ -124,6 +129,30 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="266686657027124">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="759700369970508" type="Player">
+                            <param id="0" name="Instance variable">IsActive</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="691597751774876" type="Keyboard">
+                            <param id="0" name="Key">88</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="476123635390172" type="System">
+                            <param id="0" name="Interval (seconds)">Player.MainGunFireRate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="250112901146485" type="Player">
+                            <param id="0" name="Object">PlayerBullet</param>
+                            <param id="1" name="Layer">LAYER_BULLETS</param>
+                            <param id="2" name="Image point">&quot;MainGun&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="694941778264106" type="PlayerBullet">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">Player.MainGunDamage</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="930200537334590" title="Scroller control">
@@ -136,10 +165,10 @@
                     </conditions>
                     <actions>
                         <action id="-17" name="Move forward" sid="263909841572069" type="Scroller">
-                            <param id="0" name="Distance">SCROLL_SPEED</param>
+                            <param id="0" name="Distance">ScrollSpeed</param>
                         </action>
                         <action id="-17" name="Move forward" sid="381586020716337" type="Player">
-                            <param id="0" name="Distance">SCROLL_SPEED</param>
+                            <param id="0" name="Distance">ScrollSpeed</param>
                         </action>
                     </actions>
                 </event-block>
@@ -156,6 +185,13 @@
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="987400906466591" title="Includes">
+            <sub-events>
+                <include>EUIInclude</include>
+                <include>EFEnemy</include>
+                <include>EEnemy_Example</include>
             </sub-events>
         </event-group>
     </events>

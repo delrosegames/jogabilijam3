@@ -10,12 +10,20 @@
     <unique-id>1pgcz7tbgop90</unique-id>
     <saved-with-version>26300</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
@@ -28,12 +36,13 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>LLevel1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Landscape</prop>
@@ -48,11 +57,22 @@
         <object-folder name="Enemies">
             <object-type name="Enemy_Example" sid="363282399779181">
                 <plugin id="Sprite" />
+                <container>
+                    <type>Enemy_Example</type>
+                    <type>Enemy_Example_HP</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="941880232612510" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Enemy_Example_HP" sid="324638888759100">
+                <plugin id="Text" />
+                <container>
+                    <type>Enemy_Example</type>
+                    <type>Enemy_Example_HP</type>
+                </container>
             </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
@@ -60,10 +80,26 @@
                 <plugin id="TiledBg" />
                 <texture original-source="D:\Dev\Assets\Kenney\spaceshooter\Backgrounds\blue.png" />
             </object-type>
+            <object-type name="GenericObject" sid="505388795190313">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457973334610982" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-folder name="Bullets">
+        <object-folder name="Player">
             <object-type name="PlayerBullet" sid="214772222694288">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="274011352443507">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="743193342974423">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947376320184518" speed="5">
                         <frame duration="1" hotspotX="0.833333" hotspotY="0.5">
@@ -77,72 +113,89 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Player" sid="195408945402053">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="IsActive" sid="602538605968336" type="boolean" />
+                    <instance-variable name="Speed" sid="827969422220308" type="number" />
+                    <instance-variable name="MainGunFireRate" sid="901114028551865" type="number" />
+                    <instance-variable name="MainGunDamage" sid="194886173969926" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="8Direction" sid="193689274090381">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="829652613835267">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="MainGun" x="1" y="0.5" />
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-type name="Player" sid="195408945402053">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="IsActive" sid="602538605968336" type="boolean" />
-                <instance-variable name="Speed" sid="827969422220308" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="8Direction" sid="193689274090381">
-                    <behavior id="EightDir" />
-                </behavior-type>
-                <behavior-type name="Bullet" sid="829652613835267">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Scroller" sid="489470028667034">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="IsActive" sid="660237854884946" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="ScrollTo" sid="459908421992668">
-                    <behavior id="scrollto" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284616129038782" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="GenericObject" sid="505388795190313">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457973334610982" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ScrollerStoper" sid="334281963578005">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992159341184486" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-folder name="System">
+            <object-type name="Keyboard" sid="875456426062825">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Gamepad" sid="469740689599546">
+                <plugin id="gamepad" />
+            </object-type>
+            <object-type name="Audio" sid="551964068655126">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Function" sid="777426632850088">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Browser" sid="312802792330551">
+                <plugin id="Browser" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Guides">
+            <object-type name="Scroller" sid="489470028667034">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="IsActive" sid="660237854884946" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="459908421992668">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284616129038782" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ScrollerStoper" sid="334281963578005">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992159341184486" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="InstructionsText" sid="359134539778021">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
@@ -150,6 +203,27 @@
             <members>
                 <member>Enemy_Example</member>
             </members>
+            <instance-variables>
+                <instance-variable name="HitPoints" sid="250716940195321" type="number" />
+            </instance-variables>
+        </family>
+        <family name="FPlayerBullet" plugin-id="Sprite" sid="534790618330035">
+            <members>
+                <member>PlayerBullet</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Damage" sid="241095623473434" type="number" />
+            </instance-variables>
+        </family>
+        <family name="FEnemyHitPoints" plugin-id="Text" sid="367948750754695">
+            <members>
+                <member>Enemy_Example_HP</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="468702742119538">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
@@ -157,11 +231,42 @@
             <layout>LLevel1.xml</layout>
         </layout-folder>
         <layout>LObjects.xml</layout>
+        <layout>LUI.xml</layout>
     </layout-folder>
     <event-folder>
+        <event-folder name="Enemies">
+            <event-sheet>EFEnemy.xml</event-sheet>
+            <event-sheet>EEnemy_Example.xml</event-sheet>
+        </event-folder>
         <event-sheet>ELevel.xml</event-sheet>
+        <event-sheet>EUI.xml</event-sheet>
+        <event-sheet>EGlobal.xml</event-sheet>
+        <event-sheet>EUIInclude.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="28" />
+        <global-instance type="Gamepad" uid="29">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="30">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="31" />
+        <global-instance type="Browser" uid="32" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>

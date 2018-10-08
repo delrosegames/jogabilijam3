@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EEnemy_Example</name>
+    <events>
+        <event-block sid="990179809748486">
+            <conditions>
+                <condition id="-18" name="On created" sid="263900092454328" type="Enemy_Example" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="590958821479760" type="Enemy_Example_HP">
+                    <param id="0" name="Pin to">Enemy_Example</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="636565975253339">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="260444024474174" type="Enemy_Example_HP" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="533701796769276" type="Enemy_Example_HP">
+                    <param id="0" name="Text">Enemy_Example.HitPoints</param>
+                </action>
+                <action id="-24" name="Move to top" sid="829930788629550" type="Enemy_Example_HP" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

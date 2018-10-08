@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EUIInclude</name>
+    <events>
+        <comment>If the UI layout has not been created yet, it is created (by going to UI layout).&#x0D;&#x0A;Also saves the current layout name, so the UI layout can redirect back to this layout.</comment>
+        <event-block sid="668750345752806">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="761956158549257" type="System" />
+                <condition id="-14" name="Compare variable" sid="285770716482979" type="System">
+                    <param id="0" name="Variable">WasUICreated</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="552252501204436" type="System">
+                    <param id="0" name="Variable">LayoutToRedirectTo</param>
+                    <param id="1" name="Value">LayoutName </param>
+                </action>
+                <action id="-2" name="Go to layout" sid="887609140552760" type="System">
+                    <param id="0" name="Layout">LUI</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EUI</name>
+    <events>
+        <event-block sid="389305072838468">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="315264163892403" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="707962434954255" type="System">
+                    <param id="0" name="Variable">WasUICreated</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="904366581687792" type="System">
+                    <param id="0" name="Layout">LayoutToRedirectTo</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

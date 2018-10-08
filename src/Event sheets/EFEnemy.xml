@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EFEnemy</name>
+    <events>
+        <event-block sid="541283212078815">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="473948590418188" type="FEnemy">
+                    <param id="0" name="Object">FPlayerBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="880159531867943" type="FEnemy">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Value">FPlayerBullet.Damage</param>
+                </action>
+                <action id="-9" name="Destroy" sid="832071328754628" type="FPlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="847039989208666">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="153588903428372" type="FEnemy">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="782646735534123" type="FEnemy" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
