@@ -1,35 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>ELevel</name>
     <events>
-        <variable comment="Name of the layer where the player belongs" constant="1" name="LAYER_PLAYER" sid="749690393006807" static="0" type="text">LPlayer</variable>
-        <variable constant="0" name="SCROLL_SPEED" sid="710629510946635" static="0" type="number">2</variable>
+        <variable comment="Name of the layer where the guide objects belongs" constant="1" name="LAYER_GUIDES" sid="715241701992861" static="0" type="text">Guides</variable>
+        <variable comment="Name of the layer where the player belongs" constant="1" name="LAYER_PLAYER" sid="749690393006807" static="0" type="text">Player</variable>
+        <variable constant="0" name="SCROLL_SPEED" sid="710629510946635" static="0" type="number">1</variable>
         <event-block sid="123069846995572">
             <conditions>
-                <condition id="-25" name="On loader layout complete" sid="975002566356283" type="System" />
+                <condition id="-2" name="On start of layout" sid="975002566356283" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="821071898669734" type="Scroller">
-                    <param id="0" name="X">OriginalWindowWidth / 2</param>
-                    <param id="1" name="Y">LayoutHeight - (OriginalWindowHeight / 2)</param>
+                <action id="-3" name="Create object" sid="219939423670864" type="System">
+                    <param id="0" name="Object to create">Scroller</param>
+                    <param id="1" name="Layer">LAYER_GUIDES</param>
+                    <param id="2" name="X">OriginalWindowWidth / 2</param>
+                    <param id="3" name="Y">LayoutHeight - (OriginalWindowHeight / 2)</param>
                 </action>
-                <action disabled="1" id="-13" name="Set boolean" sid="128954628199427" type="Scroller">
-                    <param id="0" name="Instance variable">IsActive</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-3" name="Create object" sid="711534845684584" type="System">
+                    <param id="0" name="Object to create">ScrollerStoper</param>
+                    <param id="1" name="Layer">LAYER_GUIDES</param>
+                    <param id="2" name="X">OriginalWindowWidth / 2</param>
+                    <param id="3" name="Y">(OriginalWindowHeight / 2) - ScrollerStoper.Height</param>
                 </action>
-                <action id="-3" name="Set position" sid="544988159668147" type="ScrollerStoper">
-                    <param id="0" name="X">OriginalWindowWidth / 2</param>
-                    <param id="1" name="Y">(OriginalWindowHeight / 2) - ScrollerStoper.Height</param>
-                </action>
-                <action id="-3" name="Set position" sid="311510345395352" type="Player">
-                    <param id="0" name="X">OriginalWindowWidth / 2</param>
-                    <param id="1" name="Y">LayoutHeight + Player.Height</param>
+                <action id="-3" name="Create object" sid="666654125613175" type="System">
+                    <param id="0" name="Object to create">Player</param>
+                    <param id="1" name="Layer">LAYER_PLAYER</param>
+                    <param id="2" name="X">OriginalWindowWidth / 2</param>
+                    <param id="3" name="Y">LayoutHeight + Player.Height</param>
                 </action>
             </actions>
         </event-block>
         <event-group description="" sid="453896717595148" title="Player behaviour">
             <sub-events>
+                <comment>Wait until player moves automatically to the starting point, so enable its controls, disable its bullet behaviour and activate the scroller.</comment>
                 <event-block sid="199566344620245">
                     <conditions>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="186168497227704" type="Player">
@@ -48,6 +52,10 @@
                             <param id="0" name="State">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="108574171573844" type="Player">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="340766951466807" type="Scroller">
                             <param id="0" name="Instance variable">IsActive</param>
                             <param id="1" name="Value">1</param>
                         </action>
