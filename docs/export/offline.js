@@ -1,11 +1,12 @@
 ﻿{
-	"version": 1538963724,
+	"version": 1538969083,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
 		"jquery-2.1.1.min.js",
 		"offlineClient.js",
 		"images/enemy_example-sheet0.png",
+		"images/enemy_example-sheet1.png",
 		"images/bluebg.png",
 		"images/genericobject-sheet0.png",
 		"images/playerbullet-sheet0.png",
