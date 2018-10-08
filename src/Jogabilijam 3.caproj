@@ -23,10 +23,14 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="setcolor">Set color</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -64,6 +68,48 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="941880232612510" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="5" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="151902890880303" speed="30">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -128,6 +174,9 @@
                     <behavior-type name="Bullet" sid="829652613835267">
                         <behavior id="Bullet" />
                     </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="344822103886087">
+                        <behavior id="bound" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
@@ -171,6 +220,9 @@
                     <behavior-type name="ScrollTo" sid="459908421992668">
                         <behavior id="scrollto" />
                     </behavior-type>
+                    <behavior-type name="Sine" sid="713946403826879">
+                        <behavior id="Sin" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="284616129038782" speed="5">
@@ -206,6 +258,11 @@
             <instance-variables>
                 <instance-variable name="HitPoints" sid="250716940195321" type="number" />
             </instance-variables>
+            <effects>
+                <effect-type name="SetColor">
+                    <effect id="setcolor" />
+                </effect-type>
+            </effects>
         </family>
         <family name="FPlayerBullet" plugin-id="Sprite" sid="534790618330035">
             <members>

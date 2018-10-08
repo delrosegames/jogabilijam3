@@ -3,6 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EFEnemy</name>
     <events>
+        <event-block sid="146791445747828">
+            <conditions>
+                <condition id="-18" name="On created" sid="412687885097663" type="FEnemy" />
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="896826039726714" type="FEnemy">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="541283212078815">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="473948590418188" type="FEnemy">
@@ -15,6 +26,17 @@
                     <param id="1" name="Value">FPlayerBullet.Damage</param>
                 </action>
                 <action id="-9" name="Destroy" sid="832071328754628" type="FPlayerBullet" />
+                <action id="-27" name="Set effect enabled" sid="940260121197624" type="FEnemy">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="305366126450231" type="System">
+                    <param id="0" name="Seconds">0.05</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="894020463111938" type="FEnemy">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="847039989208666">
@@ -23,6 +45,34 @@
                     <param id="0" name="Instance variable">HitPoints</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="651705943401188" type="Scroller">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="919373054785330" type="System">
+                    <param id="0" name="Seconds">0.12</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="999044134965593" type="Scroller">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="853321507354861" type="Scroller">
+                    <param id="0" name="X">OriginalWindowWidth / 2</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="950917971275359" type="FEnemy">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="690583215151861" type="FEnemy">
+                    <param id="0" name="Animation">&quot;Destroyed&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="449185552939256">
+            <conditions>
+                <condition id="4" name="On finished" sid="329097400076596" type="FEnemy">
+                    <param id="0" name="Animation">&quot;Destroyed&quot;</param>
                 </condition>
             </conditions>
             <actions>

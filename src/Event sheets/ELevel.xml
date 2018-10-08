@@ -66,6 +66,17 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="896037788205540">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="430199366359634" type="FPlayerBullet">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">ViewportTop(LAYER_BULLETS)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="289695058103730" type="FPlayerBullet" />
+                    </actions>
+                </event-block>
                 <comment>When active, maintain player inside the viewport.</comment>
                 <event-block sid="326084836898510">
                     <conditions>
@@ -75,7 +86,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="531772095766920">
+                        <event-block disabled="1" sid="531772095766920">
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="560433839380379" type="Player">
                                     <param id="0" name="Comparison">2</param>
@@ -88,7 +99,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="172019879366306">
+                        <event-block disabled="1" sid="172019879366306">
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="370733445938169" type="Player">
                                     <param id="0" name="Comparison">4</param>
