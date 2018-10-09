@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EPlayer</name>
+    <events>
+        <event-block sid="716238870580528">
+            <conditions>
+                <condition id="-18" name="On created" sid="903699328589762" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="519787067569970" type="Player">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Value">PLAYER_MAXIMUM_HIT_POINTS</param>
+                </action>
+                <action id="-5" name="Set width" sid="283079906132107" type="PlayerHitPointsBar">
+                    <param id="0" name="Width">100</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="664589263415509" type="Player">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="302044082037810" type="PlayerHitPointsBar">
+                    <param id="0" name="Animation">&quot;Green&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Wait until player moves automatically to the starting point, so enable its controls, disable its bullet behaviour and activate the scroller.</comment>
+        <event-block sid="996441423414660">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="795924624743923" type="Player">
+                    <param id="0" name="Instance variable">IsActive</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="334211231639411" type="Player">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">LayoutHeight - (Player.Height * 2)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="522661639741283" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="398320961351042" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="720331487589628" type="Player">
+                    <param id="0" name="Instance variable">IsActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="370784403836976" type="Scroller">
+                    <param id="0" name="Instance variable">IsActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="744239082539433">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="529597480094284" type="FPlayerBullet">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">ViewportTop(LAYER_BULLETS)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="170842004618284" type="FPlayerBullet" />
+            </actions>
+        </event-block>
+        <comment>When active, maintain player inside the viewport.</comment>
+        <event-block sid="952539725142362">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="680413860839775" type="Player">
+                    <param id="0" name="Instance variable">IsActive</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="993089554094451">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="183255344514202" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">ViewportLeft(LAYER_PLAYER) + (Player.Width / 2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="944405444290598" type="Player">
+                            <param id="0" name="X">ViewportLeft(LAYER_PLAYER) + (Player.Width / 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="823216706253109">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="270838519398740" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">ViewportRight(LAYER_PLAYER) - (Player.Width / 2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="745541999510878" type="Player">
+                            <param id="0" name="X">ViewportRight(LAYER_PLAYER) - (Player.Width / 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="650866919183763">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="392757431720999" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">ViewportTop(LAYER_PLAYER) + (Player.Height / 2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="942718111277772" type="Player">
+                            <param id="0" name="Y">ViewportTop(LAYER_PLAYER) + (Player.Height / 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="983837177383549">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="864097733645564" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(LAYER_PLAYER) - (Player.Height / 2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="142183170157646" type="Player">
+                            <param id="0" name="Y">ViewportBottom(LAYER_PLAYER) - (Player.Height / 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="703467346675367">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="240779069527031" type="Player">
+                    <param id="0" name="Instance variable">IsActive</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="830689112003480" type="Keyboard">
+                    <param id="0" name="Key">88</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="682425382727324" type="System">
+                    <param id="0" name="Interval (seconds)">Player.MainGunFireRate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="218894118788098" type="Player">
+                    <param id="0" name="Object">PlayerBullet</param>
+                    <param id="1" name="Layer">LAYER_BULLETS</param>
+                    <param id="2" name="Image point">&quot;MainGun&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="334990252938076" type="PlayerBullet">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">Player.MainGunDamage</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="701743095250206">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="546108744796631" type="FEnemyBullet">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="357560243910842" type="Player">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Value">FEnemyBullet.Damage</param>
+                </action>
+                <action id="0" name="Call function" sid="390609935951146" type="Function">
+                    <param id="0" name="Name">&quot;UpdatePlayerHitPointsBar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Destroy" sid="488437630785833" type="FEnemyBullet" />
+                <action id="-27" name="Set effect enabled" sid="503271127183096" type="Player">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="831773917057712" type="System">
+                    <param id="0" name="Seconds">0.05</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="790597690280027" type="Player">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="126968542615327">
+            <conditions>
+                <condition id="0" name="On function" sid="907538813123009" type="Function">
+                    <param id="0" name="Name">&quot;UpdatePlayerHitPointsBar&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="895044037292844" type="PlayerHitPointsBar">
+                    <param id="0" name="Width">max(Player.HitPoints / PLAYER_MAXIMUM_HIT_POINTS * 100, 0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="379273260923359">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="716578849853557" type="Player">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="293856120349516" type="PlayerHitPointsBar">
+                            <param id="0" name="Animation">&quot;Green&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="133396345417045">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="911543122002822" type="Player">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="297021288404092" type="PlayerHitPointsBar">
+                            <param id="0" name="Animation">&quot;Yellow&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="559034774795550">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="749880920432796" type="Player">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="563121448890392" type="PlayerHitPointsBar">
+                            <param id="0" name="Animation">&quot;Red&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="910961836144231">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="252916749924100" type="Player">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="966529272600896" type="Player">
+                    <param id="0" name="Object">Explosion</param>
+                    <param id="1" name="Layer">LAYER_PLAYER</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="945658159977345" type="Player" />
+                <action id="-13" name="Set boolean" sid="285010587417963" type="FEnemy">
+                    <param id="0" name="Instance variable">IsActive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

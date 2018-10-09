@@ -36,136 +36,14 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="453896717595148" title="Player behaviour">
-            <sub-events>
-                <comment>Wait until player moves automatically to the starting point, so enable its controls, disable its bullet behaviour and activate the scroller.</comment>
-                <event-block sid="199566344620245">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="186168497227704" type="Player">
-                            <param id="0" name="Instance variable">IsActive</param>
-                        </condition>
-                        <condition id="-2" name="Compare Y" sid="491763491337124" type="Player">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Y co-ordinate">LayoutHeight - (Player.Height * 2)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="693369264345788" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="425188894683003" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="108574171573844" type="Player">
-                            <param id="0" name="Instance variable">IsActive</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="340766951466807" type="Scroller">
-                            <param id="0" name="Instance variable">IsActive</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="896037788205540">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="430199366359634" type="FPlayerBullet">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Y co-ordinate">ViewportTop(LAYER_BULLETS)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="289695058103730" type="FPlayerBullet" />
-                    </actions>
-                </event-block>
-                <comment>When active, maintain player inside the viewport.</comment>
-                <event-block sid="326084836898510">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="544592709409714" type="Player">
-                            <param id="0" name="Instance variable">IsActive</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="531772095766920">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="560433839380379" type="Player">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">ViewportLeft(LAYER_PLAYER) + (Player.Width / 2)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="339828933293001" type="Player">
-                                    <param id="0" name="X">ViewportLeft(LAYER_PLAYER) + (Player.Width / 2)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="172019879366306">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="370733445938169" type="Player">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">ViewportRight(LAYER_PLAYER) - (Player.Width / 2)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-1" name="Set X" sid="560959923502532" type="Player">
-                                    <param id="0" name="X">ViewportRight(LAYER_PLAYER) - (Player.Width / 2)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="135490723823470">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="673411172928773" type="Player">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">ViewportTop(LAYER_PLAYER) + (Player.Height / 2)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="463813918753170" type="Player">
-                                    <param id="0" name="Y">ViewportTop(LAYER_PLAYER) + (Player.Height / 2)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="903099983399502">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="780172940746271" type="Player">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">ViewportBottom(LAYER_PLAYER) - (Player.Height / 2)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="755901806511440" type="Player">
-                                    <param id="0" name="Y">ViewportBottom(LAYER_PLAYER) - (Player.Height / 2)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="266686657027124">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="759700369970508" type="Player">
-                            <param id="0" name="Instance variable">IsActive</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="691597751774876" type="Keyboard">
-                            <param id="0" name="Key">88</param>
-                        </condition>
-                        <condition id="-6" name="Every X seconds" sid="476123635390172" type="System">
-                            <param id="0" name="Interval (seconds)">Player.MainGunFireRate</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="250112901146485" type="Player">
-                            <param id="0" name="Object">PlayerBullet</param>
-                            <param id="1" name="Layer">LAYER_BULLETS</param>
-                            <param id="2" name="Image point">&quot;MainGun&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="694941778264106" type="PlayerBullet">
-                            <param id="0" name="Instance variable">Damage</param>
-                            <param id="1" name="Value">Player.MainGunDamage</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
+        <event-block sid="597218169467599">
+            <conditions>
+                <condition id="5" name="On any finished" sid="583450105627621" type="Explosion" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="565468205857077" type="Explosion" />
+            </actions>
+        </event-block>
         <event-group description="" sid="930200537334590" title="Scroller control">
             <sub-events>
                 <event-block sid="146421023934974">
@@ -201,6 +79,7 @@
         <event-group description="" sid="987400906466591" title="Includes">
             <sub-events>
                 <include>EUIInclude</include>
+                <include>EPlayer</include>
                 <include>EFEnemy</include>
                 <include>ETurret_Example1</include>
             </sub-events>

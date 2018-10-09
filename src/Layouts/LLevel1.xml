@@ -603,7 +603,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -640,7 +640,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -677,7 +677,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -714,7 +714,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -751,7 +751,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -788,7 +788,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -825,7 +825,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -862,7 +862,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -899,7 +899,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -936,7 +936,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -973,7 +973,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1010,7 +1010,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1047,7 +1047,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1084,7 +1084,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1121,7 +1121,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1158,7 +1158,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1195,7 +1195,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1232,7 +1232,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1269,7 +1269,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1306,7 +1306,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1343,7 +1343,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1380,7 +1380,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1417,7 +1417,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1454,7 +1454,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1491,7 +1491,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1528,7 +1528,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1565,7 +1565,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1602,7 +1602,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1639,7 +1639,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1676,7 +1676,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1713,7 +1713,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1750,7 +1750,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1787,7 +1787,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1824,7 +1824,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>
@@ -1861,7 +1861,7 @@
                         <HitDamage>0</HitDamage>
                     </instance-variables>
                     <effect-instances>
-                        <effect-instance type="SetColor">
+                        <effect-instance type="SetColorToWhite">
                             <parameters>
                                 <blue>1</blue>
                                 <green>1</green>

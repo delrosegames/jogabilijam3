@@ -222,15 +222,23 @@
                         <behavior id="bound" />
                     </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="SetColorToRed">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\nave 1.png">
                             <image-point name="MainGun" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.0882353" y="0.15625" />
+                                <point x="0.5" y="0.28125" />
+                                <point x="0.764706" y="0.3125" />
+                                <point x="0.882353" y="0.5" />
+                                <point x="0.764706" y="0.6875" />
+                                <point x="0.5" y="0.71875" />
+                                <point x="0.0882353" y="0.84375" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -298,9 +306,53 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="InstructionsText" sid="359134539778021">
-            <plugin id="Text" />
-        </object-type>
+        <object-folder name="UI">
+            <object-type name="InstructionsText" sid="359134539778021">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PlayerHitPointsBar" sid="159508190071646">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Green" pingpong="0" repeatcount="1" repeatto="0" sid="431276539263125" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Yellow" pingpong="0" repeatcount="1" repeatto="0" sid="841088522992021" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="997255702441622" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerHitPointsFrame" sid="637335029762786">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="597072286553304" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Effects">
+            <object-type name="Explosion" sid="497103655062359">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543524461194997" speed="30">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\08.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\09.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\10.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\explosao 1\11.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
     <families>
         <family name="FEnemy" plugin-id="Sprite" sid="717946803281332">
@@ -314,7 +366,7 @@
                 <instance-variable name="HitDamage" sid="449053931770346" type="number" />
             </instance-variables>
             <effects>
-                <effect-type name="SetColor">
+                <effect-type name="SetColorToWhite">
                     <effect id="setcolor" />
                 </effect-type>
             </effects>
@@ -367,6 +419,7 @@
         <event-sheet>EUI.xml</event-sheet>
         <event-sheet>EGlobal.xml</event-sheet>
         <event-sheet>EUIInclude.xml</event-sheet>
+        <event-sheet>EPlayer.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="28" />
