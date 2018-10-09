@@ -15,7 +15,7 @@
     <layers>
         <layer name="Layer 0" sid="346495717162727">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>120,120,120</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -63,6 +63,7 @@
                         <Speed>500</Speed>
                         <MainGunFireRate>1</MainGunFireRate>
                         <MainGunDamage>5</MainGunDamage>
+                        <HitPoints>10</HitPoints>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -98,7 +99,7 @@
                         <x>20</x>
                         <y>20</y>
                         <z>0</z>
-                        <width>32</width>
+                        <width>34</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -174,40 +175,6 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_Example" uid="0">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <HitPoints>100</HitPoints>
-                    </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>1</blue>
-                                <green>1</green>
-                                <red>1</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>180</x>
-                        <y>180</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="PlayerBullet" uid="33">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -246,7 +213,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_Example_HP" uid="43">
+                <instance type="Turret_Example1_HP" uid="43">
                     <properties>
                         <text>000</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -264,14 +231,88 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>160</y>
+                        <x>220</x>
+                        <y>180</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Turret_Example1" uid="0">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <HitPoints>20</HitPoints>
+                        <IsActive>false</IsActive>
+                        <BulletDamage>1</BulletDamage>
+                        <HitDamage>0</HitDamage>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>180</x>
+                        <y>180</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyBullet1" uid="41">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Damage>0</Damage>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>100</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>180</x>
+                        <y>220</y>
+                        <z>0</z>
+                        <width>9</width>
+                        <height>11</height>
+                        <depth>0</depth>
+                        <hotspotX>0.555555582</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

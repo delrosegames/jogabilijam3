@@ -79,5 +79,30 @@
                 <action id="-9" name="Destroy" sid="782646735534123" type="FEnemy" />
             </actions>
         </event-block>
+        <event-block sid="910593013877741">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="584576294946783" type="FEnemy">
+                    <param id="0" name="Instance variable">IsActive</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="897020392487476" type="FEnemy" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="436133773846291" type="FEnemy">
+                    <param id="0" name="Instance variable">IsActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="449482063326633">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="669044907930819" type="FEnemy">
+                    <param id="0" name="Instance variable">IsActive</param>
+                </condition>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="352925714577158" type="FEnemy" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="641935637719303" type="FEnemy" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

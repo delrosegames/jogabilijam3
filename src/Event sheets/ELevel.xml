@@ -202,7 +202,7 @@
             <sub-events>
                 <include>EUIInclude</include>
                 <include>EFEnemy</include>
-                <include>EEnemy_Example</include>
+                <include>ETurret_Example1</include>
             </sub-events>
         </event-group>
     </events>

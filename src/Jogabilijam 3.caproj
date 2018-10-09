@@ -59,11 +59,11 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Enemies">
-            <object-type name="Enemy_Example" sid="363282399779181">
+            <object-type name="Turret_Example1" sid="363282399779181">
                 <plugin id="Sprite" />
                 <container>
-                    <type>Enemy_Example</type>
-                    <type>Enemy_Example_HP</type>
+                    <type>Turret_Example1</type>
+                    <type>Turret_Example1_HP</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="941880232612510" speed="5">
@@ -113,12 +113,55 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Enemy_Example_HP" sid="324638888759100">
+            <object-type name="Turret_Example1_HP" sid="324638888759100">
                 <plugin id="Text" />
                 <container>
-                    <type>Enemy_Example</type>
-                    <type>Enemy_Example_HP</type>
+                    <type>Turret_Example1</type>
+                    <type>Turret_Example1_HP</type>
                 </container>
+            </object-type>
+            <object-type name="EnemyBullet1" sid="344756075832199">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="131755374484481" speed="10">
+                        <frame duration="1" hotspotX="0.555556" hotspotY="0.545455" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\tiro inimigo1\efeitos-de-tiro_0000s_0000_Camada-1-copiar-4.png">
+                            <collision-poly>
+                                <point x="0.222222" y="0.181818" />
+                                <point x="0.444444" y="0" />
+                                <point x="0.777778" y="0.181818" />
+                                <point x="1" y="0.454545" />
+                                <point x="0.777778" y="0.818182" />
+                                <point x="0.444444" y="1" />
+                                <point x="0.222222" y="0.818182" />
+                                <point x="0" y="0.454545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.555556" hotspotY="0.545455" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\tiro inimigo1\efeitos-de-tiro_0000s_0001_Camada-1-copiar-3.png">
+                            <collision-poly>
+                                <point x="0.222222" y="0.181818" />
+                                <point x="0.444444" y="0.0909091" />
+                                <point x="0.777778" y="0.181818" />
+                                <point x="1" y="0.454545" />
+                                <point x="0.777778" y="0.818182" />
+                                <point x="0.444444" y="0.909091" />
+                                <point x="0.222222" y="0.818182" />
+                                <point x="0" y="0.454545" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.571429" hotspotY="0.545455" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\tiro inimigo1\efeitos-de-tiro_0000s_0002_Camada-1-copiar.png">
+                            <collision-poly>
+                                <point x="0.285714" y="0.181818" />
+                                <point x="0.428571" y="0.0909091" />
+                                <point x="0.714286" y="0.181818" />
+                                <point x="1" y="0.454545" />
+                                <point x="0.714286" y="0.818182" />
+                                <point x="0.428571" y="0.909091" />
+                                <point x="0.285714" y="0.818182" />
+                                <point x="0" y="0.454545" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
@@ -166,6 +209,7 @@
                     <instance-variable name="Speed" sid="827969422220308" type="number" />
                     <instance-variable name="MainGunFireRate" sid="901114028551865" type="number" />
                     <instance-variable name="MainGunDamage" sid="194886173969926" type="number" />
+                    <instance-variable name="HitPoints" sid="800745070333940" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="193689274090381">
@@ -180,13 +224,13 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\nave 1.png">
                             <image-point name="MainGun" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="0" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                                 <point x="0" y="0" />
+                                <point x="1" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -245,6 +289,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Delimiter" sid="374205257698310">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="898538906656925" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="InstructionsText" sid="359134539778021">
             <plugin id="Text" />
@@ -253,10 +305,13 @@
     <families>
         <family name="FEnemy" plugin-id="Sprite" sid="717946803281332">
             <members>
-                <member>Enemy_Example</member>
+                <member>Turret_Example1</member>
             </members>
             <instance-variables>
                 <instance-variable name="HitPoints" sid="250716940195321" type="number" />
+                <instance-variable name="IsActive" sid="123006008644673" type="boolean" />
+                <instance-variable name="BulletDamage" sid="765043465122138" type="number" />
+                <instance-variable name="HitDamage" sid="449053931770346" type="number" />
             </instance-variables>
             <effects>
                 <effect-type name="SetColor">
@@ -274,11 +329,24 @@
         </family>
         <family name="FEnemyHitPoints" plugin-id="Text" sid="367948750754695">
             <members>
-                <member>Enemy_Example_HP</member>
+                <member>Turret_Example1_HP</member>
             </members>
             <behaviors>
                 <behavior-type name="Pin" sid="468702742119538">
                     <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="FEnemyBullet" plugin-id="Sprite" sid="981132575000843">
+            <members>
+                <member>EnemyBullet1</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Damage" sid="306940680690792" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="206782410165474">
+                    <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -293,7 +361,7 @@
     <event-folder>
         <event-folder name="Enemies">
             <event-sheet>EFEnemy.xml</event-sheet>
-            <event-sheet>EEnemy_Example.xml</event-sheet>
+            <event-sheet>ETurret_Example1.xml</event-sheet>
         </event-folder>
         <event-sheet>ELevel.xml</event-sheet>
         <event-sheet>EUI.xml</event-sheet>
