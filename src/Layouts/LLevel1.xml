@@ -599,9 +599,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -636,9 +643,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -673,9 +687,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -710,9 +731,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -747,9 +775,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -784,9 +819,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -821,9 +863,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -858,9 +907,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -895,9 +951,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -932,9 +995,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -969,9 +1039,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1006,9 +1083,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1043,9 +1127,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1080,9 +1171,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1117,9 +1215,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1154,9 +1259,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1191,9 +1303,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1228,9 +1347,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1265,9 +1391,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1302,9 +1435,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1339,9 +1479,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1376,9 +1523,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1413,9 +1567,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1450,9 +1611,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1487,9 +1655,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1524,9 +1699,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1561,9 +1743,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1598,9 +1787,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1635,9 +1831,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1672,9 +1875,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1709,9 +1919,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1746,9 +1963,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1783,9 +2007,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1820,9 +2051,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
@@ -1857,9 +2095,16 @@
                     <instance-variables>
                         <HitPoints>20</HitPoints>
                         <IsActive>false</IsActive>
-                        <BulletDamage>1</BulletDamage>
-                        <HitDamage>0</HitDamage>
+                        <BulletDamage>3</BulletDamage>
+                        <HitDamage>1</HitDamage>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
                             <parameters>
