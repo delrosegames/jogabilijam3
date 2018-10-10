@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1539056868,
+	"version": 1539141635,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -20,9 +20,9 @@
 		"images/playerhitpointsbar-sheet0.png",
 		"images/playerhitpointsbar-sheet1.png",
 		"images/playerhitpointsframe-sheet0.png",
-		"images/explosion-sheet0.png",
-		"images/explosion-sheet1.png",
-		"images/explosion-sheet2.png",
+		"images/explosion1-sheet0.png",
+		"images/explosion1-sheet1.png",
+		"images/explosion1-sheet2.png",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",

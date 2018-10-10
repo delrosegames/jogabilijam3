@@ -23600,15 +23600,63 @@ cr.behaviors.scrollto = function(runtime)
 	};
 	behaviorProto.acts = new Acts();
 }());
+;
+;
+cr.behaviors.solid = function(runtime)
+{
+	this.runtime = runtime;
+};
+(function ()
+{
+	var behaviorProto = cr.behaviors.solid.prototype;
+	behaviorProto.Type = function(behavior, objtype)
+	{
+		this.behavior = behavior;
+		this.objtype = objtype;
+		this.runtime = behavior.runtime;
+	};
+	var behtypeProto = behaviorProto.Type.prototype;
+	behtypeProto.onCreate = function()
+	{
+	};
+	behaviorProto.Instance = function(type, inst)
+	{
+		this.type = type;
+		this.behavior = type.behavior;
+		this.inst = inst;				// associated object instance to modify
+		this.runtime = type.runtime;
+	};
+	var behinstProto = behaviorProto.Instance.prototype;
+	behinstProto.onCreate = function()
+	{
+		this.inst.extra["solidEnabled"] = (this.properties[0] !== 0);
+	};
+	behinstProto.tick = function ()
+	{
+	};
+	function Cnds() {};
+	Cnds.prototype.IsEnabled = function ()
+	{
+		return this.inst.extra["solidEnabled"];
+	};
+	behaviorProto.cnds = new Cnds();
+	function Acts() {};
+	Acts.prototype.SetEnabled = function (e)
+	{
+		this.inst.extra["solidEnabled"] = !!e;
+	};
+	behaviorProto.acts = new Acts();
+}());
 cr.getObjectRefTable = function () { return [
-	cr.plugins_.Audio,
-	cr.plugins_.Function,
 	cr.plugins_.Browser,
-	cr.plugins_.Keyboard,
+	cr.plugins_.Function,
 	cr.plugins_.gamepad,
+	cr.plugins_.Keyboard,
+	cr.plugins_.Sprite,
 	cr.plugins_.Text,
 	cr.plugins_.TiledBg,
-	cr.plugins_.Sprite,
+	cr.plugins_.Audio,
+	cr.behaviors.solid,
 	cr.behaviors.Bullet,
 	cr.behaviors.destroy,
 	cr.behaviors.EightDir,
@@ -23623,11 +23671,9 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.acts.Destroy,
 	cr.system_object.prototype.acts.Wait,
 	cr.plugins_.Sprite.prototype.cnds.CompareInstanceVar,
-	cr.behaviors.Sin.prototype.acts.SetActive,
-	cr.plugins_.Sprite.prototype.acts.SetX,
-	cr.system_object.prototype.exps.originalwindowwidth,
 	cr.plugins_.Sprite.prototype.acts.SetCollisions,
 	cr.plugins_.Sprite.prototype.acts.SetAnim,
+	cr.plugins_.Function.prototype.acts.CallFunction,
 	cr.plugins_.Sprite.prototype.cnds.OnAnimFinished,
 	cr.plugins_.Sprite.prototype.acts.Spawn,
 	cr.plugins_.Sprite.prototype.cnds.IsBoolInstanceVarSet,
@@ -23643,14 +23689,25 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.angle,
 	cr.plugins_.Sprite.prototype.exps.X,
 	cr.plugins_.Sprite.prototype.exps.Y,
+	cr.system_object.prototype.cnds.IsGroupActive,
 	cr.system_object.prototype.cnds.OnLayoutStart,
 	cr.system_object.prototype.acts.CreateObject,
+	cr.system_object.prototype.exps.originalwindowwidth,
 	cr.system_object.prototype.exps.layoutheight,
 	cr.system_object.prototype.exps.originalwindowheight,
 	cr.plugins_.Sprite.prototype.exps.Height,
-	cr.plugins_.Sprite.prototype.cnds.OnAnyAnimFinished,
-	cr.system_object.prototype.cnds.IsGroupActive,
+	cr.plugins_.Keyboard.prototype.cnds.OnKey,
+	cr.system_object.prototype.cnds.Compare,
+	cr.system_object.prototype.exps.timescale,
+	cr.system_object.prototype.acts.SetTimescale,
+	cr.system_object.prototype.cnds.Else,
 	cr.plugins_.Sprite.prototype.acts.MoveForward,
+	cr.plugins_.Sprite.prototype.cnds.OnAnyAnimFinished,
+	cr.plugins_.Function.prototype.cnds.OnFunction,
+	cr.behaviors.Sin.prototype.acts.SetMagnitude,
+	cr.plugins_.Function.prototype.exps.Param,
+	cr.behaviors.Sin.prototype.acts.SetActive,
+	cr.plugins_.Sprite.prototype.acts.SetX,
 	cr.system_object.prototype.acts.SetVar,
 	cr.system_object.prototype.acts.GoToLayoutByName,
 	cr.system_object.prototype.cnds.CompareVar,
@@ -23664,7 +23721,7 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.acts.SetY,
 	cr.system_object.prototype.exps.viewportbottom,
 	cr.plugins_.Keyboard.prototype.cnds.IsKeyDown,
-	cr.plugins_.Function.prototype.acts.CallFunction,
-	cr.plugins_.Function.prototype.cnds.OnFunction,
-	cr.system_object.prototype.exps.max
+	cr.system_object.prototype.exps.max,
+	cr.system_object.prototype.exps.random,
+	cr.plugins_.Sprite.prototype.exps.Width
 ];};
