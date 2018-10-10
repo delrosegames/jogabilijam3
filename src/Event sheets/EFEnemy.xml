@@ -48,24 +48,16 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Sine" id="0" name="Set active" sid="651705943401188" type="Scroller">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="919373054785330" type="System">
-                    <param id="0" name="Seconds">0.12</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="999044134965593" type="Scroller">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="-1" name="Set X" sid="853321507354861" type="Scroller">
-                    <param id="0" name="X">OriginalWindowWidth / 2</param>
-                </action>
                 <action id="11" name="Set collisions enabled" sid="950917971275359" type="FEnemy">
                     <param id="0" name="Collisions">0</param>
                 </action>
                 <action id="4" name="Set animation" sid="690583215151861" type="FEnemy">
                     <param id="0" name="Animation">&quot;Destroyed&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Call function" sid="529539105402057" type="Function">
+                    <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
+                    <param id="1" name="Parameter {n}">SCREEN_SHAKE_ENEMY_DESTROYED_MAGNITUDE{###}SCREEN_SHAKE_ENEMY_DESTROYED_TIME</param>
                 </action>
             </actions>
         </event-block>
@@ -77,7 +69,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="614269015409512" type="FEnemy">
-                    <param id="0" name="Object">Explosion</param>
+                    <param id="0" name="Object">FExplosion</param>
                     <param id="1" name="Layer">LAYER_ENEMIES</param>
                     <param id="2" name="Image point">0</param>
                 </action>
@@ -92,6 +84,9 @@
                 <condition id="-3" name="Is on-screen" sid="897020392487476" type="FEnemy" />
             </conditions>
             <actions>
+                <action id="-16" name="Wait" sid="475871498831341" type="System">
+                    <param id="0" name="Seconds">1 / ScrollSpeed / 3</param>
+                </action>
                 <action id="-13" name="Set boolean" sid="436133773846291" type="FEnemy">
                     <param id="0" name="Instance variable">IsActive</param>
                     <param id="1" name="Value">1</param>
@@ -107,6 +102,14 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="641935637719303" type="FEnemy" />
+            </actions>
+        </event-block>
+        <event-block sid="494827338478258">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="489469379215696" type="FEnemyBullet" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="517894242197126" type="FEnemyBullet" />
             </actions>
         </event-block>
     </events>

@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ETurret_Example1</name>
     <events>
-        <variable comment="Time (in secods) between shots" constant="0" name="TURRET_EXAMPLE1_FIRE_RATIO" sid="764244871079239" static="0" type="number">1.75</variable>
+        <variable comment="Time (in secods) between shots" constant="0" name="TURRET_EXAMPLE1_FIRE_RATIO" sid="764244871079239" static="0" type="number">1.5</variable>
         <event-block sid="990179809748486">
             <conditions>
                 <condition id="-18" name="On created" sid="263900092454328" type="Turret_Example1" />

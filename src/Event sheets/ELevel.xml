@@ -3,47 +3,82 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ELevel</name>
     <events>
-        <event-block sid="123069846995572">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="975002566356283" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="219939423670864" type="System">
-                    <param id="0" name="Object to create">Scroller</param>
-                    <param id="1" name="Layer">LAYER_GUIDES</param>
-                    <param id="2" name="X">OriginalWindowWidth / 2</param>
-                    <param id="3" name="Y">LayoutHeight - (OriginalWindowHeight / 2)</param>
-                </action>
-                <action id="-3" name="Create object" sid="711534845684584" type="System">
-                    <param id="0" name="Object to create">ScrollerStoper</param>
-                    <param id="1" name="Layer">LAYER_GUIDES</param>
-                    <param id="2" name="X">OriginalWindowWidth / 2</param>
-                    <param id="3" name="Y">(OriginalWindowHeight / 2) - ScrollerStoper.Height</param>
-                </action>
-                <action id="-3" name="Create object" sid="666654125613175" type="System">
-                    <param id="0" name="Object to create">Player</param>
-                    <param id="1" name="Layer">LAYER_PLAYER</param>
-                    <param id="2" name="X">OriginalWindowWidth / 2</param>
-                    <param id="3" name="Y">LayoutHeight + Player.Height</param>
-                </action>
-                <action id="-10" name="Set value" sid="605831421660548" type="Player">
-                    <param id="0" name="Instance variable">MainGunFireRate</param>
-                    <param id="1" name="Value">PLAYER_INITIAL_MAIN_GUN_FIRE_RATE</param>
-                </action>
-                <action id="-10" name="Set value" sid="190742089156260" type="Player">
-                    <param id="0" name="Instance variable">MainGunDamage</param>
-                    <param id="1" name="Value">PLAYER_INITIAL_MAIN_GUN_DAMAGE</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="597218169467599">
-            <conditions>
-                <condition id="5" name="On any finished" sid="583450105627621" type="Explosion" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="565468205857077" type="Explosion" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="134990440170131" title="Level initialization">
+            <sub-events>
+                <event-block sid="123069846995572">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="975002566356283" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="219939423670864" type="System">
+                            <param id="0" name="Object to create">Scroller</param>
+                            <param id="1" name="Layer">LAYER_GUIDES</param>
+                            <param id="2" name="X">OriginalWindowWidth / 2</param>
+                            <param id="3" name="Y">LayoutHeight - (OriginalWindowHeight / 2)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="711534845684584" type="System">
+                            <param id="0" name="Object to create">ScrollerStoper</param>
+                            <param id="1" name="Layer">LAYER_GUIDES</param>
+                            <param id="2" name="X">OriginalWindowWidth / 2</param>
+                            <param id="3" name="Y">(OriginalWindowHeight / 2) - ScrollerStoper.Height</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="666654125613175" type="System">
+                            <param id="0" name="Object to create">Player</param>
+                            <param id="1" name="Layer">LAYER_PLAYER</param>
+                            <param id="2" name="X">OriginalWindowWidth / 2</param>
+                            <param id="3" name="Y">LayoutHeight + Player.Height</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="605831421660548" type="Player">
+                            <param id="0" name="Instance variable">MainGunFireRate</param>
+                            <param id="1" name="Value">PLAYER_INITIAL_MAIN_GUN_FIRE_RATE</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="190742089156260" type="Player">
+                            <param id="0" name="Instance variable">MainGunDamage</param>
+                            <param id="1" name="Value">PLAYER_INITIAL_MAIN_GUN_DAMAGE</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="483576662893825" type="Delimiter" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="724649591594839" title="Pause/continue control">
+            <sub-events>
+                <event-block sid="443433842369588">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="226295429498987" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="456360632407667">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="194781729941315" type="System">
+                                    <param id="0" name="First value">timescale</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="936227957938948" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="842517111398821">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="240332661306273" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="854236809477034" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="930200537334590" title="Scroller control">
             <sub-events>
                 <event-block sid="146421023934974">
@@ -54,10 +89,10 @@
                     </conditions>
                     <actions>
                         <action id="-17" name="Move forward" sid="263909841572069" type="Scroller">
-                            <param id="0" name="Distance">ScrollSpeed</param>
+                            <param id="0" name="Distance">ScrollSpeed * timescale</param>
                         </action>
                         <action id="-17" name="Move forward" sid="381586020716337" type="Player">
-                            <param id="0" name="Distance">ScrollSpeed</param>
+                            <param id="0" name="Distance">ScrollSpeed * timescale</param>
                         </action>
                     </actions>
                 </event-block>
@@ -71,6 +106,47 @@
                         <action id="-13" name="Set boolean" sid="755591623976663" type="Scroller">
                             <param id="0" name="Instance variable">IsActive</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="878717165561073" title="General objects control">
+            <sub-events>
+                <event-block sid="597218169467599">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="583450105627621" type="FExplosion" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="565468205857077" type="FExplosion" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="539587583351509" title="General Level Functions">
+            <sub-events>
+                <comment>Shakes the screen by moving the scroller object.&#x0D;&#x0A;Param 0: The Sine behaviour magnitude&#x0D;&#x0A;Param 1: The time (in seconds) the screen will remain shaking</comment>
+                <event-block sid="962560950922953">
+                    <conditions>
+                        <condition id="0" name="On function" sid="292678890988844" type="Function">
+                            <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="721109553478913" type="Scroller">
+                            <param id="0" name="Magnitude">Function.Param(0)</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="728718260444429" type="Scroller">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="845110630963336" type="System">
+                            <param id="0" name="Seconds">Function.Param(1)</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="811114944258472" type="Scroller">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="190952727634125" type="Scroller">
+                            <param id="0" name="X">OriginalWindowWidth / 2</param>
                         </action>
                     </actions>
                 </event-block>

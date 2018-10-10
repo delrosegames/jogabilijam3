@@ -334,7 +334,7 @@
             </object-type>
         </object-folder>
         <object-folder name="Effects">
-            <object-type name="Explosion" sid="497103655062359">
+            <object-type name="Explosion1" sid="497103655062359">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543524461194997" speed="30">
@@ -401,6 +401,11 @@
                     <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="FExplosion" plugin-id="Sprite" sid="645147603727905">
+            <members>
+                <member>Explosion1</member>
+            </members>
         </family>
     </families>
     <layout-folder>
