@@ -2778,7 +2778,7 @@
                         <EnemyName>Enemy_Ball1</EnemyName>
                         <DistanceToStartSpawning>-350</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
-                        <AmountToSpawn>20</AmountToSpawn>
+                        <AmountToSpawn>5</AmountToSpawn>
                         <AmountSpawned>0</AmountSpawned>
                         <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
                         <IsActive>false</IsActive>
@@ -2809,7 +2809,7 @@
                         <EnemyName>Enemy_Ball1</EnemyName>
                         <DistanceToStartSpawning>-350</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
-                        <AmountToSpawn>20</AmountToSpawn>
+                        <AmountToSpawn>5</AmountToSpawn>
                         <AmountSpawned>0</AmountSpawned>
                         <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
                         <IsActive>false</IsActive>
@@ -2817,7 +2817,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>600</x>
+                        <x>720</x>
                         <y>2520</y>
                         <z>0</z>
                         <width>20</width>
