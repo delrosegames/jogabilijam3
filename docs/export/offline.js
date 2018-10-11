@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1539141635,
+	"version": 1539228726,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -10,6 +10,8 @@
 		"images/enemybullet1-sheet0.png",
 		"images/enemybullet1-sheet1.png",
 		"images/enemybullet1-sheet2.png",
+		"images/enemy_ball1-sheet0.png",
+		"images/enemy_ball1-sheet1.png",
 		"images/bluebg.png",
 		"images/genericobject-sheet0.png",
 		"images/playerbullet-sheet0.png",
@@ -17,6 +19,7 @@
 		"images/scroller-sheet0.png",
 		"images/scrollerstoper-sheet0.png",
 		"images/delimiter-sheet0.png",
+		"images/enemyspawner-sheet0.png",
 		"images/playerhitpointsbar-sheet0.png",
 		"images/playerhitpointsbar-sheet1.png",
 		"images/playerhitpointsframe-sheet0.png",

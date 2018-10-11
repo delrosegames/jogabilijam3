@@ -23054,6 +23054,86 @@ cr.behaviors.Pin = function(runtime)
 }());
 ;
 ;
+cr.behaviors.Rotate = function(runtime)
+{
+	this.runtime = runtime;
+};
+(function ()
+{
+	var behaviorProto = cr.behaviors.Rotate.prototype;
+	behaviorProto.Type = function(behavior, objtype)
+	{
+		this.behavior = behavior;
+		this.objtype = objtype;
+		this.runtime = behavior.runtime;
+	};
+	var behtypeProto = behaviorProto.Type.prototype;
+	behtypeProto.onCreate = function()
+	{
+	};
+	behaviorProto.Instance = function(type, inst)
+	{
+		this.type = type;
+		this.behavior = type.behavior;
+		this.inst = inst;				// associated object instance to modify
+		this.runtime = type.runtime;
+	};
+	var behinstProto = behaviorProto.Instance.prototype;
+	behinstProto.onCreate = function()
+	{
+		this.speed = cr.to_radians(this.properties[0]);
+		this.acc = cr.to_radians(this.properties[1]);
+	};
+	behinstProto.saveToJSON = function ()
+	{
+		return {
+			"speed": this.speed,
+			"acc": this.acc
+		};
+	};
+	behinstProto.loadFromJSON = function (o)
+	{
+		this.speed = o["speed"];
+		this.acc = o["acc"];
+	};
+	behinstProto.tick = function ()
+	{
+		var dt = this.runtime.getDt(this.inst);
+		if (dt === 0)
+			return;
+		if (this.acc !== 0)
+			this.speed += this.acc * dt;
+		if (this.speed !== 0)
+		{
+			this.inst.angle = cr.clamp_angle(this.inst.angle + this.speed * dt);
+			this.inst.set_bbox_changed();
+		}
+	};
+	function Cnds() {};
+	behaviorProto.cnds = new Cnds();
+	function Acts() {};
+	Acts.prototype.SetSpeed = function (s)
+	{
+		this.speed = cr.to_radians(s);
+	};
+	Acts.prototype.SetAcceleration = function (a)
+	{
+		this.acc = cr.to_radians(a);
+	};
+	behaviorProto.acts = new Acts();
+	function Exps() {};
+	Exps.prototype.Speed = function (ret)
+	{
+		ret.set_float(cr.to_degrees(this.speed));
+	};
+	Exps.prototype.Acceleration = function (ret)
+	{
+		ret.set_float(cr.to_degrees(this.acc));
+	};
+	behaviorProto.exps = new Exps();
+}());
+;
+;
 cr.behaviors.Sin = function(runtime)
 {
 	this.runtime = runtime;
@@ -23657,6 +23737,7 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.TiledBg,
 	cr.plugins_.Audio,
 	cr.behaviors.solid,
+	cr.behaviors.Rotate,
 	cr.behaviors.Bullet,
 	cr.behaviors.destroy,
 	cr.behaviors.EightDir,
@@ -23689,7 +23770,15 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.angle,
 	cr.plugins_.Sprite.prototype.exps.X,
 	cr.plugins_.Sprite.prototype.exps.Y,
+	cr.system_object.prototype.exps.viewporttop,
+	cr.plugins_.Sprite.prototype.exps.IID,
+	cr.plugins_.Sprite.prototype.acts.AddInstanceVar,
 	cr.system_object.prototype.cnds.IsGroupActive,
+	cr.plugins_.Function.prototype.cnds.OnFunction,
+	cr.system_object.prototype.cnds.PickByComparison,
+	cr.plugins_.Function.prototype.exps.Param,
+	cr.plugins_.Sprite.prototype.exps.Angle,
+	cr.system_object.prototype.cnds.EveryTick,
 	cr.system_object.prototype.cnds.OnLayoutStart,
 	cr.system_object.prototype.acts.CreateObject,
 	cr.system_object.prototype.exps.originalwindowwidth,
@@ -23701,14 +23790,13 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.timescale,
 	cr.system_object.prototype.acts.SetTimescale,
 	cr.system_object.prototype.cnds.Else,
+	cr.system_object.prototype.acts.SetVar,
 	cr.plugins_.Sprite.prototype.acts.MoveForward,
+	cr.plugins_.Sprite.prototype.acts.SetY,
 	cr.plugins_.Sprite.prototype.cnds.OnAnyAnimFinished,
-	cr.plugins_.Function.prototype.cnds.OnFunction,
 	cr.behaviors.Sin.prototype.acts.SetMagnitude,
-	cr.plugins_.Function.prototype.exps.Param,
 	cr.behaviors.Sin.prototype.acts.SetActive,
 	cr.plugins_.Sprite.prototype.acts.SetX,
-	cr.system_object.prototype.acts.SetVar,
 	cr.system_object.prototype.acts.GoToLayoutByName,
 	cr.system_object.prototype.cnds.CompareVar,
 	cr.system_object.prototype.exps.layoutname,
@@ -23717,8 +23805,6 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.cnds.CompareY,
 	cr.behaviors.Bullet.prototype.acts.SetEnabled,
 	cr.behaviors.EightDir.prototype.acts.SetEnabled,
-	cr.system_object.prototype.exps.viewporttop,
-	cr.plugins_.Sprite.prototype.acts.SetY,
 	cr.system_object.prototype.exps.viewportbottom,
 	cr.plugins_.Keyboard.prototype.cnds.IsKeyDown,
 	cr.system_object.prototype.exps.max,
