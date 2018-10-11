@@ -6,6 +6,8 @@
         <comment>Shake effect constants</comment>
         <variable constant="1" name="SCREEN_SHAKE_ENEMY_DESTROYED_MAGNITUDE" sid="615107163728843" static="0" type="number">1</variable>
         <variable constant="1" name="SCREEN_SHAKE_ENEMY_DESTROYED_TIME" sid="329666618958334" static="0" type="number">0.12</variable>
+        <variable constant="1" name="SCREEN_SHAKE_PLAYER_DAMAGED_BASE_MAGNITUDE" sid="356176590650919" static="0" type="number">1</variable>
+        <variable constant="1" name="SCREEN_SHAKE_PLAYER_DAMAGED_BASE_TIME" sid="569064210266805" static="0" type="number">0.2</variable>
         <variable constant="1" name="SCREEN_SHAKE_PLAYER_DESTROYED_MAGNITUDE" sid="538600910745368" static="0" type="number">10</variable>
         <variable constant="1" name="SCREEN_SHAKE_PLAYER_DESTROYED_TIME" sid="816717002318823" static="0" type="number">0.6</variable>
         <comment>Layer names</comment>
@@ -14,13 +16,13 @@
         <variable comment="Name of the layer where enemies are spawned" constant="1" name="LAYER_ENEMIES" sid="492934739060313" static="0" type="text">Enemies</variable>
         <variable comment="Name of the layer where bullets are spawned" constant="1" name="LAYER_BULLETS" sid="306964440371627" static="0" type="text">Bullets</variable>
         <comment>Player default values</comment>
-        <variable constant="1" name="PLAYER_MAXIMUM_HIT_POINTS" sid="306317171983958" static="0" type="number">20</variable>
+        <variable constant="1" name="PLAYER_MAXIMUM_HIT_POINTS" sid="306317171983958" static="0" type="number">100</variable>
         <variable constant="1" name="PLAYER_INITIAL_MAIN_GUN_FIRE_RATE" sid="116557171588925" static="0" type="number">0.15</variable>
         <variable constant="1" name="PLAYER_INITIAL_MAIN_GUN_DAMAGE" sid="641979740170554" static="0" type="number">5</variable>
         <comment>UI control</comment>
         <variable comment="If the UI has already been created, the value will be 1" constant="0" name="WasUICreated" sid="658775487531237" static="0" type="number">0</variable>
         <variable comment="Name of the layout to where the game will redirect after the UI creation" constant="0" name="LayoutToRedirectTo" sid="413482459952707" static="0" type="text"></variable>
         <comment>Level control</comment>
-        <variable constant="0" name="ScrollSpeed" sid="710629510946635" static="0" type="number">0.75</variable>
+        <variable constant="0" name="ScrollSpeed" sid="710629510946635" static="0" type="number">1.5</variable>
     </events>
 </c2eventsheet>

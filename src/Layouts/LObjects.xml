@@ -264,6 +264,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -348,6 +352,96 @@
                         <z>0</z>
                         <width>46</width>
                         <height>44</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy_Ball1" uid="55">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <HitPoints>5</HitPoints>
+                        <IsActive>false</IsActive>
+                        <BulletDamage>0</BulletDamage>
+                        <HitDamage>3</HitDamage>
+                        <DestroyOnHit>true</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>0</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>500</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>120</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColorToWhite">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>280</x>
+                        <y>180</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="89">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>300</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>5</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>false</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>220</x>
+                        <y>120</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

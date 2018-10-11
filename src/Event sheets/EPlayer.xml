@@ -158,14 +158,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="357560243910842" type="Player">
+                <action disabled="1" id="-12" name="Subtract from" sid="357560243910842" type="Player">
                     <param id="0" name="Instance variable">HitPoints</param>
                     <param id="1" name="Value">FEnemyBullet.Damage</param>
                 </action>
                 <action id="-9" name="Destroy" sid="488437630785833" type="FEnemyBullet" />
                 <action id="0" name="Call function" sid="938545053307766" type="Function">
                     <param id="0" name="Name">&quot;PlayerTakeDamage&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
+                    <param id="1" name="Parameter {n}">FEnemyBullet.Damage</param>
                 </action>
             </actions>
         </event-block>
@@ -176,15 +176,30 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="653491331586828" type="Player">
+                <action disabled="1" id="-12" name="Subtract from" sid="653491331586828" type="Player">
                     <param id="0" name="Instance variable">HitPoints</param>
                     <param id="1" name="Value">FEnemy.HitDamage</param>
                 </action>
                 <action id="0" name="Call function" sid="900196398322264" type="Function">
                     <param id="0" name="Name">&quot;PlayerTakeDamage&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
+                    <param id="1" name="Parameter {n}">FEnemy.HitDamage</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="146349603912707">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="322553987525905" type="FEnemy">
+                            <param id="0" name="Instance variable">DestroyOnHit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="379650789787918" type="FEnemy">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="158287784035569">
             <conditions>
@@ -193,9 +208,17 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-12" name="Subtract from" sid="651354388967612" type="Player">
+                    <param id="0" name="Instance variable">HitPoints</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
                 <action id="0" name="Call function" sid="390609935951146" type="Function">
                     <param id="0" name="Name">&quot;UpdatePlayerHitPointsBar&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="811830816684535" type="Function">
+                    <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
+                    <param id="1" name="Parameter {n}">SCREEN_SHAKE_PLAYER_DAMAGED_BASE_MAGNITUDE * Function.Param(0) / 2{###}SCREEN_SHAKE_PLAYER_DAMAGED_BASE_TIME * Function.Param(0) / 2</param>
                 </action>
                 <action id="-27" name="Set effect enabled" sid="503271127183096" type="Player">
                     <param id="0" name="Mode">1</param>

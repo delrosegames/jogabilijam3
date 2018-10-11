@@ -601,6 +601,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -645,6 +649,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -689,6 +697,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -733,6 +745,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -777,6 +793,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -821,6 +841,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -865,6 +889,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -909,6 +937,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -953,6 +985,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -997,6 +1033,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1029,50 +1069,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="57">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <HitPoints>20</HitPoints>
-                        <IsActive>false</IsActive>
-                        <BulletDamage>3</BulletDamage>
-                        <HitDamage>1</HitDamage>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColorToWhite">
-                            <parameters>
-                                <blue>1</blue>
-                                <green>1</green>
-                                <red>1</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>160</x>
-                        <y>1680</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Turret_Example1" uid="58">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1085,6 +1081,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1129,6 +1129,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1161,50 +1165,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="60">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <HitPoints>20</HitPoints>
-                        <IsActive>false</IsActive>
-                        <BulletDamage>3</BulletDamage>
-                        <HitDamage>1</HitDamage>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColorToWhite">
-                            <parameters>
-                                <blue>1</blue>
-                                <green>1</green>
-                                <red>1</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>480</x>
-                        <y>1680</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Turret_Example1" uid="61">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1217,6 +1177,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1261,6 +1225,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1305,6 +1273,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1349,6 +1321,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1381,50 +1357,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="65">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <HitPoints>20</HitPoints>
-                        <IsActive>false</IsActive>
-                        <BulletDamage>3</BulletDamage>
-                        <HitDamage>1</HitDamage>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColorToWhite">
-                            <parameters>
-                                <blue>1</blue>
-                                <green>1</green>
-                                <red>1</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>320</x>
-                        <y>1680</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Turret_Example1" uid="66">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1437,6 +1369,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1481,6 +1417,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1525,6 +1465,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1569,6 +1513,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1613,6 +1561,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1657,6 +1609,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1701,6 +1657,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1745,6 +1705,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1789,6 +1753,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1833,6 +1801,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1877,6 +1849,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1921,6 +1897,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1965,6 +1945,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2009,6 +1993,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2053,6 +2041,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2097,6 +2089,10 @@
                         <IsActive>false</IsActive>
                         <BulletDamage>3</BulletDamage>
                         <HitDamage>1</HitDamage>
+                        <DestroyOnHit>false</DestroyOnHit>
+                        <OnDestroyShakeMagnitude>1</OnDestroyShakeMagnitude>
+                        <OnDestroyShakeTime>0.12</OnDestroyShakeTime>
+                        <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2427,6 +2423,409 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="88">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>300</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>5</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>false</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>2280</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="90">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>-120</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>5</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-80</x>
+                        <y>2480</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="57">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>300</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>5</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>false</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>80</x>
+                        <y>2200</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="60">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>-120</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>5</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>false</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>720</x>
+                        <y>2080</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="65">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>40</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>10</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-80</x>
+                        <y>1640</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="91">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>500</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>10</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>false</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>480</x>
+                        <y>1360</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="92">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>500</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>10</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>false</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>1360</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="93">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>-240</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>15</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-80</x>
+                        <y>1080</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="94">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>-80</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>15</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>720</x>
+                        <y>1080</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="95">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>-350</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>20</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>720</x>
+                        <y>880</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-2.356194735</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="96">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>-350</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>20</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-80</x>
+                        <y>880</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="97">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>-350</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>20</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-80</x>
+                        <y>2520</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySpawner" uid="98">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <DistanceToStartSpawning>-350</DistanceToStartSpawning>
+                        <SpawningInterval>0.5</SpawningInterval>
+                        <AmountToSpawn>20</AmountToSpawn>
+                        <AmountSpawned>0</AmountSpawned>
+                        <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
+                        <IsActive>false</IsActive>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>600</x>
+                        <y>2520</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-2.356194735</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

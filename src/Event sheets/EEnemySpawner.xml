@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EEnemySpawner</name>
+    <events>
+        <event-block sid="396023365520986">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="539064992794116" type="EnemySpawner">
+                    <param id="0" name="Instance variable">DistanceToStartSpawning</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y</param>
+                </condition>
+                <condition disabled="1" id="-7" name="Compare instance variable" sid="824003841894319" type="EnemySpawner">
+                    <param id="0" name="Instance variable">AmountToSpawn</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">EnemySpawner.AmountSpawned</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="889514697086890" type="System">
+                    <param id="0" name="Interval (seconds)">EnemySpawner.SpawningInterval</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="277389049609836" type="EnemySpawner">
+                    <param id="0" name="Instance variable">IsActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="435388248777358" type="Function">
+                    <param id="0" name="Name">&quot;Spawn&quot; &amp; EnemySpawner.EnemyName</param>
+                    <param id="1" name="Parameter {n}">EnemySpawner.IID</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="511230838880716" type="InstructionsText">
+                    <param id="0" name="Text">ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y</param>
+                </action>
+                <action id="-11" name="Add to" sid="453286335107431" type="EnemySpawner">
+                    <param id="0" name="Instance variable">AmountSpawned</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="923102658991149" type="InstructionsText">
+                    <param id="0" name="Text">str(EnemySpawner.AmountSpawned) &amp; &quot; | &quot; &amp; str(EnemySpawner.DistanceToStartSpawning) &amp; &quot; | &quot; &amp; str(ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="553730103587379">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="876927742683914" type="EnemySpawner">
+                            <param id="0" name="Instance variable">AmountSpawned</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">EnemySpawner.AmountToSpawn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="172502838068482" type="EnemySpawner" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="776086146084796" title="EnemySpawner functions">
+            <sub-events>
+                <event-group description="" sid="535306943668640" title="Enemy_Ball1">
+                    <sub-events>
+                        <event-block sid="642735714474290">
+                            <conditions>
+                                <condition id="0" name="On function" sid="553061128237448" type="Function">
+                                    <param id="0" name="Name">&quot;SpawnEnemy_Ball1&quot;</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="212723672762029" type="System">
+                                    <param id="0" name="Object">EnemySpawner</param>
+                                    <param id="1" name="Expression">EnemySpawner.IID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="924844582896584" type="EnemySpawner">
+                                    <param id="0" name="Object">Enemy_Ball1</param>
+                                    <param id="1" name="Layer">LAYER_ENEMIES</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="556699785161577" type="Function">
+                                    <param id="0" name="Name">&quot;OnAfterSpawnEnemy&quot;</param>
+                                    <param id="1" name="Parameter {n}">EnemySpawner.IID{###}Enemy_Ball1.IID</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="776179192604185" type="Enemy_Ball1">
+                                    <param id="0" name="Angle">EnemySpawner.Angle</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="937198609209496">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="764490876636308" type="EnemySpawner">
+                                            <param id="0" name="Instance variable">SpawnedShouldMoveWithScroll</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="986058922855030" type="Enemy_Ball1">
+                                            <param id="0" name="Instance variable">MoveWithScroll</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="844810918656773" title="Common spawner functions">
+                    <sub-events>
+                        <comment>Common actions executed just after an enemy is spawned.&#x0D;&#x0A;Param 0: EnemySpawner IID&#x0D;&#x0A;Param 1: Spawned enemy IID</comment>
+                        <event-block disabled="1" sid="522960959224864">
+                            <conditions>
+                                <condition id="0" name="On function" sid="211836372919155" type="Function">
+                                    <param id="0" name="Name">&quot;OnAfterSpawnEnemy&quot;</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="965684157636545" type="System">
+                                    <param id="0" name="Object">EnemySpawner</param>
+                                    <param id="1" name="Expression">EnemySpawner.IID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="355517637693083" type="System">
+                                    <param id="0" name="Object">FEnemy</param>
+                                    <param id="1" name="Expression">FEnemy.IID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Function.Param(1)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="874635704535735">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="534944742107987" type="EnemySpawner">
+                                            <param id="0" name="Instance variable">SpawnedShouldMoveWithScroll</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="121232732885291" type="FEnemy">
+                                            <param id="0" name="Instance variable">MoveWithScroll</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="651984466550811" type="InstructionsText">
+                                            <param id="0" name="Text">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="449199994606511">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="843242186292987" type="System" />
+                                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="444548882872448" type="EnemySpawner">
+                                            <param id="0" name="Instance variable">SpawnedShouldMoveWithScroll</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="749885967478320" type="FEnemy">
+                                            <param id="0" name="Instance variable">MoveWithScroll</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="946583241310163" title="EnemySpawner_Tests">
+            <sub-events>
+                <event-block disabled="1" sid="915258641679118">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="257553641102800" type="System">
+                            <param id="0" name="Interval (seconds)">EnemySpawner.SpawningInterval</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="284591175728095" type="InstructionsText">
+                            <param id="0" name="Text">str(EnemySpawner.DistanceToStartSpawning) &amp; &quot; | &quot; &amp; str(ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="824653826171626">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="364470151305291" type="EnemySpawner">
+                                    <param id="0" name="Instance variable">DistanceToStartSpawning</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y</param>
+                                </condition>
+                                <condition disabled="1" id="-7" name="Compare instance variable" sid="285534272872466" type="EnemySpawner">
+                                    <param id="0" name="Instance variable">AmountToSpawn</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">EnemySpawner.AmountSpawned</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="421736652989458" type="Function">
+                                    <param id="0" name="Name">EnemySpawner.EnemyName</param>
+                                    <param id="1" name="Parameter {n}">EnemySpawner.IID</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set text" sid="196055659108606" type="InstructionsText">
+                                    <param id="0" name="Text">ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set text" sid="684194161116851" type="InstructionsText">
+                                    <param id="0" name="Text">str(EnemySpawner.DistanceToStartSpawning) &amp; &quot; | &quot; &amp; str(ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="769864322229882">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="795738354970463" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Set text" sid="700179619609638" type="InstructionsText">
+                            <param id="0" name="Text">ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="887225841952861" type="InstructionsText">
+                            <param id="0" name="Text">EnemySpawner.DistanceToStartSpawning</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="954351293336214" type="InstructionsText">
+                            <param id="0" name="Text">str(EnemySpawner.DistanceToStartSpawning) &amp; &quot; | &quot; &amp; str(ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="195517696232399">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="636535697645071" type="EnemySpawner">
+                            <param id="0" name="Instance variable">DistanceToStartSpawning</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y</param>
+                        </condition>
+                        <condition disabled="1" id="-7" name="Compare instance variable" sid="152857935067517" type="EnemySpawner">
+                            <param id="0" name="Instance variable">AmountToSpawn</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">EnemySpawner.AmountSpawned</param>
+                        </condition>
+                        <condition disabled="1" id="-6" name="Every X seconds" sid="604924109190088" type="System">
+                            <param id="0" name="Interval (seconds)">EnemySpawner.SpawningInterval</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="124385937711844" type="EnemySpawner">
+                            <param id="0" name="Object">Enemy_Ball1</param>
+                            <param id="1" name="Layer">LAYER_ENEMIES</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="973945611223263" type="Enemy_Ball1">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="638626659014243">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="715789319012043" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="286972520264581" type="InstructionsText">
+                            <param id="0" name="Text">ViewportTop(LAYER_ENEMIES) - EnemySpawner.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="733989310476982">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="135131224700360" type="EnemySpawner" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="410776174907036" type="InstructionsText">
+                            <param id="0" name="Text">&quot;foi&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

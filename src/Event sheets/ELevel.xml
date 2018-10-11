@@ -81,6 +81,7 @@
         </event-group>
         <event-group description="" sid="930200537334590" title="Scroller control">
             <sub-events>
+                <variable constant="0" name="scrollAmount" sid="993197898520238" static="0" type="number">0</variable>
                 <event-block sid="146421023934974">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="981194962409419" type="Scroller">
@@ -88,13 +89,46 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="146582756751045" type="System">
+                            <param id="0" name="Variable">scrollAmount</param>
+                            <param id="1" name="Value">ScrollSpeed * timescale</param>
+                        </action>
                         <action id="-17" name="Move forward" sid="263909841572069" type="Scroller">
-                            <param id="0" name="Distance">ScrollSpeed * timescale</param>
+                            <param id="0" name="Distance">scrollAmount</param>
                         </action>
                         <action id="-17" name="Move forward" sid="381586020716337" type="Player">
-                            <param id="0" name="Distance">ScrollSpeed * timescale</param>
+                            <param id="0" name="Distance">scrollAmount</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="299447438439336">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="979410395778623" type="FEnemy">
+                                    <param id="0" name="Instance variable">MoveWithScroll</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="312722861332557" type="FEnemy">
+                                    <param id="0" name="Y">FEnemy.Y - scrollAmount</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="651388309805580">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="126350765799690" type="EnemySpawner">
+                                    <param id="0" name="Instance variable">SpawnedShouldMoveWithScroll</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="886537241105293" type="EnemySpawner">
+                                    <param id="0" name="Instance variable">IsActive</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="122814991378983" type="EnemySpawner">
+                                    <param id="0" name="Y">EnemySpawner.Y - scrollAmount</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="252544290894751">
                     <conditions>
@@ -157,6 +191,7 @@
                 <include>EUIInclude</include>
                 <include>EPlayer</include>
                 <include>EFEnemy</include>
+                <include>EEnemySpawner</include>
                 <include>ETurret_Example1</include>
             </sub-events>
         </event-group>

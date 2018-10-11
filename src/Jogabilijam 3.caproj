@@ -23,6 +23,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -176,6 +177,47 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Enemy_Ball1" sid="234207089391823">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Rotate" sid="501472644011860">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="825251103209798">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330668024862002" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.35" y="0.35" />
+                                <point x="0.5" y="3.72529e-009" />
+                                <point x="0.65" y="0.35" />
+                                <point x="1" y="0.5" />
+                                <point x="0.65" y="0.65" />
+                                <point x="0.5" y="1" />
+                                <point x="0.35" y="0.65" />
+                                <point x="3.72529e-009" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="376020626720538" speed="60">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.35" y="0.35" />
+                                <point x="0.5" y="3.72529e-009" />
+                                <point x="0.65" y="0.35" />
+                                <point x="1" y="0.5" />
+                                <point x="0.65" y="0.65" />
+                                <point x="0.5" y="1" />
+                                <point x="0.35" y="0.65" />
+                                <point x="3.72529e-009" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Backgrounds">
             <object-type name="BlueBG" sid="902409118974808">
@@ -318,6 +360,23 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="EnemySpawner" sid="994830695424336">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="EnemyName" sid="628871071875714" type="string" />
+                    <instance-variable name="DistanceToStartSpawning" sid="640944651000039" type="number" />
+                    <instance-variable name="SpawningInterval" sid="325705468817834" type="number" />
+                    <instance-variable name="AmountToSpawn" sid="234022646242090" type="number" />
+                    <instance-variable name="AmountSpawned" sid="658739410683747" type="number" />
+                    <instance-variable name="SpawnedShouldMoveWithScroll" sid="491981092496232" type="boolean" />
+                    <instance-variable name="IsActive" sid="368833172207107" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="550319733150252" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="UI">
             <object-type name="InstructionsText" sid="359134539778021">
@@ -370,6 +429,7 @@
     <families>
         <family name="FEnemy" plugin-id="Sprite" sid="717946803281332">
             <members>
+                <member>Enemy_Ball1</member>
                 <member>Turret_Example1</member>
             </members>
             <instance-variables>
@@ -377,6 +437,10 @@
                 <instance-variable name="IsActive" sid="123006008644673" type="boolean" />
                 <instance-variable name="BulletDamage" sid="765043465122138" type="number" />
                 <instance-variable name="HitDamage" sid="449053931770346" type="number" />
+                <instance-variable comment="If the enemy will be destroyed when hit the player" name="DestroyOnHit" sid="600276252948410" type="boolean" />
+                <instance-variable name="OnDestroyShakeMagnitude" sid="592523036217029" type="number" />
+                <instance-variable name="OnDestroyShakeTime" sid="259411086895274" type="number" />
+                <instance-variable name="MoveWithScroll" sid="916311332186716" type="boolean" />
             </instance-variables>
             <effects>
                 <effect-type name="SetColorToWhite">
@@ -432,6 +496,7 @@
         <event-folder name="Enemies">
             <event-sheet>EFEnemy.xml</event-sheet>
             <event-sheet>ETurret_Example1.xml</event-sheet>
+            <event-sheet>EEnemySpawner.xml</event-sheet>
         </event-folder>
         <event-sheet>ELevel.xml</event-sheet>
         <event-sheet>EUI.xml</event-sheet>
