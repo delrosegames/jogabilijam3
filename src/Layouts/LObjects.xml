@@ -377,12 +377,6 @@
                         <MoveWithScroll>false</MoveWithScroll>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>500</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
                                 <speed>120</speed>

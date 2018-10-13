@@ -23,7 +23,6 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -180,15 +179,48 @@
             <object-type name="Enemy_Ball1" sid="234207089391823">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="Rotate" sid="501472644011860">
-                        <behavior id="Rotate" />
-                    </behavior-type>
                     <behavior-type name="Bullet" sid="825251103209798">
                         <behavior id="Bullet" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330668024862002" speed="5">
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330668024862002" speed="20">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.35" y="0.35" />
+                                <point x="0.5" y="3.72529e-009" />
+                                <point x="0.65" y="0.35" />
+                                <point x="1" y="0.5" />
+                                <point x="0.65" y="0.65" />
+                                <point x="0.5" y="1" />
+                                <point x="0.35" y="0.65" />
+                                <point x="3.72529e-009" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.35" y="0.35" />
+                                <point x="0.5" y="3.72529e-009" />
+                                <point x="0.65" y="0.35" />
+                                <point x="1" y="0.5" />
+                                <point x="0.65" y="0.65" />
+                                <point x="0.5" y="1" />
+                                <point x="0.35" y="0.65" />
+                                <point x="3.72529e-009" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.35" y="0.35" />
+                                <point x="0.5" y="3.72529e-009" />
+                                <point x="0.65" y="0.35" />
+                                <point x="1" y="0.5" />
+                                <point x="0.65" y="0.65" />
+                                <point x="0.5" y="1" />
+                                <point x="0.35" y="0.65" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.35" y="0.35" />
