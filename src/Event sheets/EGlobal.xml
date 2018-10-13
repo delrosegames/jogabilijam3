@@ -4,8 +4,6 @@
     <name>EGlobal</name>
     <events>
         <comment>Shake effect constants</comment>
-        <variable constant="1" name="SCREEN_SHAKE_ENEMY_DESTROYED_MAGNITUDE" sid="615107163728843" static="0" type="number">1</variable>
-        <variable constant="1" name="SCREEN_SHAKE_ENEMY_DESTROYED_TIME" sid="329666618958334" static="0" type="number">0.12</variable>
         <variable constant="1" name="SCREEN_SHAKE_PLAYER_DAMAGED_BASE_MAGNITUDE" sid="356176590650919" static="0" type="number">1</variable>
         <variable constant="1" name="SCREEN_SHAKE_PLAYER_DAMAGED_BASE_TIME" sid="569064210266805" static="0" type="number">0.2</variable>
         <variable constant="1" name="SCREEN_SHAKE_PLAYER_DESTROYED_MAGNITUDE" sid="538600910745368" static="0" type="number">10</variable>

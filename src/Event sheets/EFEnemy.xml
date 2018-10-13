@@ -55,10 +55,6 @@
                     <param id="0" name="Animation">&quot;Destroyed&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="529539105402057" type="Function">
-                    <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
-                    <param id="1" name="Parameter {n}">SCREEN_SHAKE_ENEMY_DESTROYED_MAGNITUDE{###}SCREEN_SHAKE_ENEMY_DESTROYED_TIME</param>
-                </action>
                 <action id="0" name="Call function" sid="654091652549373" type="Function">
                     <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
                     <param id="1" name="Parameter {n}">FEnemy.OnDestroyShakeMagnitude{###}FEnemy.OnDestroyShakeTime</param>
