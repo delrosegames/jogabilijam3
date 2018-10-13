@@ -286,6 +286,8 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\nave 1.png">
                             <image-point name="MainGun" x="1" y="0.5" />
+                            <image-point name="MainLeftGun" x="0.764706" y="0.28125" />
+                            <image-point name="MainRightGun" x="0.764706" y="0.71875" />
                             <collision-poly>
                                 <point x="0.0882353" y="0.15625" />
                                 <point x="0.5" y="0.28125" />

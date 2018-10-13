@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EPlayer</name>
     <events>
+        <variable constant="0" name="PlayerMainGunSide" sid="437141592594289" static="0" type="number">0</variable>
         <event-block sid="716238870580528">
             <conditions>
                 <condition id="-18" name="On created" sid="903699328589762" type="Player" />
@@ -135,21 +136,86 @@
                 <condition id="2" name="Key is down" sid="830689112003480" type="Keyboard">
                     <param id="0" name="Key">88</param>
                 </condition>
-                <condition id="-6" name="Every X seconds" sid="682425382727324" type="System">
-                    <param id="0" name="Interval (seconds)">Player.MainGunFireRate</param>
-                </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="218894118788098" type="Player">
-                    <param id="0" name="Object">PlayerBullet</param>
-                    <param id="1" name="Layer">LAYER_BULLETS</param>
-                    <param id="2" name="Image point">&quot;MainGun&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="334990252938076" type="PlayerBullet">
-                    <param id="0" name="Instance variable">Damage</param>
-                    <param id="1" name="Value">Player.MainGunDamage</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="908738403412314">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="682425382727324" type="System">
+                            <param id="0" name="Interval (seconds)">Player.MainGunFireRate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="218894118788098" type="Player">
+                            <param id="0" name="Object">PlayerBullet</param>
+                            <param id="1" name="Layer">LAYER_BULLETS</param>
+                            <param id="2" name="Image point">&quot;MainGun&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="334990252938076" type="PlayerBullet">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">Player.MainGunDamage</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="482824612331672">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="307083341340561" type="System">
+                            <param id="0" name="Interval (seconds)">Player.MainGunFireRate * 1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-16" name="Wait" sid="439794662661546" type="System">
+                            <param id="0" name="Seconds">Player.MainGunFireRate * 3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="318945677552616">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="961918843430087" type="System">
+                                    <param id="0" name="Variable">PlayerMainGunSide</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="187803222117590" type="Player">
+                                    <param id="0" name="Object">PlayerBullet</param>
+                                    <param id="1" name="Layer">LAYER_BULLETS</param>
+                                    <param id="2" name="Image point">&quot;MainLeftGun&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="439097982762464" type="PlayerBullet">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">Player.MainGunDamage</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="948730082047019" type="System">
+                                    <param id="0" name="Variable">PlayerMainGunSide</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="755334203823397">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="269174725967069" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="286846765808392" type="Player">
+                                    <param id="0" name="Object">PlayerBullet</param>
+                                    <param id="1" name="Layer">LAYER_BULLETS</param>
+                                    <param id="2" name="Image point">&quot;MainRightGun&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="477591492559821" type="PlayerBullet">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">Player.MainGunDamage</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="830481608395105" type="System">
+                                    <param id="0" name="Variable">PlayerMainGunSide</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="701743095250206">
             <conditions>
