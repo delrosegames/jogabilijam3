@@ -2496,10 +2496,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_Plane1</EnemyName>
                         <DistanceToStartSpawning>300</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
-                        <AmountToSpawn>5</AmountToSpawn>
+                        <AmountToSpawn>3</AmountToSpawn>
                         <AmountSpawned>0</AmountSpawned>
                         <SpawnedShouldMoveWithScroll>false</SpawnedShouldMoveWithScroll>
                         <IsActive>false</IsActive>
@@ -2558,7 +2558,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_Plane1</EnemyName>
                         <DistanceToStartSpawning>40</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>10</AmountToSpawn>
@@ -2651,10 +2651,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
-                        <DistanceToStartSpawning>-240</DistanceToStartSpawning>
-                        <SpawningInterval>0.5</SpawningInterval>
-                        <AmountToSpawn>15</AmountToSpawn>
+                        <EnemyName>Enemy_Plane1</EnemyName>
+                        <DistanceToStartSpawning>-40</DistanceToStartSpawning>
+                        <SpawningInterval>0.7</SpawningInterval>
+                        <AmountToSpawn>10</AmountToSpawn>
                         <AmountSpawned>0</AmountSpawned>
                         <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
                         <IsActive>false</IsActive>
@@ -2683,7 +2683,7 @@
                     </properties>
                     <instance-variables>
                         <EnemyName>Enemy_Ball1</EnemyName>
-                        <DistanceToStartSpawning>-80</DistanceToStartSpawning>
+                        <DistanceToStartSpawning>-220</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>15</AmountToSpawn>
                         <AmountSpawned>0</AmountSpawned>
@@ -2713,10 +2713,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_Plane1</EnemyName>
                         <DistanceToStartSpawning>-350</DistanceToStartSpawning>
-                        <SpawningInterval>0.5</SpawningInterval>
-                        <AmountToSpawn>20</AmountToSpawn>
+                        <SpawningInterval>0.7</SpawningInterval>
+                        <AmountToSpawn>18</AmountToSpawn>
                         <AmountSpawned>0</AmountSpawned>
                         <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
                         <IsActive>false</IsActive>

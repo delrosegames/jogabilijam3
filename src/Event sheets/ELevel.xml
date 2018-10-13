@@ -192,6 +192,7 @@
                 <include>EPlayer</include>
                 <include>EFEnemy</include>
                 <include>EEnemySpawner</include>
+                <include>EEnemy_Plane1</include>
                 <include>ETurret_Example1</include>
             </sub-events>
         </event-group>
