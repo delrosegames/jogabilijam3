@@ -5,6 +5,8 @@
     <events>
         <variable constant="0" name="PlayerMainGunSide" sid="437141592594289" static="0" type="number">0</variable>
         <variable constant="0" name="PlayerDamageMultiplier" sid="608539370192102" static="0" type="number">1</variable>
+        <variable constant="0" name="PLAYER_BASE_SPEED" sid="620735686174332" static="0" type="number">200</variable>
+        <variable constant="0" name="PlayerSpeedMultiplier" sid="583273067681619" static="0" type="number">2</variable>
         <event-block sid="716238870580528">
             <conditions>
                 <condition id="-18" name="On created" sid="903699328589762" type="Player" />
@@ -21,6 +23,10 @@
                     <param id="0" name="Mode">0</param>
                     <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
                 </action>
+                <action id="-27" name="Set effect enabled" sid="203411321760765" type="PlayerHitPointsBarFrame">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
+                </action>
                 <action id="4" name="Set animation" sid="302044082037810" type="PlayerHitPointsBar">
                     <param id="0" name="Animation">&quot;Green&quot;</param>
                     <param id="1" name="From">1</param>
@@ -28,6 +34,19 @@
                 <action id="-9" name="Set value" sid="408190630417444" type="System">
                     <param id="0" name="Variable">PlayerDamageMultiplier</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="0" name="Call function" sid="799384894246012" type="Function">
+                    <param id="0" name="Name">&quot;ChangePlayerSpeed&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="728605137592978" type="Player">
+                    <param id="0" name="Max Speed">PLAYER_BASE_SPEED * PlayerSpeedMultiplier</param>
+                </action>
+                <action id="6" name="Set speed" sid="640075082957813" type="PlayerJet">
+                    <param id="0" name="Speed">PlayerSpeedMultiplier * 5</param>
+                </action>
+                <action id="-5" name="Set width" sid="775608521385177" type="PlayerJet">
+                    <param id="0" name="Width">PlayerJet.ImageHeight * PlayerSpeedMultiplier / 2</param>
                 </action>
             </actions>
         </event-block>
@@ -87,8 +106,17 @@
                 <condition id="-8" name="Is boolean instance variable set" sid="680413860839775" type="Player">
                     <param id="0" name="Instance variable">IsActive</param>
                 </condition>
+                <condition id="-8" name="Compare two values" sid="724922966938589" type="System">
+                    <param id="0" name="First value">timescale</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Set text" sid="157034896458089" type="InstructionsText">
+                    <param id="0" name="Text">Player.8Direction.MaxSpeed</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block disabled="1" sid="993089554094451">
                     <conditions>
@@ -243,8 +271,14 @@
                 </event-block>
                 <event-block sid="704862623107050">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="478969682588183" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="478969682588183" type="Keyboard">
                             <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="482135090455502" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="945589845773467" type="Player">
+                            <param id="0" name="Animation">&quot;TurningLeft&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -256,8 +290,14 @@
                 </event-block>
                 <event-block sid="204547320781129">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="336423174876095" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="538475478572632" type="Keyboard">
                             <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="262875933845401" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="801590756725926" type="Player">
+                            <param id="0" name="Animation">&quot;TurningRight&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -285,220 +325,333 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="703467346675367">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="240779069527031" type="Player">
-                    <param id="0" name="Instance variable">IsActive</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="701743095250206">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="546108744796631" type="FEnemyBullet">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action disabled="1" id="-12" name="Subtract from" sid="357560243910842" type="Player">
-                    <param id="0" name="Instance variable">HitPoints</param>
-                    <param id="1" name="Value">FEnemyBullet.Damage</param>
-                </action>
-                <action id="-9" name="Destroy" sid="488437630785833" type="FEnemyBullet" />
-                <action id="0" name="Call function" sid="938545053307766" type="Function">
-                    <param id="0" name="Name">&quot;PlayerTakeDamage&quot;</param>
-                    <param id="1" name="Parameter {n}">FEnemyBullet.Damage</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="371262129260186">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="547386810670796" type="FEnemy">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action disabled="1" id="-12" name="Subtract from" sid="653491331586828" type="Player">
-                    <param id="0" name="Instance variable">HitPoints</param>
-                    <param id="1" name="Value">FEnemy.HitDamage</param>
-                </action>
-                <action id="0" name="Call function" sid="900196398322264" type="Function">
-                    <param id="0" name="Name">&quot;PlayerTakeDamage&quot;</param>
-                    <param id="1" name="Parameter {n}">FEnemy.HitDamage</param>
-                </action>
-            </actions>
+        <event-group description="" sid="688883001254909" title="Player speed control">
             <sub-events>
-                <event-block sid="146349603912707">
+                <event-block sid="208182587513897">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="322553987525905" type="FEnemy">
-                            <param id="0" name="Instance variable">DestroyOnHit</param>
+                        <condition id="0" name="On key pressed" sid="126791700301033" type="Keyboard">
+                            <param id="0" name="Key">65</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="379650789787918" type="FEnemy">
+                        <action id="-9" name="Set value" sid="638265983365732" type="System">
+                            <param id="0" name="Variable">PlayerSpeedMultiplier</param>
+                            <param id="1" name="Value">max(1, PlayerSpeedMultiplier - 1)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="868677904308026" type="Function">
+                            <param id="0" name="Name">&quot;ChangePlayerSpeed&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="460327002842385">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="251561586615529" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="484413012438081" type="System">
+                            <param id="0" name="Variable">PlayerSpeedMultiplier</param>
+                            <param id="1" name="Value">min(3, PlayerSpeedMultiplier + 1)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="383058034572815" type="Function">
+                            <param id="0" name="Name">&quot;ChangePlayerSpeed&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="264534550082760">
+                    <conditions>
+                        <condition id="0" name="On function" sid="519926538586529" type="Function">
+                            <param id="0" name="Name">&quot;ChangePlayerSpeed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="538381446796523" type="Player">
+                            <param id="0" name="Max Speed">PLAYER_BASE_SPEED * PlayerSpeedMultiplier</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="856932824268269" type="PlayerJet">
+                            <param id="0" name="Speed">PlayerSpeedMultiplier * 5</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="286235414658982" type="PlayerJet">
+                            <param id="0" name="Width">PlayerJet.ImageHeight * PlayerSpeedMultiplier / 2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="612109254394270">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="813050623310011" type="System">
+                                    <param id="0" name="Variable">PlayerSpeedMultiplier</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="613549429438474" type="PlayerSpeedBar">
+                                    <param id="0" name="Width">20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="109828591204661">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="116195216870292" type="System">
+                                    <param id="0" name="Variable">PlayerSpeedMultiplier</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="454653868515295" type="PlayerSpeedBar">
+                                    <param id="0" name="Width">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="827810111965929">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="712371682187559" type="System">
+                                    <param id="0" name="Variable">PlayerSpeedMultiplier</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="282141926947953" type="PlayerSpeedBar">
+                                    <param id="0" name="Width">60</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="638522089456063" title="Player take damage">
+            <sub-events>
+                <event-block sid="701743095250206">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="546108744796631" type="FEnemyBullet">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-12" name="Subtract from" sid="357560243910842" type="Player">
                             <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Value">FEnemyBullet.Damage</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="488437630785833" type="FEnemyBullet" />
+                        <action id="0" name="Call function" sid="938545053307766" type="Function">
+                            <param id="0" name="Name">&quot;PlayerTakeDamage&quot;</param>
+                            <param id="1" name="Parameter {n}">FEnemyBullet.Damage</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="371262129260186">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="547386810670796" type="FEnemy">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-12" name="Subtract from" sid="653491331586828" type="Player">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Value">FEnemy.HitDamage</param>
+                        </action>
+                        <action id="0" name="Call function" sid="900196398322264" type="Function">
+                            <param id="0" name="Name">&quot;PlayerTakeDamage&quot;</param>
+                            <param id="1" name="Parameter {n}">FEnemy.HitDamage</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="146349603912707">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="322553987525905" type="FEnemy">
+                                    <param id="0" name="Instance variable">DestroyOnHit</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="379650789787918" type="FEnemy">
+                                    <param id="0" name="Instance variable">HitPoints</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="158287784035569">
+                    <conditions>
+                        <condition id="0" name="On function" sid="358261919643535" type="Function">
+                            <param id="0" name="Name">&quot;PlayerTakeDamage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="651354388967612" type="Player">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="390609935951146" type="Function">
+                            <param id="0" name="Name">&quot;UpdatePlayerHitPointsBar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="811830816684535" type="Function">
+                            <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
+                            <param id="1" name="Parameter {n}">SCREEN_SHAKE_PLAYER_DAMAGED_BASE_MAGNITUDE * Function.Param(0) / 2{###}SCREEN_SHAKE_PLAYER_DAMAGED_BASE_TIME * Function.Param(0) / 2</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="503271127183096" type="Player">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="994753971712463" type="PlayerHitPointsBarFrame">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="831773917057712" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="790597690280027" type="Player">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="859286412326438" type="PlayerHitPointsBarFrame">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126968542615327">
+                    <conditions>
+                        <condition id="0" name="On function" sid="907538813123009" type="Function">
+                            <param id="0" name="Name">&quot;UpdatePlayerHitPointsBar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="895044037292844" type="PlayerHitPointsBar">
+                            <param id="0" name="Width">max(Player.HitPoints / PLAYER_MAXIMUM_HIT_POINTS * 100, 0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="379273260923359">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="716578849853557" type="Player">
+                                    <param id="0" name="Instance variable">HitPoints</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="293856120349516" type="PlayerHitPointsBar">
+                                    <param id="0" name="Animation">&quot;Green&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="951013743034084" type="System">
+                                    <param id="0" name="Variable">PlayerDamageMultiplier</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="419712956097110" type="PlayerHitPointsBarFrame">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="133396345417045">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="911543122002822" type="Player">
+                                    <param id="0" name="Instance variable">HitPoints</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="297021288404092" type="PlayerHitPointsBar">
+                                    <param id="0" name="Animation">&quot;Yellow&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="250751973282122" type="System">
+                                    <param id="0" name="Variable">PlayerDamageMultiplier</param>
+                                    <param id="1" name="Value">1.5</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="122241550464551" type="PlayerHitPointsBarFrame">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="559034774795550">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="749880920432796" type="Player">
+                                    <param id="0" name="Instance variable">HitPoints</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="563121448890392" type="PlayerHitPointsBar">
+                                    <param id="0" name="Animation">&quot;Red&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="363394762560015" type="System">
+                                    <param id="0" name="Variable">PlayerDamageMultiplier</param>
+                                    <param id="1" name="Value">2.25</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="954191390919797" type="PlayerHitPointsBarFrame">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Player is destroyed</comment>
+                <event-block sid="910961836144231">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="252916749924100" type="Player">
+                            <param id="0" name="Instance variable">HitPoints</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="285010587417963" type="FEnemy">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="709022221816410" type="Function">
+                            <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
+                            <param id="1" name="Parameter {n}">SCREEN_SHAKE_PLAYER_DESTROYED_MAGNITUDE{###}SCREEN_SHAKE_PLAYER_DESTROYED_TIME</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="966529272600896" type="Player">
+                            <param id="0" name="Object">FExplosion</param>
+                            <param id="1" name="Layer">LAYER_PLAYER</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="418837874573040" type="System">
+                            <param id="0" name="Object to create">FExplosion</param>
+                            <param id="1" name="Layer">LAYER_PLAYER</param>
+                            <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
+                            <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="442018479137922" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="901192028584494" type="System">
+                            <param id="0" name="Object to create">FExplosion</param>
+                            <param id="1" name="Layer">LAYER_PLAYER</param>
+                            <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
+                            <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="104844287639752" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="764914413120635" type="System">
+                            <param id="0" name="Object to create">FExplosion</param>
+                            <param id="1" name="Layer">LAYER_PLAYER</param>
+                            <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
+                            <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="945658159977345" type="Player" />
+                        <action id="-13" name="Set boolean" sid="684168167329838" type="Scroller">
+                            <param id="0" name="Instance variable">IsActive</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="158287784035569">
-            <conditions>
-                <condition id="0" name="On function" sid="358261919643535" type="Function">
-                    <param id="0" name="Name">&quot;PlayerTakeDamage&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="651354388967612" type="Player">
-                    <param id="0" name="Instance variable">HitPoints</param>
-                    <param id="1" name="Value">Function.Param(0)</param>
-                </action>
-                <action id="0" name="Call function" sid="390609935951146" type="Function">
-                    <param id="0" name="Name">&quot;UpdatePlayerHitPointsBar&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="0" name="Call function" sid="811830816684535" type="Function">
-                    <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
-                    <param id="1" name="Parameter {n}">SCREEN_SHAKE_PLAYER_DAMAGED_BASE_MAGNITUDE * Function.Param(0) / 2{###}SCREEN_SHAKE_PLAYER_DAMAGED_BASE_TIME * Function.Param(0) / 2</param>
-                </action>
-                <action id="-27" name="Set effect enabled" sid="503271127183096" type="Player">
-                    <param id="0" name="Mode">1</param>
-                    <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
-                </action>
-                <action id="-16" name="Wait" sid="831773917057712" type="System">
-                    <param id="0" name="Seconds">0.05</param>
-                </action>
-                <action id="-27" name="Set effect enabled" sid="790597690280027" type="Player">
-                    <param id="0" name="Mode">0</param>
-                    <param id="1" name="Effect">&quot;SetColorToRed&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="126968542615327">
-            <conditions>
-                <condition id="0" name="On function" sid="907538813123009" type="Function">
-                    <param id="0" name="Name">&quot;UpdatePlayerHitPointsBar&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="895044037292844" type="PlayerHitPointsBar">
-                    <param id="0" name="Width">max(Player.HitPoints / PLAYER_MAXIMUM_HIT_POINTS * 100, 0)</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="379273260923359">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="716578849853557" type="Player">
-                            <param id="0" name="Instance variable">HitPoints</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="293856120349516" type="PlayerHitPointsBar">
-                            <param id="0" name="Animation">&quot;Green&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="951013743034084" type="System">
-                            <param id="0" name="Variable">PlayerDamageMultiplier</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="133396345417045">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="911543122002822" type="Player">
-                            <param id="0" name="Instance variable">HitPoints</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="297021288404092" type="PlayerHitPointsBar">
-                            <param id="0" name="Animation">&quot;Yellow&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="250751973282122" type="System">
-                            <param id="0" name="Variable">PlayerDamageMultiplier</param>
-                            <param id="1" name="Value">1.5</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="559034774795550">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="749880920432796" type="Player">
-                            <param id="0" name="Instance variable">HitPoints</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">PLAYER_MAXIMUM_HIT_POINTS / 4</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="563121448890392" type="PlayerHitPointsBar">
-                            <param id="0" name="Animation">&quot;Red&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="363394762560015" type="System">
-                            <param id="0" name="Variable">PlayerDamageMultiplier</param>
-                            <param id="1" name="Value">2.25</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <comment>Player is destroyed</comment>
-        <event-block sid="910961836144231">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="252916749924100" type="Player">
-                    <param id="0" name="Instance variable">HitPoints</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="285010587417963" type="FEnemy">
-                    <param id="0" name="Instance variable">IsActive</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Call function" sid="709022221816410" type="Function">
-                    <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
-                    <param id="1" name="Parameter {n}">SCREEN_SHAKE_PLAYER_DESTROYED_MAGNITUDE{###}SCREEN_SHAKE_PLAYER_DESTROYED_TIME</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="966529272600896" type="Player">
-                    <param id="0" name="Object">FExplosion</param>
-                    <param id="1" name="Layer">LAYER_PLAYER</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-3" name="Create object" sid="418837874573040" type="System">
-                    <param id="0" name="Object to create">FExplosion</param>
-                    <param id="1" name="Layer">LAYER_PLAYER</param>
-                    <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
-                    <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
-                </action>
-                <action id="-16" name="Wait" sid="442018479137922" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-3" name="Create object" sid="901192028584494" type="System">
-                    <param id="0" name="Object to create">FExplosion</param>
-                    <param id="1" name="Layer">LAYER_PLAYER</param>
-                    <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
-                    <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
-                </action>
-                <action id="-16" name="Wait" sid="104844287639752" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-3" name="Create object" sid="764914413120635" type="System">
-                    <param id="0" name="Object to create">FExplosion</param>
-                    <param id="1" name="Layer">LAYER_PLAYER</param>
-                    <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
-                    <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
-                </action>
-                <action id="-9" name="Destroy" sid="945658159977345" type="Player" />
-                <action id="-13" name="Set boolean" sid="684168167329838" type="Scroller">
-                    <param id="0" name="Instance variable">IsActive</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
