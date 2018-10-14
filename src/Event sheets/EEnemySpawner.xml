@@ -64,11 +64,11 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="924844582896584" type="EnemySpawner">
-                                    <param id="0" name="Object">Enemy_Ball1</param>
+                                    <param id="0" name="Object">Enemy_RotatingDrone</param>
                                     <param id="1" name="Layer">LAYER_ENEMIES</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="776179192604185" type="Enemy_Ball1">
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="776179192604185" type="Enemy_RotatingDrone">
                                     <param id="0" name="Angle">EnemySpawner.Angle</param>
                                 </action>
                             </actions>
@@ -80,7 +80,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="986058922855030" type="Enemy_Ball1">
+                                        <action id="-13" name="Set boolean" sid="986058922855030" type="Enemy_RotatingDrone">
                                             <param id="0" name="Instance variable">MoveWithScroll</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
@@ -106,11 +106,11 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="491921137964157" type="EnemySpawner">
-                                    <param id="0" name="Object">Enemy_Plane1</param>
+                                    <param id="0" name="Object">Enemy_CommonShip</param>
                                     <param id="1" name="Layer">LAYER_ENEMIES</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="940697254120826" type="Enemy_Plane1">
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="940697254120826" type="Enemy_CommonShip">
                                     <param id="0" name="Angle">EnemySpawner.Angle</param>
                                 </action>
                             </actions>
@@ -122,7 +122,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="842725350728591" type="Enemy_Plane1">
+                                        <action id="-13" name="Set boolean" sid="842725350728591" type="Enemy_CommonShip">
                                             <param id="0" name="Instance variable">MoveWithScroll</param>
                                             <param id="1" name="Value">1</param>
                                         </action>

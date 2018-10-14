@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ETurret_Example1</name>
+    <name>EEnemy_Turret</name>
     <events>
         <variable comment="Time (in secods) between shots" constant="0" name="TURRET_EXAMPLE1_FIRE_RATIO" sid="764244871079239" static="0" type="number">1.5</variable>
         <event-block sid="990179809748486">
             <conditions>
-                <condition id="-18" name="On created" sid="263900092454328" type="Turret_Example1" />
+                <condition id="-18" name="On created" sid="263900092454328" type="Enemy_Turret" />
             </conditions>
             <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="590958821479760" type="Turret_Example1_HP">
-                    <param id="0" name="Pin to">Turret_Example1</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="590958821479760" type="Enemy_Turret_HP">
+                    <param id="0" name="Pin to">Enemy_Turret</param>
                     <param id="1" name="Mode">1</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="636565975253339">
             <conditions>
-                <condition id="-9" name="Is visible" sid="260444024474174" type="Turret_Example1_HP" />
+                <condition id="-9" name="Is visible" sid="260444024474174" type="Enemy_Turret_HP" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="533701796769276" type="Turret_Example1_HP">
-                    <param id="0" name="Text">Turret_Example1.HitPoints</param>
+                <action id="0" name="Set text" sid="533701796769276" type="Enemy_Turret_HP">
+                    <param id="0" name="Text">Enemy_Turret.HitPoints</param>
                 </action>
-                <action id="-24" name="Move to top" sid="829930788629550" type="Turret_Example1_HP" />
+                <action id="-24" name="Move to top" sid="829930788629550" type="Enemy_Turret_HP" />
             </actions>
         </event-block>
         <event-block sid="467684816336950">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="706304885847582" type="Turret_Example1">
+                <condition id="-8" name="Is boolean instance variable set" sid="706304885847582" type="Enemy_Turret">
                     <param id="0" name="Instance variable">IsActive</param>
                 </condition>
                 <condition id="-8" name="Is boolean instance variable set" sid="110649409120841" type="Player">
@@ -39,17 +39,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="469692243384496" type="Turret_Example1">
-                    <param id="0" name="Object">EnemyBullet1</param>
+                <action id="0" name="Spawn another object" sid="469692243384496" type="Enemy_Turret">
+                    <param id="0" name="Object">EnemyBullet2</param>
                     <param id="1" name="Layer">LAYER_BULLETS</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">&quot;Gun&quot;</param>
                 </action>
-                <action id="-10" name="Set value" sid="155096372920332" type="EnemyBullet1">
+                <action id="-10" name="Set value" sid="155096372920332" type="EnemyBullet2">
                     <param id="0" name="Instance variable">Damage</param>
-                    <param id="1" name="Value">Turret_Example1.BulletDamage</param>
+                    <param id="1" name="Value">Enemy_Turret.BulletDamage</param>
                 </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="549989469197589" type="EnemyBullet1">
-                    <param id="0" name="Angle">angle(EnemyBullet1.X, EnemyBullet1.Y, Player.X, Player.Y)</param>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="549989469197589" type="EnemyBullet2">
+                    <param id="0" name="Angle">angle(EnemyBullet2.X, EnemyBullet2.Y, Player.X, Player.Y)</param>
                 </action>
             </actions>
         </event-block>

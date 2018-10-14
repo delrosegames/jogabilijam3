@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>EEnemy_Plane1</name>
+    <name>EEnemy_CommonShip</name>
     <events>
         <variable comment="Time (in secods) between shots" constant="0" name="ENEMY_PLANE1_FIRE_RATIO" sid="842463796707227" static="0" type="number">1.25</variable>
         <event-block sid="539771182696057">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="311474235853715" type="Enemy_Plane1">
+                <condition id="-8" name="Is boolean instance variable set" sid="311474235853715" type="Enemy_CommonShip">
                     <param id="0" name="Instance variable">IsActive</param>
                 </condition>
                 <condition id="-8" name="Is boolean instance variable set" sid="352610003073940" type="Player">
@@ -17,17 +17,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="115981786403159" type="Enemy_Plane1">
-                    <param id="0" name="Object">EnemyBullet2</param>
+                <action id="0" name="Spawn another object" sid="115981786403159" type="Enemy_CommonShip">
+                    <param id="0" name="Object">EnemyBullet1</param>
                     <param id="1" name="Layer">LAYER_BULLETS</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">&quot;Gun&quot;</param>
                 </action>
-                <action id="-10" name="Set value" sid="887373433682786" type="EnemyBullet2">
+                <action id="-10" name="Set value" sid="887373433682786" type="EnemyBullet1">
                     <param id="0" name="Instance variable">Damage</param>
-                    <param id="1" name="Value">Enemy_Plane1.BulletDamage</param>
+                    <param id="1" name="Value">Enemy_CommonShip.BulletDamage</param>
                 </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="694935520983844" type="EnemyBullet2">
-                    <param id="0" name="Angle">angle(Enemy_Plane1.X, Enemy_Plane1.Y, Player.X, Player.Y)</param>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="694935520983844" type="EnemyBullet1">
+                    <param id="0" name="Angle">angle(Enemy_CommonShip.X, Enemy_CommonShip.Y, Player.X, Player.Y)</param>
                 </action>
             </actions>
         </event-block>

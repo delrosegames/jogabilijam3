@@ -79,7 +79,7 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>500</speed>
+                                <speed>200</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -109,7 +109,7 @@
                         <y>20</y>
                         <z>0</z>
                         <width>34</width>
-                        <height>32</height>
+                        <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -222,10 +222,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1_HP" uid="43">
+                <instance type="Enemy_Turret_HP" uid="43">
                     <properties>
                         <text>000</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-13,400,0</font>
                         <color>0,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -252,7 +252,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="0">
+                <instance type="Enemy_Turret" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -275,6 +275,19 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
@@ -291,8 +304,8 @@
                         <x>180</x>
                         <y>180</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -300,7 +313,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemyBullet1" uid="41">
+                <instance type="EnemyBullet2" uid="41">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -359,7 +372,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_Ball1" uid="55">
+                <instance type="Enemy_RotatingDrone" uid="55">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -387,6 +400,12 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
@@ -403,8 +422,8 @@
                         <x>280</x>
                         <y>180</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>22</width>
+                        <height>22</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -443,7 +462,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_Plane1" uid="99">
+                <instance type="Enemy_CommonShip" uid="99">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -487,8 +506,8 @@
                         <x>340</x>
                         <y>180</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
+                        <width>32</width>
+                        <height>28</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -496,7 +515,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemyBullet2" uid="100">
+                <instance type="EnemyBullet1" uid="100">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

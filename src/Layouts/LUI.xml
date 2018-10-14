@@ -49,7 +49,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Bullets" sid="399124895791755">
+        <layer name="Enemies" sid="880496424181417">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -67,7 +67,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Enemies" sid="880496424181417">
+        <layer name="Bullets" sid="399124895791755">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

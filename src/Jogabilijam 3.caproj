@@ -23,6 +23,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -47,7 +48,7 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Landscape</prop>
@@ -60,19 +61,64 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Enemies">
-            <object-type name="Turret_Example1" sid="363282399779181">
+            <object-type name="Enemy_Turret" sid="363282399779181">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Solid" sid="116815076717532">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Sine" sid="225765985272770">
+                        <behavior id="Sin" />
+                    </behavior-type>
                 </behaviors>
                 <container>
-                    <type>Turret_Example1</type>
-                    <type>Turret_Example1_HP</type>
+                    <type>Enemy_Turret</type>
+                    <type>Enemy_Turret_HP</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="941880232612510" speed="5">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224431149677150" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\Naves - Felipe Fazendo\Inimigo - Torre.png">
+                            <image-point name="Gun" x="0.5" y="0.116667" />
+                            <collision-poly>
+                                <point x="0.0714286" y="0.116667" />
+                                <point x="0.5" y="0.116667" />
+                                <point x="0.928571" y="0.116667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.928571" y="0.7" />
+                                <point x="0.0714286" y="0.695834" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="584287002018527" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Gun" x="0.5" y="0.27" />
+                            <collision-poly>
+                                <point x="0.36" y="0.27" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.64" y="0.27" />
+                                <point x="0.78" y="0.5" />
+                                <point x="0.6" y="0.71" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.4" y="0.71" />
+                                <point x="0.22" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Gun" x="0.5" y="0.27" />
+                            <collision-poly>
+                                <point x="0.36" y="0.27" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.64" y="0.27" />
+                                <point x="0.78" y="0.5" />
+                                <point x="0.6" y="0.71" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.4" y="0.71" />
+                                <point x="0.22" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="OLD_Default" pingpong="0" repeatcount="1" repeatto="0" sid="941880232612510" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.075" y="0.075" />
@@ -82,7 +128,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="5" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="151902890880303" speed="30">
+                    <animation framecount="5" loop="0" name="OLD_Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="151902890880303" speed="30">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.075" y="0.075" />
@@ -126,14 +172,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Turret_Example1_HP" sid="324638888759100">
+            <object-type name="Enemy_Turret_HP" sid="324638888759100">
                 <plugin id="Text" />
                 <container>
-                    <type>Turret_Example1</type>
-                    <type>Turret_Example1_HP</type>
+                    <type>Enemy_Turret</type>
+                    <type>Enemy_Turret_HP</type>
                 </container>
             </object-type>
-            <object-type name="EnemyBullet1" sid="344756075832199">
+            <object-type name="EnemyBullet2" sid="344756075832199">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="131755374484481" speed="10">
@@ -176,15 +222,46 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Enemy_Ball1" sid="234207089391823">
+            <object-type name="Enemy_RotatingDrone" sid="234207089391823">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Bullet" sid="825251103209798">
                         <behavior id="Bullet" />
                     </behavior-type>
+                    <behavior-type name="Rotate" sid="750979794892761">
+                        <behavior id="Rotate" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330668024862002" speed="20">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="406887685574983" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\Naves - Felipe Fazendo\Inimigo - Drone Giratorio.png">
+                            <collision-poly>
+                                <point x="0.0454545" y="0.0454545" />
+                                <point x="0.954545" y="0.0454545" />
+                                <point x="0.954545" y="0.954545" />
+                                <point x="0.0454545" y="0.954545" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="824232698691499" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.217949" y="0.217949" />
+                                <point x="0.782051" y="0.217949" />
+                                <point x="0.782051" y="0.782051" />
+                                <point x="0.217949" y="0.782051" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.255556" y="0.255556" />
+                                <point x="0.744444" y="0.255556" />
+                                <point x="0.744444" y="0.744444" />
+                                <point x="0.255556" y="0.744444" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="OLD_Default" pingpong="0" repeatcount="1" repeatto="0" sid="330668024862002" speed="20">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.35" y="0.35" />
@@ -234,7 +311,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="376020626720538" speed="60">
+                    <animation framecount="1" loop="0" name="OLD_Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="376020626720538" speed="60">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.35" y="0.35" />
@@ -250,7 +327,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Enemy_Plane1" sid="101426415865053">
+            <object-type name="Enemy_CommonShip" sid="101426415865053">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Bullet" sid="161034733508567">
@@ -258,12 +335,65 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338360954173545" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Gun" x="0.766667" y="0.5" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976842501449614" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\Naves - Felipe Fazendo\Inimigo - Nave.png">
+                            <image-point name="Gun" x="0.9375" y="0.5" />
+                            <collision-poly>
+                                <point x="0.0625" y="0.928571" />
+                                <point x="0.09375" y="0.5" />
+                                <point x="0.0625" y="0.0714286" />
+                                <point x="0.5" y="0.0357143" />
+                                <point x="0.84375" y="0.178571" />
+                                <point x="1" y="0.5" />
+                                <point x="0.84375" y="0.821429" />
+                                <point x="0.5" y="0.964286" />
+                            </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="311111622625064" speed="60">
+                    <animation framecount="2" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="881557832134276" speed="15">
+                        <frame duration="1" hotspotX="0.515152" hotspotY="0.5">
+                            <image-point name="Gun" x="0.787879" y="0.5" />
+                            <collision-poly>
+                                <point x="0.243636" y="0.71" />
+                                <point x="0.26303" y="0.5" />
+                                <point x="0.243636" y="0.29" />
+                                <point x="0.515152" y="0.2725" />
+                                <point x="0.728485" y="0.3425" />
+                                <point x="0.825454" y="0.5" />
+                                <point x="0.728485" y="0.6575" />
+                                <point x="0.515152" y="0.7275" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.542857" hotspotY="0.514286">
+                            <image-point name="Gun" x="0.8" y="0.514286" />
+                            <collision-poly>
+                                <point x="0.286857" y="0.706286" />
+                                <point x="0.305143" y="0.514286" />
+                                <point x="0.286857" y="0.322286" />
+                                <point x="0.542857" y="0.306286" />
+                                <point x="0.744" y="0.370286" />
+                                <point x="0.835429" y="0.514286" />
+                                <point x="0.744" y="0.658286" />
+                                <point x="0.542857" y="0.722286" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="OLD_Default" pingpong="0" repeatcount="1" repeatto="0" sid="338360954173545" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\Naves - Felipe Fazendo\Inimigo - Nave.png">
+                            <image-point name="Gun" x="0.766667" y="0.5" />
+                            <collision-poly>
+                                <point x="0.0714286" y="0.0625" />
+                                <point x="0.5" y="0.09375" />
+                                <point x="0.928571" y="0.0625" />
+                                <point x="0.964286" y="0.5" />
+                                <point x="0.821429" y="0.84375" />
+                                <point x="0.5" y="1" />
+                                <point x="0.178571" y="0.84375" />
+                                <point x="0.0357143" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="OLD_Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="311111622625064" speed="60">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.03125" y="0.03125" />
@@ -275,7 +405,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="EnemyBullet2" sid="667117737980147">
+            <object-type name="EnemyBullet1" sid="667117737980147">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="344729636406287" speed="10">
@@ -388,19 +518,19 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\nave 1.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\Naves - Felipe Fazendo\Nave 2.png">
                             <image-point name="MainGun" x="1" y="0.5" />
-                            <image-point name="MainLeftGun" x="0.764706" y="0.28125" />
-                            <image-point name="MainRightGun" x="0.764706" y="0.71875" />
+                            <image-point name="MainLeftGun" x="0.823529" y="0.266667" />
+                            <image-point name="MainRightGun" x="0.823529" y="0.733333" />
                             <image-point name="Jet" x="0.0588235" y="0.5" />
                             <collision-poly>
-                                <point x="0.0882353" y="0.15625" />
-                                <point x="0.5" y="0.28125" />
-                                <point x="0.764706" y="0.3125" />
-                                <point x="0.882353" y="0.5" />
-                                <point x="0.764706" y="0.6875" />
-                                <point x="0.5" y="0.71875" />
-                                <point x="0.0882353" y="0.84375" />
+                                <point x="0.0882353" y="0.1" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.794118" y="0.333333" />
+                                <point x="1" y="0.5" />
+                                <point x="0.794118" y="0.666667" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.0882353" y="0.9" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -579,9 +709,9 @@
     <families>
         <family name="FEnemy" plugin-id="Sprite" sid="717946803281332">
             <members>
-                <member>Enemy_Ball1</member>
-                <member>Enemy_Plane1</member>
-                <member>Turret_Example1</member>
+                <member>Enemy_CommonShip</member>
+                <member>Enemy_RotatingDrone</member>
+                <member>Enemy_Turret</member>
             </members>
             <instance-variables>
                 <instance-variable name="HitPoints" sid="250716940195321" type="number" />
@@ -609,7 +739,7 @@
         </family>
         <family name="FEnemyHitPoints" plugin-id="Text" sid="367948750754695">
             <members>
-                <member>Turret_Example1_HP</member>
+                <member>Enemy_Turret_HP</member>
             </members>
             <behaviors>
                 <behavior-type name="Pin" sid="468702742119538">
@@ -647,9 +777,9 @@
     <event-folder>
         <event-folder name="Enemies">
             <event-sheet>EFEnemy.xml</event-sheet>
-            <event-sheet>ETurret_Example1.xml</event-sheet>
+            <event-sheet>EEnemy_Turret.xml</event-sheet>
             <event-sheet>EEnemySpawner.xml</event-sheet>
-            <event-sheet>EEnemy_Plane1.xml</event-sheet>
+            <event-sheet>EEnemy_CommonShip.xml</event-sheet>
         </event-folder>
         <event-sheet>ELevel.xml</event-sheet>
         <event-sheet>EUI.xml</event-sheet>

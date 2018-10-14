@@ -555,24 +555,6 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Bullets" sid="630670570562071">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
         <layer name="Enemies" sid="417093290558942">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -589,7 +571,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Turret_Example1" uid="35">
+                <instance type="Enemy_Turret" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -610,6 +592,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -628,8 +623,8 @@
                         <x>320</x>
                         <y>2480</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -637,7 +632,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="39">
+                <instance type="Enemy_Turret" uid="39">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -660,6 +655,19 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
@@ -676,8 +684,8 @@
                         <x>160</x>
                         <y>2160</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -685,7 +693,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="40">
+                <instance type="Enemy_Turret" uid="40">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -706,6 +714,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -724,8 +745,8 @@
                         <x>320</x>
                         <y>2160</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -733,7 +754,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="47">
+                <instance type="Enemy_Turret" uid="47">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -756,6 +777,19 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
@@ -772,8 +806,8 @@
                         <x>480</x>
                         <y>2320</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -781,7 +815,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="48">
+                <instance type="Enemy_Turret" uid="48">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -802,6 +836,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -820,8 +867,8 @@
                         <x>160</x>
                         <y>2320</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -829,7 +876,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="49">
+                <instance type="Enemy_Turret" uid="49">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -852,6 +899,19 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
@@ -868,8 +928,8 @@
                         <x>480</x>
                         <y>2160</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -877,7 +937,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="50">
+                <instance type="Enemy_Turret" uid="50">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -898,6 +958,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -916,8 +989,8 @@
                         <x>320</x>
                         <y>1960</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -925,7 +998,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="51">
+                <instance type="Enemy_Turret" uid="51">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -946,6 +1019,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -964,8 +1050,8 @@
                         <x>40</x>
                         <y>1960</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -973,7 +1059,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="52">
+                <instance type="Enemy_Turret" uid="52">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -994,6 +1080,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1012,8 +1111,8 @@
                         <x>600</x>
                         <y>1960</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1021,7 +1120,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="56">
+                <instance type="Enemy_Turret" uid="56">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1042,6 +1141,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1060,8 +1172,8 @@
                         <x>400</x>
                         <y>1680</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1069,7 +1181,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="58">
+                <instance type="Enemy_Turret" uid="58">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1090,6 +1202,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1108,8 +1233,8 @@
                         <x>80</x>
                         <y>1680</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1117,7 +1242,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="59">
+                <instance type="Enemy_Turret" uid="59">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1138,6 +1263,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1156,8 +1294,8 @@
                         <x>560</x>
                         <y>1680</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1165,7 +1303,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="61">
+                <instance type="Enemy_Turret" uid="61">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1186,6 +1324,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1204,8 +1355,8 @@
                         <x>240</x>
                         <y>1680</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1213,7 +1364,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="62">
+                <instance type="Enemy_Turret" uid="62">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1234,6 +1385,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1252,8 +1416,8 @@
                         <x>366</x>
                         <y>1338</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1261,7 +1425,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="63">
+                <instance type="Enemy_Turret" uid="63">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1282,6 +1446,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1300,8 +1477,8 @@
                         <x>568</x>
                         <y>1340</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1309,7 +1486,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="64">
+                <instance type="Enemy_Turret" uid="64">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1330,6 +1507,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1348,8 +1538,8 @@
                         <x>87</x>
                         <y>1295</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1357,7 +1547,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="66">
+                <instance type="Enemy_Turret" uid="66">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1378,6 +1568,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1396,8 +1599,8 @@
                         <x>205</x>
                         <y>1326</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1405,7 +1608,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="67">
+                <instance type="Enemy_Turret" uid="67">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1426,6 +1629,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1444,8 +1660,8 @@
                         <x>290</x>
                         <y>1175</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1453,7 +1669,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="68">
+                <instance type="Enemy_Turret" uid="68">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1474,6 +1690,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1492,8 +1721,8 @@
                         <x>76</x>
                         <y>1140</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1501,7 +1730,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="69">
+                <instance type="Enemy_Turret" uid="69">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1522,6 +1751,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1540,8 +1782,8 @@
                         <x>451</x>
                         <y>1130</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1549,7 +1791,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="70">
+                <instance type="Enemy_Turret" uid="70">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1570,6 +1812,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1588,8 +1843,8 @@
                         <x>237</x>
                         <y>1025</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1597,7 +1852,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="71">
+                <instance type="Enemy_Turret" uid="71">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1618,6 +1873,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1636,8 +1904,8 @@
                         <x>88</x>
                         <y>980</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1645,7 +1913,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="72">
+                <instance type="Enemy_Turret" uid="72">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1666,6 +1934,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1684,8 +1965,8 @@
                         <x>437</x>
                         <y>957</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1693,7 +1974,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="73">
+                <instance type="Enemy_Turret" uid="73">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1714,6 +1995,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1732,8 +2026,8 @@
                         <x>553</x>
                         <y>1015</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1741,7 +2035,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="74">
+                <instance type="Enemy_Turret" uid="74">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1762,6 +2056,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1780,8 +2087,8 @@
                         <x>213</x>
                         <y>873</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1789,7 +2096,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="75">
+                <instance type="Enemy_Turret" uid="75">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1810,6 +2117,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1828,8 +2148,8 @@
                         <x>49</x>
                         <y>775</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1837,7 +2157,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="76">
+                <instance type="Enemy_Turret" uid="76">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1858,6 +2178,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1876,8 +2209,8 @@
                         <x>442</x>
                         <y>777</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1885,7 +2218,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="77">
+                <instance type="Enemy_Turret" uid="77">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1906,6 +2239,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1924,8 +2270,8 @@
                         <x>545</x>
                         <y>822</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1933,7 +2279,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="78">
+                <instance type="Enemy_Turret" uid="78">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1954,6 +2300,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -1972,8 +2331,8 @@
                         <x>211</x>
                         <y>678</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1981,7 +2340,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="79">
+                <instance type="Enemy_Turret" uid="79">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2002,6 +2361,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -2020,8 +2392,8 @@
                         <x>358</x>
                         <y>645</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2029,7 +2401,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="80">
+                <instance type="Enemy_Turret" uid="80">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2050,6 +2422,19 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -2068,8 +2453,8 @@
                         <x>83</x>
                         <y>534</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2077,7 +2462,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Turret_Example1" uid="81">
+                <instance type="Enemy_Turret" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2100,6 +2485,19 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>3</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColorToWhite">
@@ -2116,8 +2514,8 @@
                         <x>297</x>
                         <y>753</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>28</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2126,6 +2524,24 @@
                     </world>
                 </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Bullets" sid="630670570562071">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
         <layer name="Player" sid="400319528714460">
