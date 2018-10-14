@@ -454,14 +454,6 @@
                 <plugin id="TiledBg" />
                 <texture original-source="D:\Dev\Assets\Kenney\spaceshooter\Backgrounds\blue.png" />
             </object-type>
-            <object-type name="GenericObject" sid="505388795190313">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457973334610982" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="WaterBottomBG" sid="664362297793275">
                 <plugin id="TiledBg" />
                 <behaviors>
@@ -488,6 +480,86 @@
                     </behavior-type>
                 </behaviors>
                 <texture original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\cenarios\03.png" />
+            </object-type>
+            <object-type name="TurretPlatform1" sid="161045484579312">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="226889170961436" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\cenarios\_0014_Camada-3.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.941176" y="0.933333" />
+                                <point x="0.5" y="0.966667" />
+                                <point x="0.0588235" y="0.933333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TurretPlatform3" sid="644623394902172">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="328741397068847" speed="5">
+                        <frame duration="1" hotspotX="0.833333" hotspotY="0.428571" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\cenarios\_0016_Camada-1.png">
+                            <collision-poly>
+                                <point x="0.665" y="0.5" />
+                                <point x="0.625882" y="0.933333" />
+                                <point x="0.3325" y="0.966667" />
+                                <point x="0.039118" y="0.933333" />
+                                <point x="0" y="0.5" />
+                                <point x="0" y="0" />
+                                <point x="0.665" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ORIGINAL" pingpong="0" repeatcount="1" repeatto="0" sid="276005402601139" speed="5">
+                        <frame duration="1" hotspotX="0.657895" hotspotY="0.428571">
+                            <collision-poly>
+                                <point x="1" y="0.5" />
+                                <point x="0.941176" y="0.933333" />
+                                <point x="0.5" y="0.966667" />
+                                <point x="0.058824" y="0.933333" />
+                                <point x="0" y="0.5" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TurretPlatform2" sid="287910830518577">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="176273947334137" speed="5">
+                        <frame duration="1" hotspotX="0.833333" hotspotY="0.478261" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\cenarios\_0015_Camada-2.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.333333" y="0" />
+                                <point x="0.333333" y="0.5" />
+                                <point x="0.313725" y="0.933333" />
+                                <point x="0.166667" y="0.966667" />
+                                <point x="0.0196078" y="0.933333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ORIGINAL" pingpong="0" repeatcount="1" repeatto="0" sid="401850299350015" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="0.478261">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.941176" y="0.933333" />
+                                <point x="0.5" y="0.966667" />
+                                <point x="0.0588235" y="0.933333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Player">
