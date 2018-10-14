@@ -112,11 +112,7 @@
                     <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="157034896458089" type="InstructionsText">
-                    <param id="0" name="Text">Player.8Direction.MaxSpeed</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <event-block disabled="1" sid="993089554094451">
                     <conditions>
