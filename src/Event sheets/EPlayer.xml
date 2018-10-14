@@ -4,6 +4,7 @@
     <name>EPlayer</name>
     <events>
         <variable constant="0" name="PlayerMainGunSide" sid="437141592594289" static="0" type="number">0</variable>
+        <variable constant="0" name="PlayerDamageMultiplier" sid="608539370192102" static="0" type="number">1</variable>
         <event-block sid="716238870580528">
             <conditions>
                 <condition id="-18" name="On created" sid="903699328589762" type="Player" />
@@ -23,6 +24,10 @@
                 <action id="4" name="Set animation" sid="302044082037810" type="PlayerHitPointsBar">
                     <param id="0" name="Animation">&quot;Green&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="408190630417444" type="System">
+                    <param id="0" name="Variable">PlayerDamageMultiplier</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -162,9 +167,16 @@
                             <param id="1" name="Layer">LAYER_BULLETS</param>
                             <param id="2" name="Image point">&quot;MainGun&quot;</param>
                         </action>
+                        <action id="4" name="Set animation" sid="945895469869395" type="PlayerBullet">
+                            <param id="0" name="Animation">&quot;Size2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="937598700174832" type="PlayerBullet">
+                            <param id="0" name="Angle">random(269, 271)</param>
+                        </action>
                         <action id="-10" name="Set value" sid="334990252938076" type="PlayerBullet">
                             <param id="0" name="Instance variable">Damage</param>
-                            <param id="1" name="Value">Player.MainGunDamage</param>
+                            <param id="1" name="Value">Player.MainGunDamage * 1.25 * PlayerDamageMultiplier</param>
                         </action>
                     </actions>
                 </event-block>
@@ -196,7 +208,10 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="439097982762464" type="PlayerBullet">
                                     <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">Player.MainGunDamage</param>
+                                    <param id="1" name="Value">Player.MainGunDamage * 0.85 * PlayerDamageMultiplier</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="967180533139634" type="PlayerBullet">
+                                    <param id="0" name="Angle">random(263, 269)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="948730082047019" type="System">
                                     <param id="0" name="Variable">PlayerMainGunSide</param>
@@ -216,7 +231,10 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="477591492559821" type="PlayerBullet">
                                     <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">Player.MainGunDamage</param>
+                                    <param id="1" name="Value">Player.MainGunDamage * 0.85 * PlayerDamageMultiplier</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="934699860585139" type="PlayerBullet">
+                                    <param id="0" name="Angle">random(271, 277)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="830481608395105" type="System">
                                     <param id="0" name="Variable">PlayerMainGunSide</param>
@@ -335,6 +353,10 @@
                             <param id="0" name="Animation">&quot;Green&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="951013743034084" type="System">
+                            <param id="0" name="Variable">PlayerDamageMultiplier</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="133396345417045">
@@ -350,6 +372,10 @@
                             <param id="0" name="Animation">&quot;Yellow&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="250751973282122" type="System">
+                            <param id="0" name="Variable">PlayerDamageMultiplier</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="559034774795550">
@@ -364,6 +390,10 @@
                         <action id="4" name="Set animation" sid="563121448890392" type="PlayerHitPointsBar">
                             <param id="0" name="Animation">&quot;Red&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="363394762560015" type="System">
+                            <param id="0" name="Variable">PlayerDamageMultiplier</param>
+                            <param id="1" name="Value">2.25</param>
                         </action>
                     </actions>
                 </event-block>

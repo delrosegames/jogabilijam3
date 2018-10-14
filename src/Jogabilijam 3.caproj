@@ -512,6 +512,16 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="Size2" pingpong="0" repeatcount="1" repeatto="0" sid="434442941344519" speed="5">
+                        <frame duration="1" hotspotX="0.875" hotspotY="0.6">
+                            <collision-poly>
+                                <point x="0" y="0.8" />
+                                <point x="0" y="0" />
+                                <point x="0.75" y="0" />
+                                <point x="0.75" y="0.8" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Player" sid="195408945402053">
