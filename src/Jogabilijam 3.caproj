@@ -502,23 +502,23 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947376320184518" speed="5">
+                    <animation framecount="1" loop="0" name="Size1" pingpong="0" repeatcount="1" repeatto="0" sid="947376320184518" speed="5">
                         <frame duration="1" hotspotX="0.833333" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0" y="1" />
                                 <point x="0" y="0" />
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
+                                <point x="0.833333" y="0" />
+                                <point x="0.833333" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Size2" pingpong="0" repeatcount="1" repeatto="0" sid="434442941344519" speed="5">
-                        <frame duration="1" hotspotX="0.875" hotspotY="0.6">
+                        <frame duration="1" hotspotX="0.9" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0" y="0.8" />
+                                <point x="0" y="1" />
                                 <point x="0" y="0" />
-                                <point x="0.75" y="0" />
-                                <point x="0.75" y="0.8" />
+                                <point x="0.898438" y="0" />
+                                <point x="0.9" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -554,20 +554,37 @@
                     <type>PlayerJet</type>
                 </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244885420727369" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\nave 1.png">
+                            <image-point name="MainGun" x="1" y="0.5" />
+                            <image-point name="MainLeftGun" x="0.764706" y="0.28125" />
+                            <image-point name="MainRightGun" x="0.764706" y="0.71875" />
+                            <image-point name="Jet" x="0.0588235" y="0.5" />
+                            <collision-poly>
+                                <point x="0.0882353" y="0.1" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.794118" y="0.333333" />
+                                <point x="0.941176" y="0.5" />
+                                <point x="0.794118" y="0.666667" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.0882353" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ALT_Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\Naves - Felipe Fazendo\Nave 2.png">
                             <image-point name="MainGun" x="1" y="0.5" />
                             <image-point name="MainLeftGun" x="0.823529" y="0.266667" />
                             <image-point name="MainRightGun" x="0.823529" y="0.733333" />
                             <image-point name="Jet" x="0.0588235" y="0.5" />
                             <collision-poly>
-                                <point x="0.0882353" y="0.1" />
-                                <point x="0.5" y="0.2" />
-                                <point x="0.794118" y="0.333333" />
-                                <point x="1" y="0.5" />
-                                <point x="0.794118" y="0.666667" />
-                                <point x="0.5" y="0.8" />
-                                <point x="0.0882353" y="0.9" />
+                                <point x="0.9" y="0.0882353" />
+                                <point x="0.8" y="0.5" />
+                                <point x="0.666667" y="0.794118" />
+                                <point x="0.5" y="0.941176" />
+                                <point x="0.333333" y="0.794118" />
+                                <point x="0.2" y="0.5" />
+                                <point x="0.1" y="0.0882353" />
                             </collision-poly>
                         </frame>
                     </animation>

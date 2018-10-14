@@ -109,7 +109,7 @@
                         <y>20</y>
                         <z>0</z>
                         <width>34</width>
-                        <height>30</height>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -187,7 +187,7 @@
                 <instance type="PlayerBullet" uid="33">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Size1</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
