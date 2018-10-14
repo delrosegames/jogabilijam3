@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1539550093,
+	"version": 1539553809,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -17,10 +17,13 @@
 		"images/enemybullet1-sheet1.png",
 		"images/enemybullet1-sheet2.png",
 		"images/bluebg.png",
-		"images/genericobject-sheet0.png",
 		"images/waterbottombg.png",
 		"images/watermiddlebg.png",
 		"images/watertopbg.png",
+		"images/turretplatform1-sheet0.png",
+		"images/turretplatform3-sheet0.png",
+		"images/turretplatform3-sheet1.png",
+		"images/turretplatform2-sheet0.png",
 		"images/playerbullet-sheet0.png",
 		"images/player-sheet0.png",
 		"images/playerjet-sheet0.png",
