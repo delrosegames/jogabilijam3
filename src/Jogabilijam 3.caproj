@@ -382,12 +382,17 @@
                         <effect id="setcolor" />
                     </effect-type>
                 </effects>
+                <container>
+                    <type>Player</type>
+                    <type>PlayerJet</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668753924285668" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\nave 1.png">
                             <image-point name="MainGun" x="1" y="0.5" />
                             <image-point name="MainLeftGun" x="0.764706" y="0.28125" />
                             <image-point name="MainRightGun" x="0.764706" y="0.71875" />
+                            <image-point name="Jet" x="0.0588235" y="0.5" />
                             <collision-poly>
                                 <point x="0.0882353" y="0.15625" />
                                 <point x="0.5" y="0.28125" />
@@ -396,6 +401,49 @@
                                 <point x="0.764706" y="0.6875" />
                                 <point x="0.5" y="0.71875" />
                                 <point x="0.0882353" y="0.84375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerJet" sid="546406729915264">
+                <plugin id="Sprite" />
+                <container>
+                    <type>Player</type>
+                    <type>PlayerJet</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="665997913425612" speed="10">
+                        <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\1.png">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="0.848485" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.515152" y="0.555556" />
+                                <point x="0" y="0.5" />
+                                <point x="0.515152" y="0.166667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\2.png">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="0.647059" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.441176" y="0.166667" />
+                                <point x="0.441176" y="0.5" />
+                                <point x="0.235294" y="0.444444" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="1" hotspotY="0.526316" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\3.png">
+                            <collision-poly>
+                                <point x="0.966667" y="0.0526316" />
+                                <point x="0.666667" y="0.473684" />
+                                <point x="0.966667" y="0.947368" />
+                                <point x="0.5" y="1" />
+                                <point x="0.533333" y="0.157895" />
+                                <point x="0.166667" y="0.473684" />
+                                <point x="0.533333" y="0.842105" />
+                                <point x="0.5" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>

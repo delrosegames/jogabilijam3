@@ -26,6 +26,17 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="239103529837438">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="762835899577357" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="113635440425001" type="PlayerJet">
+                    <param id="0" name="X">Player.ImagePointX(&quot;Jet&quot;)</param>
+                    <param id="1" name="Y">Player.ImagePointY(&quot;Jet&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Wait until player moves automatically to the starting point, so enable its controls, disable its bullet behaviour and activate the scroller.</comment>
         <event-block sid="996441423414660">
             <conditions>
