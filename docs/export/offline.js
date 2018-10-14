@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1539488072,
+	"version": 1539550093,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -30,7 +30,9 @@
 		"images/enemyspawner-sheet0.png",
 		"images/playerhitpointsbar-sheet0.png",
 		"images/playerhitpointsbar-sheet1.png",
-		"images/playerhitpointsframe-sheet0.png",
+		"images/playerhitpointsbarframe-sheet0.png",
+		"images/playerspeedbarframe-sheet0.png",
+		"images/playerspeedbar.png",
 		"images/explosion1-sheet0.png",
 		"images/explosion1-sheet1.png",
 		"images/explosion1-sheet2.png",

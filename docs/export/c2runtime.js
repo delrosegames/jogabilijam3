@@ -23802,6 +23802,9 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.layoutname,
 	cr.system_object.prototype.acts.GoToLayout,
 	cr.plugins_.Sprite.prototype.acts.SetWidth,
+	cr.behaviors.EightDir.prototype.acts.SetMaxSpeed,
+	cr.plugins_.Sprite.prototype.acts.SetAnimSpeed,
+	cr.plugins_.Sprite.prototype.exps.ImageHeight,
 	cr.system_object.prototype.cnds.EveryTick,
 	cr.plugins_.Sprite.prototype.acts.SetPos,
 	cr.plugins_.Sprite.prototype.exps.ImagePointX,
@@ -23812,6 +23815,9 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.viewportbottom,
 	cr.plugins_.Keyboard.prototype.cnds.IsKeyDown,
 	cr.system_object.prototype.exps.random,
+	cr.plugins_.Sprite.prototype.cnds.IsAnimPlaying,
 	cr.system_object.prototype.exps.max,
+	cr.system_object.prototype.exps.min,
+	cr.plugins_.TiledBg.prototype.acts.SetWidth,
 	cr.plugins_.Sprite.prototype.exps.Width
 ];};
