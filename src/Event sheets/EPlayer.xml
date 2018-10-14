@@ -142,109 +142,156 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="315416363243231">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="830689112003480" type="Keyboard">
+                            <param id="0" name="Key">88</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="908738403412314">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="682425382727324" type="System">
+                                    <param id="0" name="Interval (seconds)">Player.MainGunFireRate</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="218894118788098" type="Player">
+                                    <param id="0" name="Object">PlayerBullet</param>
+                                    <param id="1" name="Layer">LAYER_BULLETS</param>
+                                    <param id="2" name="Image point">&quot;MainGun&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="945895469869395" type="PlayerBullet">
+                                    <param id="0" name="Animation">&quot;Size2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="937598700174832" type="PlayerBullet">
+                                    <param id="0" name="Angle">random(269, 271)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="334990252938076" type="PlayerBullet">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">Player.MainGunDamage * 1.25 * PlayerDamageMultiplier</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="482824612331672">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="307083341340561" type="System">
+                                    <param id="0" name="Interval (seconds)">Player.MainGunFireRate * 1.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-16" name="Wait" sid="439794662661546" type="System">
+                                    <param id="0" name="Seconds">Player.MainGunFireRate * 3</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="318945677552616">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="961918843430087" type="System">
+                                            <param id="0" name="Variable">PlayerMainGunSide</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="187803222117590" type="Player">
+                                            <param id="0" name="Object">PlayerBullet</param>
+                                            <param id="1" name="Layer">LAYER_BULLETS</param>
+                                            <param id="2" name="Image point">&quot;MainLeftGun&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="439097982762464" type="PlayerBullet">
+                                            <param id="0" name="Instance variable">Damage</param>
+                                            <param id="1" name="Value">Player.MainGunDamage * 0.85 * PlayerDamageMultiplier</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="967180533139634" type="PlayerBullet">
+                                            <param id="0" name="Angle">random(263, 269)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="948730082047019" type="System">
+                                            <param id="0" name="Variable">PlayerMainGunSide</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="755334203823397">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="269174725967069" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="286846765808392" type="Player">
+                                            <param id="0" name="Object">PlayerBullet</param>
+                                            <param id="1" name="Layer">LAYER_BULLETS</param>
+                                            <param id="2" name="Image point">&quot;MainRightGun&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="477591492559821" type="PlayerBullet">
+                                            <param id="0" name="Instance variable">Damage</param>
+                                            <param id="1" name="Value">Player.MainGunDamage * 0.85 * PlayerDamageMultiplier</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="934699860585139" type="PlayerBullet">
+                                            <param id="0" name="Angle">random(271, 277)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="830481608395105" type="System">
+                                            <param id="0" name="Variable">PlayerMainGunSide</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="704862623107050">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="478969682588183" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="480525557015001" type="Player">
+                            <param id="0" name="Animation">&quot;TurningLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="204547320781129">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="336423174876095" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="620637434163936" type="Player">
+                            <param id="0" name="Animation">&quot;TurningRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="358547705563120">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="132125914002832" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="788921103872327" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="538596461399651" type="Player">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="703467346675367">
+        <event-block disabled="1" sid="703467346675367">
             <conditions>
                 <condition id="-8" name="Is boolean instance variable set" sid="240779069527031" type="Player">
                     <param id="0" name="Instance variable">IsActive</param>
                 </condition>
-                <condition id="2" name="Key is down" sid="830689112003480" type="Keyboard">
-                    <param id="0" name="Key">88</param>
-                </condition>
             </conditions>
             <actions />
-            <sub-events>
-                <event-block sid="908738403412314">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="682425382727324" type="System">
-                            <param id="0" name="Interval (seconds)">Player.MainGunFireRate</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="218894118788098" type="Player">
-                            <param id="0" name="Object">PlayerBullet</param>
-                            <param id="1" name="Layer">LAYER_BULLETS</param>
-                            <param id="2" name="Image point">&quot;MainGun&quot;</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="945895469869395" type="PlayerBullet">
-                            <param id="0" name="Animation">&quot;Size2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="937598700174832" type="PlayerBullet">
-                            <param id="0" name="Angle">random(269, 271)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="334990252938076" type="PlayerBullet">
-                            <param id="0" name="Instance variable">Damage</param>
-                            <param id="1" name="Value">Player.MainGunDamage * 1.25 * PlayerDamageMultiplier</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="482824612331672">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="307083341340561" type="System">
-                            <param id="0" name="Interval (seconds)">Player.MainGunFireRate * 1.5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-16" name="Wait" sid="439794662661546" type="System">
-                            <param id="0" name="Seconds">Player.MainGunFireRate * 3</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="318945677552616">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="961918843430087" type="System">
-                                    <param id="0" name="Variable">PlayerMainGunSide</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="187803222117590" type="Player">
-                                    <param id="0" name="Object">PlayerBullet</param>
-                                    <param id="1" name="Layer">LAYER_BULLETS</param>
-                                    <param id="2" name="Image point">&quot;MainLeftGun&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="439097982762464" type="PlayerBullet">
-                                    <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">Player.MainGunDamage * 0.85 * PlayerDamageMultiplier</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="967180533139634" type="PlayerBullet">
-                                    <param id="0" name="Angle">random(263, 269)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="948730082047019" type="System">
-                                    <param id="0" name="Variable">PlayerMainGunSide</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="755334203823397">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="269174725967069" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="286846765808392" type="Player">
-                                    <param id="0" name="Object">PlayerBullet</param>
-                                    <param id="1" name="Layer">LAYER_BULLETS</param>
-                                    <param id="2" name="Image point">&quot;MainRightGun&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="477591492559821" type="PlayerBullet">
-                                    <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">Player.MainGunDamage * 0.85 * PlayerDamageMultiplier</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="934699860585139" type="PlayerBullet">
-                                    <param id="0" name="Angle">random(271, 277)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="830481608395105" type="System">
-                                    <param id="0" name="Variable">PlayerMainGunSide</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="701743095250206">
             <conditions>

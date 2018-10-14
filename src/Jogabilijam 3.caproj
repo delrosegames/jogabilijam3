@@ -588,6 +588,70 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="2" loop="0" name="TurningLeft" pingpong="0" repeatcount="1" repeatto="0" sid="908886219133309" speed="15">
+                        <frame duration="1" hotspotX="0.514286" hotspotY="0.4375" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\nave esquerda 1.png">
+                            <image-point name="MainGun" x="1" y="0.4375" />
+                            <image-point name="MainLeftGun" x="0.771429" y="0.3125" />
+                            <image-point name="MainRightGun" x="0.771429" y="0.6875" />
+                            <image-point name="Jet" x="0.0571429" y="0.4375" />
+                            <collision-poly>
+                                <point x="0.0882353" y="0.1" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.794118" y="0.333333" />
+                                <point x="0.941176" y="0.5" />
+                                <point x="0.794118" y="0.666667" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.0882353" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.542857" hotspotY="0.375" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\naves\nave esquerda 2.png">
+                            <image-point name="MainGun" x="1" y="0.375" />
+                            <image-point name="MainLeftGun" x="0.771429" y="0.25" />
+                            <image-point name="MainRightGun" x="0.8" y="0.625" />
+                            <image-point name="Jet" x="0.142857" y="0.375" />
+                            <collision-poly>
+                                <point x="0.0882353" y="0.1" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.794118" y="0.333333" />
+                                <point x="0.941176" y="0.5" />
+                                <point x="0.794118" y="0.666667" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.0882353" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="352617777407325" speed="15">
+                        <frame duration="1" hotspotX="0.514286" hotspotY="0.5625">
+                            <image-point name="MainGun" x="1" y="0.5625" />
+                            <image-point name="MainLeftGun" x="0.771429" y="0.6875" />
+                            <image-point name="MainRightGun" x="0.771429" y="0.3125" />
+                            <image-point name="Jet" x="0.0571429" y="0.5625" />
+                            <collision-poly>
+                                <point x="0.0882353" y="0.1" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.794118" y="0.333333" />
+                                <point x="0.941176" y="0.5" />
+                                <point x="0.794118" y="0.666667" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.0882353" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.542857" hotspotY="0.625">
+                            <image-point name="MainGun" x="1" y="0.625" />
+                            <image-point name="MainLeftGun" x="0.771429" y="0.75" />
+                            <image-point name="MainRightGun" x="0.8" y="0.375" />
+                            <image-point name="Jet" x="0.142857" y="0.625" />
+                            <collision-poly>
+                                <point x="0.0882353" y="0.1" />
+                                <point x="0.5" y="0.2" />
+                                <point x="0.794118" y="0.333333" />
+                                <point x="0.941176" y="0.5" />
+                                <point x="0.794118" y="0.666667" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.0882353" y="0.9" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="PlayerJet" sid="546406729915264">
@@ -720,13 +784,13 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Green" pingpong="0" repeatcount="1" repeatto="0" sid="431276539263125" speed="5">
-                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
                     </animation>
                     <animation framecount="1" loop="0" name="Yellow" pingpong="0" repeatcount="1" repeatto="0" sid="841088522992021" speed="5">
-                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
                     </animation>
                     <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="997255702441622" speed="5">
-                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -734,7 +798,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="597072286553304" speed="5">
-                        <frame duration="1" hotspotX="1" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
