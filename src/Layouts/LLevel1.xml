@@ -3193,7 +3193,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
                         <DistanceToStartSpawning>300</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>5</AmountToSpawn>
@@ -3224,7 +3224,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
                         <DistanceToStartSpawning>-120</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>5</AmountToSpawn>
@@ -3255,7 +3255,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Plane1</EnemyName>
+                        <EnemyName>Enemy_CommonShip</EnemyName>
                         <DistanceToStartSpawning>300</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>3</AmountToSpawn>
@@ -3286,7 +3286,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_CommonShip</EnemyName>
                         <DistanceToStartSpawning>-120</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>5</AmountToSpawn>
@@ -3317,7 +3317,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Plane1</EnemyName>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
                         <DistanceToStartSpawning>40</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>10</AmountToSpawn>
@@ -3348,7 +3348,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_CommonShip</EnemyName>
                         <DistanceToStartSpawning>500</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>10</AmountToSpawn>
@@ -3379,7 +3379,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
                         <DistanceToStartSpawning>500</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>10</AmountToSpawn>
@@ -3410,7 +3410,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Plane1</EnemyName>
+                        <EnemyName>Enemy_CommonShip</EnemyName>
                         <DistanceToStartSpawning>-40</DistanceToStartSpawning>
                         <SpawningInterval>0.7</SpawningInterval>
                         <AmountToSpawn>10</AmountToSpawn>
@@ -3441,7 +3441,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
                         <DistanceToStartSpawning>-220</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>15</AmountToSpawn>
@@ -3472,10 +3472,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Plane1</EnemyName>
-                        <DistanceToStartSpawning>-350</DistanceToStartSpawning>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
+                        <DistanceToStartSpawning>-380</DistanceToStartSpawning>
                         <SpawningInterval>0.7</SpawningInterval>
-                        <AmountToSpawn>18</AmountToSpawn>
+                        <AmountToSpawn>20</AmountToSpawn>
                         <AmountSpawned>0</AmountSpawned>
                         <SpawnedShouldMoveWithScroll>true</SpawnedShouldMoveWithScroll>
                         <IsActive>false</IsActive>
@@ -3484,7 +3484,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>720</x>
-                        <y>880</y>
+                        <y>960</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
@@ -3503,8 +3503,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
-                        <DistanceToStartSpawning>-350</DistanceToStartSpawning>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
+                        <DistanceToStartSpawning>-380</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>20</AmountToSpawn>
                         <AmountSpawned>0</AmountSpawned>
@@ -3515,7 +3515,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-80</x>
-                        <y>880</y>
+                        <y>960</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
@@ -3534,7 +3534,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
                         <DistanceToStartSpawning>-350</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>5</AmountToSpawn>
@@ -3565,7 +3565,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyName>Enemy_Ball1</EnemyName>
+                        <EnemyName>Enemy_RotatingDrone</EnemyName>
                         <DistanceToStartSpawning>-350</DistanceToStartSpawning>
                         <SpawningInterval>0.5</SpawningInterval>
                         <AmountToSpawn>5</AmountToSpawn>

@@ -48,12 +48,12 @@
         </event-block>
         <event-group description="" sid="776086146084796" title="EnemySpawner functions">
             <sub-events>
-                <event-group description="" sid="535306943668640" title="Enemy_Ball1">
+                <event-group description="" sid="535306943668640" title="Enemy_RotatingDrone">
                     <sub-events>
                         <event-block sid="642735714474290">
                             <conditions>
                                 <condition id="0" name="On function" sid="553061128237448" type="Function">
-                                    <param id="0" name="Name">&quot;SpawnEnemy_Ball1&quot;</param>
+                                    <param id="0" name="Name">&quot;SpawnEnemy_RotatingDrone&quot;</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="212723672762029" type="System">
                                     <param id="0" name="Object">EnemySpawner</param>
@@ -90,12 +90,12 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="327474117710822" title="Enemy_Plane1">
+                <event-group description="" sid="327474117710822" title="Enemy_CommonShip">
                     <sub-events>
                         <event-block sid="504560418577710">
                             <conditions>
                                 <condition id="0" name="On function" sid="641421254761369" type="Function">
-                                    <param id="0" name="Name">&quot;SpawnEnemy_Plane1&quot;</param>
+                                    <param id="0" name="Name">&quot;SpawnEnemy_CommonShip&quot;</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="808645178759154" type="System">
                                     <param id="0" name="Object">EnemySpawner</param>
