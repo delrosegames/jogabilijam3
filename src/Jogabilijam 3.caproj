@@ -462,6 +462,33 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="WaterBottomBG" sid="664362297793275">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="552699264256594">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\cenarios\ccenario copiar.png" />
+            </object-type>
+            <object-type name="WaterMiddleBG" sid="739353210187281">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="283980550886478">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\cenarios\02.png" />
+            </object-type>
+            <object-type name="WaterTopBG" sid="237983717954820">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="954800383314681">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\cenarios\03.png" />
+            </object-type>
         </object-folder>
         <object-folder name="Player">
             <object-type name="PlayerBullet" sid="214772222694288">
