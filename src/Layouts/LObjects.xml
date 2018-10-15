@@ -173,6 +173,7 @@
                         <Damage>0</Damage>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout2" />
                         <behavior-instance type="Bullet">
                             <properties>
                                 <speed>1000</speed>
@@ -316,8 +317,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>180</x>
-                        <y>220</y>
+                        <x>200</x>
+                        <y>200</y>
                         <z>0</z>
                         <width>9</width>
                         <height>11</height>
@@ -518,8 +519,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>220</y>
+                        <x>360</x>
+                        <y>200</y>
                         <z>0</z>
                         <width>7</width>
                         <height>8</height>
@@ -563,7 +564,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>440</x>
-                        <y>40</y>
+                        <y>20</y>
                         <z>0</z>
                         <width>34</width>
                         <height>30</height>
@@ -584,8 +585,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>480</x>
-                        <y>40</y>
+                        <x>520</x>
+                        <y>20</y>
                         <z>0</z>
                         <width>60</width>
                         <height>23</height>
@@ -606,14 +607,95 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>520</x>
-                        <y>40</y>
+                        <x>600</x>
+                        <y>20</y>
                         <z>0</z>
                         <width>60</width>
                         <height>35</height>
                         <depth>0</depth>
                         <hotspotX>0.833333313</hotspotX>
                         <hotspotY>0.428571433</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerMissile" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Damage>20</Damage>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout2" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>100</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>10000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>270</range>
+                                <rate-of-fire>1</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>360</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>Yes</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                                <initial-state>Enabled</initial-state>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>60</x>
+                        <y>40</y>
+                        <z>0</z>
+                        <width>11</width>
+                        <height>6</height>
+                        <depth>0</depth>
+                        <hotspotX>0.909090936</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerMissileTrail" uid="16">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>80</x>
+                        <y>40</y>
+                        <z>0</z>
+                        <width>6</width>
+                        <height>6</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

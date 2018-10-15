@@ -22,9 +22,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -411,38 +413,34 @@
                     <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="344729636406287" speed="10">
                         <frame duration="1" hotspotX="0.571429" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\tiro inimigo1\efeitos-de-tiro_0000s_0000_Camada-1-copiar-4.png">
                             <collision-poly>
-                                <point x="0.285714" y="0.25" />
-                                <point x="0.571428" y="0" />
-                                <point x="1" y="0.25" />
-                                <point x="1" y="0.624999" />
-                                <point x="1" y="1" />
-                                <point x="0.571428" y="1" />
-                                <point x="0.285714" y="1" />
-                                <point x="0" y="0.624999" />
+                                <point x="0.142857" y="0.125" />
+                                <point x="0.5" y="0" />
+                                <point x="0.857143" y="0.125" />
+                                <point x="1" y="0.5" />
+                                <point x="0.857143" y="0.875" />
+                                <point x="0.508929" y="0.992188" />
+                                <point x="0.142857" y="0.875" />
+                                <point x="0" y="0.5" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\tiro inimigo1\efeitos-de-tiro_0000s_0001_Camada-1-copiar-3.png">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0" y="0" />
-                                <point x="0" y="0" />
-                                <point x="0" y="0.124999" />
-                                <point x="0" y="0.625" />
-                                <point x="0" y="0.75" />
-                                <point x="0" y="0.625" />
-                                <point x="0" y="0.124999" />
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="0.5" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Dev\GitHub\delrosegames\jogabilijam3-assets\efeitos\tiro inimigo1\efeitos-de-tiro_0000s_0002_Camada-1-copiar.png">
                             <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="0" y="0" />
-                                <point x="0" y="0" />
-                                <point x="0" y="0.124999" />
-                                <point x="0" y="0.625" />
-                                <point x="0" y="0.75" />
-                                <point x="0" y="0.625" />
-                                <point x="0" y="0.124999" />
+                                <point x="0.166667" y="0.125" />
+                                <point x="0.5" y="0" />
+                                <point x="0.833333" y="0.125" />
+                                <point x="1" y="0.5" />
+                                <point x="0.833333" y="0.875" />
+                                <point x="0.5" y="1" />
+                                <point x="0.166667" y="0.875" />
+                                <point x="0" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -631,6 +629,7 @@
                             <image-point name="MainGun" x="1" y="0.5" />
                             <image-point name="MainLeftGun" x="0.764706" y="0.28125" />
                             <image-point name="MainRightGun" x="0.764706" y="0.71875" />
+                            <image-point name="MissilePort" x="0.323529" y="0.8125" />
                             <image-point name="Jet" x="0.0588235" y="0.5" />
                             <collision-poly>
                                 <point x="0.0882353" y="0.1" />
@@ -766,6 +765,56 @@
                                 <point x="0.5" y="0" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerMissile" sid="237219843528879">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="387162905319525">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="879066913756297">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                    <behavior-type name="Turret" sid="782776269784833">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="444044837114145" speed="5">
+                        <frame duration="1" hotspotX="0.909091" hotspotY="0.5">
+                            <image-point name="Trail" x="0.272727" y="0.5" />
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="219944439760689" speed="5">
+                        <frame duration="1" hotspotX="0.45" hotspotY="0.55">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.65" y="0.25" />
+                                <point x="0.65" y="0.75" />
+                                <point x="0.25" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerMissileTrail" sid="519212374085345">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587458284762770" speed="20">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.666667" hotspotY="0.666667" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="1" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -951,10 +1000,16 @@
         <family name="FPlayerBullet" plugin-id="Sprite" sid="534790618330035">
             <members>
                 <member>PlayerBullet</member>
+                <member>PlayerMissile</member>
             </members>
             <instance-variables>
                 <instance-variable name="Damage" sid="241095623473434" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout2" sid="460742882779621">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
         </family>
         <family name="FEnemyHitPoints" plugin-id="Text" sid="367948750754695">
             <members>

@@ -89,11 +89,15 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="744239082539433">
+        <event-block any="1" sid="744239082539433">
             <conditions>
                 <condition id="-2" name="Compare Y" sid="529597480094284" type="FPlayerBullet">
                     <param id="0" name="Comparison">3</param>
                     <param id="1" name="Y co-ordinate">ViewportTop(LAYER_BULLETS)</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="838851727781534" type="FPlayerBullet">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">ViewportBottom(LAYER_BULLETS)</param>
                 </condition>
             </conditions>
             <actions>
@@ -262,6 +266,36 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="886188038899996">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="448943082037079" type="Keyboard">
+                            <param id="0" name="Key">67</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="939605252059544">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="833753651509369" type="System">
+                                    <param id="0" name="Interval (seconds)">Player.MainGunFireRate * 4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="533235403912183" type="Player">
+                                    <param id="0" name="Object">PlayerMissile</param>
+                                    <param id="1" name="Layer">LAYER_BULLETS</param>
+                                    <param id="2" name="Image point">&quot;MissilePort&quot;</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="564205574337578" type="PlayerMissile">
+                                    <param id="0" name="Angle">270</param>
+                                </action>
+                                <action behavior="Turret" id="1" name="Add object to target" sid="888171083871538" type="PlayerMissile">
+                                    <param id="0" name="Target">FEnemy</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -645,6 +679,32 @@
                             <param id="0" name="Instance variable">IsActive</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="504022057783487" title="Player bullets control">
+            <sub-events>
+                <event-block sid="540467646461911">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="173391121024955" type="System">
+                            <param id="0" name="Object">PlayerMissile</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="118235666406718" type="PlayerMissile">
+                            <param id="0" name="Object">PlayerMissileTrail</param>
+                            <param id="1" name="Layer">LAYER_ENEMIES</param>
+                            <param id="2" name="Image point">&quot;Trail&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="454309397150421">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="566774258019819" type="PlayerMissileTrail" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="689984165313878" type="PlayerMissileTrail" />
                     </actions>
                 </event-block>
             </sub-events>
