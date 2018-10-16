@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1539553809,
+	"version": 1539658093,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -27,6 +27,9 @@
 		"images/playerbullet-sheet0.png",
 		"images/player-sheet0.png",
 		"images/playerjet-sheet0.png",
+		"images/playermissile-sheet0.png",
+		"images/playermissiletrail-sheet0.png",
+		"images/playermissiletrail-sheet1.png",
 		"images/scroller-sheet0.png",
 		"images/scrollerstoper-sheet0.png",
 		"images/delimiter-sheet0.png",
@@ -36,6 +39,8 @@
 		"images/playerhitpointsbarframe-sheet0.png",
 		"images/playerspeedbarframe-sheet0.png",
 		"images/playerspeedbar.png",
+		"images/playermissilebarframe-sheet0.png",
+		"images/playermissilebar-sheet0.png",
 		"images/explosion1-sheet0.png",
 		"images/explosion1-sheet1.png",
 		"images/explosion1-sheet2.png",
