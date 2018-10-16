@@ -739,9 +739,6 @@
                             <param id="0" name="Name">&quot;UpdateMissileBar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Set text" sid="679913016280456" type="InstructionsText">
-                            <param id="0" name="Text">PlayerMissileRate</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="570006807692681">

@@ -175,7 +175,7 @@
             <instances>
                 <instance type="InstructionsText" uid="34">
                     <properties>
-                        <text>Controles: movimentação nas setas | X: arma principal | A/D: reduzir/aumentar velocidade | Espaço: pausar/continuar</text>
+                        <text>Controles: X: arma principal | C: mísseis | A/D: reduzir/aumentar velocidade | Espaço: pausar/continuar</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-11,400,0</font>
                         <color>255,255,255</color>
