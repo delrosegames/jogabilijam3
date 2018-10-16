@@ -6,6 +6,7 @@
         <variable constant="0" name="PlayerMainGunSide" sid="437141592594289" static="0" type="number">0</variable>
         <variable constant="0" name="PlayerDamageMultiplier" sid="608539370192102" static="0" type="number">1</variable>
         <variable constant="0" name="PLAYER_BASE_SPEED" sid="620735686174332" static="0" type="number">200</variable>
+        <variable constant="0" name="PlayerMissileRate" sid="375553802846202" static="0" type="number">1</variable>
         <variable constant="0" name="PlayerSpeedMultiplier" sid="583273067681619" static="0" type="number">2</variable>
         <event-block sid="716238870580528">
             <conditions>
@@ -280,7 +281,7 @@
                         <event-block sid="939605252059544">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="833753651509369" type="System">
-                                    <param id="0" name="Interval (seconds)">Player.MainGunFireRate * 4</param>
+                                    <param id="0" name="Interval (seconds)">1 / PlayerMissileRate / 4</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -294,6 +295,14 @@
                                 </action>
                                 <action behavior="Turret" id="1" name="Add object to target" sid="888171083871538" type="PlayerMissile">
                                     <param id="0" name="Target">FEnemy</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="400715588556800" type="System">
+                                    <param id="0" name="Variable">PlayerMissileRate</param>
+                                    <param id="1" name="Value">max(0.1, PlayerMissileRate - 0.125)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="605060759053401" type="Function">
+                                    <param id="0" name="Name">&quot;UpdateMissileBar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -705,6 +714,46 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="689984165313878" type="PlayerMissileTrail" />
+                    </actions>
+                </event-block>
+                <event-block sid="843882609026137">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="720396278527416" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Key is down" sid="365764907808361" type="Keyboard">
+                            <param id="0" name="Key">67</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="990118718894220" type="System">
+                            <param id="0" name="Interval (seconds)">0.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="860932521196295" type="System">
+                            <param id="0" name="Variable">PlayerMissileRate</param>
+                            <param id="1" name="Value">min(1, PlayerMissileRate + (PlayerMissileRate / 10))</param>
+                        </action>
+                        <action id="0" name="Call function" sid="602342702849416" type="Function">
+                            <param id="0" name="Name">&quot;UpdateMissileBar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="679913016280456" type="InstructionsText">
+                            <param id="0" name="Text">PlayerMissileRate</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="570006807692681">
+                    <conditions>
+                        <condition id="0" name="On function" sid="837855474092894" type="Function">
+                            <param id="0" name="Name">&quot;UpdateMissileBar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="994237748184566" type="PlayerMissileBar">
+                            <param id="0" name="Width">PlayerMissileRate * 23</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

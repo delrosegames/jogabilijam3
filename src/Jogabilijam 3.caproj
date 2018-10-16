@@ -952,6 +952,22 @@
                 <plugin id="TiledBg" />
                 <texture />
             </object-type>
+            <object-type name="PlayerMissileBarFrame" sid="311545960919699">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="554502076464934" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerMissileBar" sid="477698384272080">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="283150522845403" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Effects">
             <object-type name="Explosion1" sid="497103655062359">
