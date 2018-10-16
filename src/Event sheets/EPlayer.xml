@@ -6,6 +6,7 @@
         <variable constant="0" name="PlayerMainGunSide" sid="437141592594289" static="0" type="number">0</variable>
         <variable constant="0" name="PlayerDamageMultiplier" sid="608539370192102" static="0" type="number">1</variable>
         <variable constant="0" name="PLAYER_BASE_SPEED" sid="620735686174332" static="0" type="number">200</variable>
+        <variable constant="0" name="PlayerLaserReady" sid="819262297421346" static="0" type="number">0</variable>
         <variable constant="0" name="PlayerMissileRate" sid="375553802846202" static="0" type="number">1</variable>
         <variable constant="0" name="PlayerSpeedMultiplier" sid="583273067681619" static="0" type="number">2</variable>
         <event-block sid="716238870580528">
@@ -36,10 +37,6 @@
                     <param id="0" name="Variable">PlayerDamageMultiplier</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="799384894246012" type="Function">
-                    <param id="0" name="Name">&quot;ChangePlayerSpeed&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
                 <action behavior="8Direction" id="4" name="Set max speed" sid="728605137592978" type="Player">
                     <param id="0" name="Max Speed">PLAYER_BASE_SPEED * PlayerSpeedMultiplier</param>
                 </action>
@@ -48,6 +45,9 @@
                 </action>
                 <action id="-5" name="Set width" sid="775608521385177" type="PlayerJet">
                     <param id="0" name="Width">PlayerJet.ImageHeight * PlayerSpeedMultiplier / 2</param>
+                </action>
+                <action id="-5" name="Set width" sid="694104613449639" type="PlayerLaserBar">
+                    <param id="0" name="Width">0</param>
                 </action>
             </actions>
         </event-block>
@@ -59,6 +59,10 @@
                 <action id="-3" name="Set position" sid="113635440425001" type="PlayerJet">
                     <param id="0" name="X">Player.ImagePointX(&quot;Jet&quot;)</param>
                     <param id="1" name="Y">Player.ImagePointY(&quot;Jet&quot;)</param>
+                </action>
+                <action id="-3" name="Set position" sid="303925449892816" type="PlayerLaser">
+                    <param id="0" name="X">Player.ImagePointX(&quot;LaserGun&quot;)</param>
+                    <param id="1" name="Y">Player.ImagePointY(&quot;LaserGun&quot;)</param>
                 </action>
             </actions>
         </event-block>
@@ -88,21 +92,6 @@
                     <param id="0" name="Instance variable">IsActive</param>
                     <param id="1" name="Value">1</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="744239082539433">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="529597480094284" type="FPlayerBullet">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Y co-ordinate">ViewportTop(LAYER_BULLETS)</param>
-                </condition>
-                <condition id="-2" name="Compare Y" sid="838851727781534" type="FPlayerBullet">
-                    <param id="0" name="Comparison">5</param>
-                    <param id="1" name="Y co-ordinate">ViewportBottom(LAYER_BULLETS)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="170842004618284" type="FPlayerBullet" />
             </actions>
         </event-block>
         <comment>When active, maintain player inside the viewport.</comment>
@@ -298,7 +287,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="400715588556800" type="System">
                                     <param id="0" name="Variable">PlayerMissileRate</param>
-                                    <param id="1" name="Value">max(0.1, PlayerMissileRate - 0.125)</param>
+                                    <param id="1" name="Value">max(0.1, PlayerMissileRate - 0.1)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="605060759053401" type="Function">
                                     <param id="0" name="Name">&quot;UpdateMissileBar&quot;</param>
@@ -307,6 +296,42 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="170935967589626">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="651806796772548" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="166997633013870" type="System">
+                            <param id="0" name="Variable">PlayerLaserReady</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="197519966243410" type="System">
+                            <param id="0" name="Variable">PlayerLaserReady</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="482361416708477" type="Function">
+                            <param id="0" name="Name">&quot;UpdateLaserBar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="880708307986633" type="Player">
+                            <param id="0" name="Object">PlayerLaser</param>
+                            <param id="1" name="Layer">LAYER_BULLETS</param>
+                            <param id="2" name="Image point">&quot;LaserGun&quot;</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="108231087675458" type="PlayerLaser">
+                            <param id="0" name="Width">660</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="686566662951757" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action behavior="Rotate" id="1" name="Set acceleration" sid="938588667270405" type="PlayerLaser">
+                            <param id="0" name="Acceleration">720</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="704862623107050">
                     <conditions>
@@ -694,6 +719,21 @@
         </event-group>
         <event-group description="" sid="504022057783487" title="Player bullets control">
             <sub-events>
+                <event-block any="1" sid="340197415661034">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="515444023750876" type="FPlayerBullet">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">ViewportTop(LAYER_BULLETS)</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="690651197255702" type="FPlayerBullet">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(LAYER_BULLETS)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="502715436954797" type="FPlayerBullet" />
+                    </actions>
+                </event-block>
                 <event-block sid="540467646461911">
                     <conditions>
                         <condition id="-11" name="For Each" sid="173391121024955" type="System">
@@ -723,23 +763,88 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="365764907808361" type="Keyboard">
-                            <param id="0" name="Key">67</param>
-                        </condition>
-                        <condition id="-6" name="Every X seconds" sid="990118718894220" type="System">
-                            <param id="0" name="Interval (seconds)">0.25</param>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="584016433815845">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="354277267533720" type="System">
+                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="812769154405969" type="System">
+                                    <param id="0" name="Variable">PlayerLaserReady</param>
+                                    <param id="1" name="Value">min(1, PlayerLaserReady + 0.015)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="739034582204159" type="Function">
+                                    <param id="0" name="Name">&quot;UpdateLaserBar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="303330312409352">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="365764907808361" type="Keyboard">
+                                    <param id="0" name="Key">67</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="990118718894220" type="System">
+                                    <param id="0" name="Interval (seconds)">0.25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="860932521196295" type="System">
+                                    <param id="0" name="Variable">PlayerMissileRate</param>
+                                    <param id="1" name="Value">min(1, PlayerMissileRate + (PlayerMissileRate / 10))</param>
+                                </action>
+                                <action id="0" name="Call function" sid="602342702849416" type="Function">
+                                    <param id="0" name="Name">&quot;UpdateMissileBar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="945684817681097">
+                    <conditions>
+                        <condition id="0" name="On function" sid="624671386055014" type="Function">
+                            <param id="0" name="Name">&quot;UpdateLaserBar&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="860932521196295" type="System">
-                            <param id="0" name="Variable">PlayerMissileRate</param>
-                            <param id="1" name="Value">min(1, PlayerMissileRate + (PlayerMissileRate / 10))</param>
-                        </action>
-                        <action id="0" name="Call function" sid="602342702849416" type="Function">
-                            <param id="0" name="Name">&quot;UpdateMissileBar&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-5" name="Set width" sid="118600462262150" type="PlayerLaserBar">
+                            <param id="0" name="Width">PlayerLaserReady * 23</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="427889379245904">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="998933918718893" type="System">
+                                    <param id="0" name="Variable">PlayerLaserReady</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="823457706055517" type="PlayerLaserBarFrame">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="358845821213503">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="769932324370986" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="553972170935402" type="PlayerLaserBarFrame">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="818999680201031" type="PlayerLaserBarFrame">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="570006807692681">
                     <conditions>

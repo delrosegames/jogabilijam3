@@ -19,13 +19,13 @@
                 <condition id="0" name="On collision with another object" sid="473948590418188" type="FEnemy">
                     <param id="0" name="Object">FPlayerBullet</param>
                 </condition>
+                <condition id="-3" name="Is on-screen" sid="551410254631912" type="FEnemy" />
             </conditions>
             <actions>
                 <action id="-12" name="Subtract from" sid="880159531867943" type="FEnemy">
                     <param id="0" name="Instance variable">HitPoints</param>
                     <param id="1" name="Value">FPlayerBullet.Damage</param>
                 </action>
-                <action id="-9" name="Destroy" sid="832071328754628" type="FPlayerBullet" />
                 <action id="-27" name="Set effect enabled" sid="940260121197624" type="FEnemy">
                     <param id="0" name="Mode">1</param>
                     <param id="1" name="Effect">&quot;SetColorToWhite&quot;</param>
@@ -38,6 +38,18 @@
                     <param id="1" name="Effect">&quot;SetColorToWhite&quot;</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="417136127690995">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="793471625887355" type="FPlayerBullet">
+                            <param id="0" name="Instance variable">DestroyOnHit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="832071328754628" type="FPlayerBullet" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="847039989208666">
             <conditions>

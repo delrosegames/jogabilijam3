@@ -22,6 +22,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
@@ -629,6 +630,7 @@
                             <image-point name="MainGun" x="1" y="0.5" />
                             <image-point name="MainLeftGun" x="0.764706" y="0.28125" />
                             <image-point name="MainRightGun" x="0.764706" y="0.71875" />
+                            <image-point name="LaserGun" x="0.235294" y="0.125" />
                             <image-point name="MissilePort" x="0.323529" y="0.8125" />
                             <image-point name="Jet" x="0.0588235" y="0.5" />
                             <collision-poly>
@@ -648,6 +650,8 @@
                             <image-point name="MainLeftGun" x="0.823529" y="0.266667" />
                             <image-point name="MainRightGun" x="0.823529" y="0.733333" />
                             <image-point name="Jet" x="0.0588235" y="0.5" />
+                            <image-point name="MissilePort" x="0.323529" y="0.8" />
+                            <image-point name="LaserGun" x="0.264706" y="0.133333" />
                             <collision-poly>
                                 <point x="0.9" y="0.0882353" />
                                 <point x="0.8" y="0.5" />
@@ -664,6 +668,8 @@
                             <image-point name="MainGun" x="1" y="0.4375" />
                             <image-point name="MainLeftGun" x="0.771429" y="0.3125" />
                             <image-point name="MainRightGun" x="0.771429" y="0.6875" />
+                            <image-point name="LaserGun" x="0.285714" y="0.125" />
+                            <image-point name="MissilePort" x="0.314286" y="0.78125" />
                             <image-point name="Jet" x="0.0571429" y="0.4375" />
                             <collision-poly>
                                 <point x="0.0882353" y="0.1" />
@@ -679,6 +685,8 @@
                             <image-point name="MainGun" x="1" y="0.375" />
                             <image-point name="MainLeftGun" x="0.771429" y="0.25" />
                             <image-point name="MainRightGun" x="0.8" y="0.625" />
+                            <image-point name="LaserGun" x="0.371429" y="0.125" />
+                            <image-point name="MissilePort" x="0.314286" y="0.75" />
                             <image-point name="Jet" x="0.142857" y="0.375" />
                             <collision-poly>
                                 <point x="0.0882353" y="0.1" />
@@ -696,6 +704,8 @@
                             <image-point name="MainGun" x="1" y="0.5625" />
                             <image-point name="MainLeftGun" x="0.771429" y="0.3125" />
                             <image-point name="MainRightGun" x="0.771429" y="0.6875" />
+                            <image-point name="LaserGun" x="0.228571" y="0.15625" />
+                            <image-point name="MissilePort" x="0.371429" y="0.8125" />
                             <image-point name="Jet" x="0.0571429" y="0.5625" />
                             <collision-poly>
                                 <point x="0.0882353" y="0.1" />
@@ -711,6 +721,8 @@
                             <image-point name="MainGun" x="1" y="0.625" />
                             <image-point name="MainLeftGun" x="0.771429" y="0.75" />
                             <image-point name="MainRightGun" x="0.8" y="0.375" />
+                            <image-point name="LaserGun" x="0.228571" y="0.1875" />
+                            <image-point name="MissilePort" x="0.428571" y="0.84375" />
                             <image-point name="Jet" x="0.142857" y="0.625" />
                             <collision-poly>
                                 <point x="0.0882353" y="0.1" />
@@ -815,6 +827,22 @@
                         <frame duration="1" hotspotX="0.666667" hotspotY="0.666667" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="1" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerLaser" sid="934674886038640">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Rotate" sid="884948651645421">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="574509135895560">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121388855457898" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -968,6 +996,27 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PlayerLaserBarFrame" sid="183069154406037">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="474146821652838">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="530687801470928" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerLaserBar" sid="693277960214159">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="402830434931694" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Effects">
             <object-type name="Explosion1" sid="497103655062359">
@@ -1016,10 +1065,12 @@
         <family name="FPlayerBullet" plugin-id="Sprite" sid="534790618330035">
             <members>
                 <member>PlayerBullet</member>
+                <member>PlayerLaser</member>
                 <member>PlayerMissile</member>
             </members>
             <instance-variables>
                 <instance-variable name="Damage" sid="241095623473434" type="number" />
+                <instance-variable name="DestroyOnHit" sid="905346989413462" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout2" sid="460742882779621">
