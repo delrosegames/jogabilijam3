@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1540010089,
+	"version": 1540058841,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -44,6 +44,7 @@
 		"images/playermissilebar-sheet0.png",
 		"images/playerlaserbarframe-sheet0.png",
 		"images/playerlaserbar-sheet0.png",
+		"images/faderin.png",
 		"images/explosion1-sheet0.png",
 		"images/explosion1-sheet1.png",
 		"images/explosion1-sheet2.png",
