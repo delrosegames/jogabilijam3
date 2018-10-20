@@ -51,7 +51,7 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Landscape</prop>
@@ -1062,6 +1062,16 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="Selected_Alternative" pingpong="0" repeatcount="1" repeatto="0" sid="157965862479953" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.5" y="0.257143" />
+                                <point x="0.778947" y="0.485714" />
+                                <point x="0.5" y="0.742857" />
+                                <point x="0.215789" y="0.485714" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="MainMenu_Instructions" sid="359123315005774">
@@ -1149,6 +1159,31 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="Selected_Alternative" pingpong="0" repeatcount="1" repeatto="0" sid="806545953737702" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.5" y="0.257143" />
+                                <point x="0.668421" y="0.485714" />
+                                <point x="0.5" y="0.771429" />
+                                <point x="0.321053" y="0.485714" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MainMenu_Selector" sid="932889781601195">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="708041557839648" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.166667" y="0" />
+                                <point x="0.833333" y="0" />
+                                <point x="0.833333" y="1" />
+                                <point x="0.166667" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
@@ -1220,6 +1255,18 @@
             <members>
                 <member>Explosion1</member>
             </members>
+        </family>
+        <family name="FMainMenuItem" plugin-id="Sprite" sid="111741535636728">
+            <members>
+                <member>MainMenu_Credits</member>
+                <member>MainMenu_Instructions</member>
+                <member>MainMenu_Quit</member>
+                <member>MainMenu_Start</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Position" sid="591319757759265" type="number" />
+                <instance-variable name="OnSelectedFunction" sid="742928812407110" type="string" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>

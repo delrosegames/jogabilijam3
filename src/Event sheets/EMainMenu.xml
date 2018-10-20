@@ -2,5 +2,197 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EMainMenu</name>
-    <events />
+    <events>
+        <variable constant="0" name="MenuTotalItems" sid="632319005490008" static="0" type="number">0</variable>
+        <variable constant="0" name="MenuCurrentItem" sid="938002425802546" static="0" type="number">0</variable>
+        <variable constant="0" name="MenuOptionWasSelected" sid="373220546158922" static="0" type="number">0</variable>
+        <event-block sid="968749193018339">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="727073389256875" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="423538667658503" type="System">
+                    <param id="0" name="Variable">MenuTotalItems</param>
+                    <param id="1" name="Value">FMainMenuItem.Count</param>
+                </action>
+                <action id="-9" name="Set value" sid="900837509211351" type="System">
+                    <param id="0" name="Variable">MenuCurrentItem</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="353717204805056" type="Function">
+                    <param id="0" name="Name">&quot;MainMenuItemChange&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="877835864252801">
+                    <conditions>
+                        <condition id="-32" name="Is on platform" sid="607929080675743" type="System">
+                            <param id="0" name="Platform">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="295842710992407" type="Browser">
+                            <param id="0" name="Mode">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="234753900213708">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="944539346370987" type="System">
+                    <param id="0" name="Variable">MenuOptionWasSelected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="289133293144142">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="121206770850179" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="868980155723860" type="System">
+                            <param id="0" name="Variable">MenuCurrentItem</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="263049062953866" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuItemChange&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500500719458355">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="862450673218661" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="632147294777056" type="System">
+                            <param id="0" name="Variable">MenuCurrentItem</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="418322885132655" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuItemChange&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="281753077815673">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="642950951463031" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="966222418501868" type="System">
+                            <param id="0" name="Object">FMainMenuItem</param>
+                            <param id="1" name="Expression">FMainMenuItem.Position</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">MenuCurrentItem</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="723339995457400" type="Function">
+                            <param id="0" name="Name">FMainMenuItem.OnSelectedFunction</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="311591976624804" title="Main menu functions">
+            <sub-events>
+                <event-block sid="468996517496606">
+                    <conditions>
+                        <condition id="0" name="On function" sid="111885741098260" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuItemChange&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="688188775672298" type="FMainMenuItem">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="390337461466375">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="289195119180212" type="System">
+                                    <param id="0" name="Variable">MenuCurrentItem</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">MenuTotalItems</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="926914540117200" type="System">
+                                    <param id="0" name="Variable">MenuCurrentItem</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="263235647796020">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="631877777802214" type="System">
+                                    <param id="0" name="Variable">MenuCurrentItem</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="741937435640452" type="System">
+                                    <param id="0" name="Variable">MenuCurrentItem</param>
+                                    <param id="1" name="Value">MenuTotalItems</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="792487416695401">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="446521716886403" type="System">
+                                    <param id="0" name="Object">FMainMenuItem</param>
+                                    <param id="1" name="Expression">FMainMenuItem.Position</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">MenuCurrentItem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="453027325251732" type="FMainMenuItem">
+                                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="551877779158445" type="MainMenu_Selector">
+                                    <param id="0" name="Y">FMainMenuItem.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="530704909113482">
+                    <conditions>
+                        <condition id="0" name="On function" sid="510510100673727" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="812566397248885" type="System">
+                            <param id="0" name="Layout">LLevel1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="159716579534651">
+                    <conditions>
+                        <condition id="0" name="On function" sid="956842329910760" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuQuit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="243812235068743" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>

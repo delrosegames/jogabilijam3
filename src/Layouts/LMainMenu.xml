@@ -36,11 +36,15 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Position>1</Position>
+                        <OnSelectedFunction>MainMenuStart</OnSelectedFunction>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>314.033691406</x>
-                        <y>116.422851563</y>
+                        <x>320</x>
+                        <y>110</y>
                         <z>0</z>
                         <width>190</width>
                         <height>35</height>
@@ -58,11 +62,15 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Position>2</Position>
+                        <OnSelectedFunction></OnSelectedFunction>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>316.516571045</x>
-                        <y>176.031600952</y>
+                        <x>320</x>
+                        <y>145</y>
                         <z>0</z>
                         <width>190</width>
                         <height>35</height>
@@ -80,11 +88,15 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Position>3</Position>
+                        <OnSelectedFunction></OnSelectedFunction>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>309.688110352</x>
-                        <y>218.254318237</y>
+                        <x>320</x>
+                        <y>180</y>
                         <z>0</z>
                         <width>190</width>
                         <height>35</height>
@@ -102,13 +114,39 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Position>4</Position>
+                        <OnSelectedFunction>MainMenuQuit</OnSelectedFunction>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>312.791259766</x>
-                        <y>268.548828125</y>
+                        <x>320</x>
+                        <y>215</y>
                         <z>0</z>
                         <width>190</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MainMenu_Selector" uid="129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>75</y>
+                        <z>0</z>
+                        <width>300</width>
                         <height>35</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
