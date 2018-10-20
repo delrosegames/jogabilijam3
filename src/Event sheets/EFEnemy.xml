@@ -72,6 +72,25 @@
                     <param id="1" name="Parameter {n}">FEnemy.OnDestroyShakeMagnitude{###}FEnemy.OnDestroyShakeTime</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="778311812544497">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="764723748428186" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="25" name="Play at object" sid="220813811151167" type="Audio">
+                            <param id="0" name="Audio file">Thud 2</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">0</param>
+                            <param id="3" name="Object">FEnemy</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="449185552939256">
             <conditions>

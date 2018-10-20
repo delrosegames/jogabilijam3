@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ELevelInstructions</name>
+    <events>
+        <include>ELevelBase</include>
+        <event-block sid="107613880389494">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="683280510338842" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="257618936945891" type="Audio">
+                    <param id="0" name="Audio file">Inspired</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;LevelInstructionsMusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="420173335124036">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="882611956333991" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="662470485854082" type="Audio">
+                    <param id="0" name="Tag">&quot;LevelInstructionsMusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -108,32 +108,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block disabled="1" sid="993089554094451">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="183255344514202" type="Player">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">ViewportLeft(LAYER_PLAYER) + (Player.Width / 2)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="944405444290598" type="Player">
-                            <param id="0" name="X">ViewportLeft(LAYER_PLAYER) + (Player.Width / 2)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="823216706253109">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="270838519398740" type="Player">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">ViewportRight(LAYER_PLAYER) - (Player.Width / 2)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="745541999510878" type="Player">
-                            <param id="0" name="X">ViewportRight(LAYER_PLAYER) - (Player.Width / 2)</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="650866919183763">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="392757431720999" type="Player">
@@ -191,6 +165,16 @@
                                     <param id="0" name="Instance variable">Damage</param>
                                     <param id="1" name="Value">Player.MainGunDamage * 1.25 * PlayerDamageMultiplier</param>
                                 </action>
+                                <action id="25" name="Play at object" sid="896797988387924" type="Audio">
+                                    <param id="0" name="Audio file">Hit2</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">-10</param>
+                                    <param id="3" name="Object">Player</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="482824612331672">
@@ -199,7 +183,18 @@
                                     <param id="0" name="Interval (seconds)">Player.MainGunFireRate * 1.5</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="25" name="Play at object" sid="797327004533731" type="Audio">
+                                    <param id="0" name="Audio file">Hit1</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">-15</param>
+                                    <param id="3" name="Object">Player</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="318945677552616">
                                     <conditions>
@@ -288,6 +283,16 @@
                                 <action id="0" name="Call function" sid="605060759053401" type="Function">
                                     <param id="0" name="Name">&quot;UpdateMissileBar&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="25" name="Play at object" sid="771995123642151" type="Audio">
+                                    <param id="0" name="Audio file">Wet4</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">-7</param>
+                                    <param id="3" name="Object">Player</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -551,6 +556,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="25" name="Play at object" sid="907608330000247" type="Audio">
+                            <param id="0" name="Audio file">Bump3</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">0</param>
+                            <param id="3" name="Object">Player</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-12" name="Subtract from" sid="651354388967612" type="Player">
                             <param id="0" name="Instance variable">HitPoints</param>
                             <param id="1" name="Value">Function.Param(0)</param>
@@ -672,8 +687,19 @@
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="835191650304335" type="System" />
                     </conditions>
                     <actions>
+                        <action id="25" name="Play at object" sid="936809104815686" type="Audio">
+                            <param id="0" name="Audio file">Explosion 4</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">0</param>
+                            <param id="3" name="Object">Player</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-13" name="Set boolean" sid="285010587417963" type="FEnemy">
                             <param id="0" name="Instance variable">IsActive</param>
                             <param id="1" name="Value">0</param>
@@ -682,41 +708,45 @@
                             <param id="0" name="Name">&quot;ShakeScreen&quot;</param>
                             <param id="1" name="Parameter {n}">SCREEN_SHAKE_PLAYER_DESTROYED_MAGNITUDE{###}SCREEN_SHAKE_PLAYER_DESTROYED_TIME</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="966529272600896" type="Player">
-                            <param id="0" name="Object">FExplosion</param>
-                            <param id="1" name="Layer">LAYER_PLAYER</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="418837874573040" type="System">
-                            <param id="0" name="Object to create">FExplosion</param>
-                            <param id="1" name="Layer">LAYER_PLAYER</param>
-                            <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
-                            <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="442018479137922" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="901192028584494" type="System">
-                            <param id="0" name="Object to create">FExplosion</param>
-                            <param id="1" name="Layer">LAYER_PLAYER</param>
-                            <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
-                            <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="104844287639752" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="764914413120635" type="System">
-                            <param id="0" name="Object to create">FExplosion</param>
-                            <param id="1" name="Layer">LAYER_PLAYER</param>
-                            <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
-                            <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="945658159977345" type="Player" />
-                        <action id="-13" name="Set boolean" sid="684168167329838" type="Scroller">
-                            <param id="0" name="Instance variable">IsActive</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="739360743123355">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="917638102593391" type="System">
+                                    <param id="0" name="Count">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="169795492717019" type="System">
+                                    <param id="0" name="Object to create">FExplosion</param>
+                                    <param id="1" name="Layer">LAYER_PLAYER</param>
+                                    <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
+                                    <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="131876975627031" type="System">
+                                    <param id="0" name="Seconds">0.02</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="481032547568448" type="System">
+                                    <param id="0" name="Object to create">FExplosion</param>
+                                    <param id="1" name="Layer">LAYER_PLAYER</param>
+                                    <param id="2" name="X">Player.X + random(-(Player.Width/2), (Player.Width/2))</param>
+                                    <param id="3" name="Y">Player.Y + random(-(Player.Height/2), (Player.Height/2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="687716185534844">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="503411780699406" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="272213009145660" type="Player" />
+                                <action id="-13" name="Set boolean" sid="962286487068860" type="Scroller">
+                                    <param id="0" name="Instance variable">IsActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -825,47 +855,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="945684817681097">
-                    <conditions>
-                        <condition id="0" name="On function" sid="624671386055014" type="Function">
-                            <param id="0" name="Name">&quot;UpdateLaserBar&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-5" name="Set width" sid="118600462262150" type="PlayerLaserBar">
-                            <param id="0" name="Width">PlayerLaserReady * 23</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="427889379245904">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="998933918718893" type="System">
-                                    <param id="0" name="Variable">PlayerLaserReady</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="823457706055517" type="PlayerLaserBarFrame">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="358845821213503">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="769932324370986" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="553972170935402" type="PlayerLaserBarFrame">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="818999680201031" type="PlayerLaserBarFrame">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="570006807692681">
                     <conditions>
                         <condition id="0" name="On function" sid="837855474092894" type="Function">
@@ -878,30 +867,111 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="868033916932746">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="484775664404760" type="PlayerLaser">
-                            <param id="0" name="Object">FEnemyBullet</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="494782550287753" type="FEnemyBullet" />
-                    </actions>
-                </event-block>
-                <event-block sid="293577237411176">
-                    <conditions>
-                        <condition id="-19" name="On destroyed" sid="729842544503939" type="PlayerLaser" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="567653319955133" type="System">
-                            <param id="0" name="Variable">CurrentTimeScale</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-13" name="Set time scale" sid="545257020770669" type="System">
-                            <param id="0" name="Time scale">CurrentTimeScale</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="703363000842184" title="Player laser control">
+                    <sub-events>
+                        <event-block sid="945684817681097">
+                            <conditions>
+                                <condition id="0" name="On function" sid="624671386055014" type="Function">
+                                    <param id="0" name="Name">&quot;UpdateLaserBar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="118600462262150" type="PlayerLaserBar">
+                                    <param id="0" name="Width">PlayerLaserReady * 23</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="427889379245904">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="998933918718893" type="System">
+                                            <param id="0" name="Variable">PlayerLaserReady</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="823457706055517" type="PlayerLaserBarFrame">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="358845821213503">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="769932324370986" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="553972170935402" type="PlayerLaserBarFrame">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="818999680201031" type="PlayerLaserBarFrame">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="154442942251744">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="204850286321187" type="PlayerLaser" />
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Play at object" sid="995341943627262" type="Audio">
+                                    <param id="0" name="Audio file">MechanicalA1</param>
+                                    <param id="1" name="Loop">1</param>
+                                    <param id="2" name="Volume">0</param>
+                                    <param id="3" name="Object">Player</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;LaserSound&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="868033916932746">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="484775664404760" type="PlayerLaser">
+                                    <param id="0" name="Object">FEnemyBullet</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="494782550287753" type="FEnemyBullet" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="996101571400925">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="359042958493001" type="Audio">
+                                    <param id="0" name="Tag">&quot;LaserSound&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="836621892722461" type="Audio">
+                                    <param id="0" name="Tag">&quot;LaserSound&quot;</param>
+                                    <param id="1" name="dB">-(100 - PlayerLaser.Opacity)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="866146037603186" type="InstructionsText">
+                                    <param id="0" name="Text">-(100 - PlayerLaser.Opacity)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="293577237411176">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="729842544503939" type="PlayerLaser" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="567653319955133" type="System">
+                                    <param id="0" name="Variable">CurrentTimeScale</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="545257020770669" type="System">
+                                    <param id="0" name="Time scale">CurrentTimeScale</param>
+                                </action>
+                                <action id="6" name="Stop" sid="747267761218504" type="Audio">
+                                    <param id="0" name="Tag">&quot;LaserSound&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

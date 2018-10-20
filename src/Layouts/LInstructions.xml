@@ -2,7 +2,7 @@
 <c2layout>
     <name>LInstructions</name>
     <sid>638320056272254</sid>
-    <event-sheet>ELevel</event-sheet>
+    <event-sheet>ELevelInstructions</event-sheet>
     <size>
         <width>640</width>
         <height>2880</height>

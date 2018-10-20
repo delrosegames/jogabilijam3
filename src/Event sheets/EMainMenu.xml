@@ -42,6 +42,12 @@
                     <param id="0" name="Width">LayoutWidth</param>
                     <param id="1" name="Height">LayoutHeight</param>
                 </action>
+                <action id="0" name="Play" sid="474694002194921" type="Audio">
+                    <param id="0" name="Audio file">Laser Groove</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-3</param>
+                    <param id="1" name="Tag (optional)">&quot;MainMenuMusic&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="877835864252801">
@@ -57,6 +63,16 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="621857975675471">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="694006076153090" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="826486030304680" type="Audio">
+                    <param id="0" name="Tag">&quot;MainMenuMusic&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="234753900213708">
             <conditions>
@@ -115,6 +131,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="25" name="Play at object" sid="770572760000548" type="Audio">
+                            <param id="0" name="Audio file">OK - 1</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">0</param>
+                            <param id="3" name="Object">FMainMenuItem</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="580612315331481" type="System">
                             <param id="0" name="Variable">MenuOptionWasSelected</param>
                             <param id="1" name="Value">1</param>

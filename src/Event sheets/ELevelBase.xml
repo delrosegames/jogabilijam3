@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ELevel</name>
+    <name>ELevelBase</name>
     <events>
         <event-group description="" sid="134990440170131" title="Level initialization and ending">
             <sub-events>

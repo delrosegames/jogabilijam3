@@ -1462,7 +1462,11 @@
             <event-sheet>EEnemySpawner.xml</event-sheet>
             <event-sheet>EEnemy_CommonShip.xml</event-sheet>
         </event-folder>
-        <event-sheet>ELevel.xml</event-sheet>
+        <event-folder name="Levels">
+            <event-sheet>ELevelBase.xml</event-sheet>
+            <event-sheet>ELevel1.xml</event-sheet>
+            <event-sheet>ELevelInstructions.xml</event-sheet>
+        </event-folder>
         <event-sheet>EUI.xml</event-sheet>
         <event-sheet>EGlobal.xml</event-sheet>
         <event-sheet>EUIInclude.xml</event-sheet>
@@ -1494,8 +1498,36 @@
         <global-instance type="Browser" uid="32" />
         <global-instance type="Mouse" uid="140" />
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="Hit1.m4a" />
+        <file name="Hit1.ogg" />
+        <file name="Hit2.m4a" />
+        <file name="Hit2.ogg" />
+        <file name="MechanicalA1.m4a" />
+        <file name="MechanicalA1.ogg" />
+        <file name="Hit4.m4a" />
+        <file name="Hit4.ogg" />
+        <file name="Hit3.m4a" />
+        <file name="Hit3.ogg" />
+        <file name="Wet4.m4a" />
+        <file name="Wet4.ogg" />
+        <file name="Thud 2.m4a" />
+        <file name="Thud 2.ogg" />
+        <file name="OK - 1.m4a" />
+        <file name="OK - 1.ogg" />
+        <file name="Bump3.m4a" />
+        <file name="Bump3.ogg" />
+        <file name="Explosion 4.m4a" />
+        <file name="Explosion 4.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Inspired.m4a" />
+        <file name="Inspired.ogg" />
+        <file name="Voltaic.m4a" />
+        <file name="Voltaic.ogg" />
+        <file name="Laser Groove.m4a" />
+        <file name="Laser Groove.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
