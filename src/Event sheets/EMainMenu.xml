@@ -241,29 +241,8 @@
                         <event-block any="1" sid="386486363151380">
                             <conditions>
                                 <condition id="1" name="On any key pressed" sid="880667865951613" type="Keyboard" />
-                                <condition id="3" name="Is button down" sid="869634833942092" type="Gamepad">
+                                <condition id="8" name="On any button pressed" sid="869634833942092" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">0</param>
-                                </condition>
-                                <condition id="3" name="Is button down" sid="855418453057562" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">1</param>
-                                </condition>
-                                <condition id="3" name="Is button down" sid="727853254562925" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">2</param>
-                                </condition>
-                                <condition id="3" name="Is button down" sid="293641207143700" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">3</param>
-                                </condition>
-                                <condition id="3" name="Is button down" sid="977527513739196" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">8</param>
-                                </condition>
-                                <condition id="3" name="Is button down" sid="926246269782982" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">9</param>
                                 </condition>
                             </conditions>
                             <actions>

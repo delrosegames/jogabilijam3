@@ -22,5 +22,6 @@
         <variable comment="Name of the layout to where the game will redirect after the UI creation" constant="0" name="LayoutToRedirectTo" sid="413482459952707" static="0" type="text"></variable>
         <comment>Level control</comment>
         <variable constant="0" name="ScrollSpeed" sid="710629510946635" static="0" type="number">0.75</variable>
+        <variable constant="0" name="CurrentTimeScale" sid="782817559483352" static="0" type="number">1</variable>
     </events>
 </c2eventsheet>

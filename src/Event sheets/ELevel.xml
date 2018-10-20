@@ -43,10 +43,14 @@
         </event-group>
         <event-group description="" sid="724649591594839" title="Pause/continue control">
             <sub-events>
-                <event-block sid="443433842369588">
+                <event-block any="1" sid="443433842369588">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="226295429498987" type="Keyboard">
-                            <param id="0" name="Key">32</param>
+                            <param id="0" name="Key">27</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="800942854330757" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">9</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -71,7 +75,7 @@
                             </conditions>
                             <actions>
                                 <action id="-13" name="Set time scale" sid="854236809477034" type="System">
-                                    <param id="0" name="Time scale">1</param>
+                                    <param id="0" name="Time scale">CurrentTimeScale</param>
                                 </action>
                             </actions>
                         </event-block>
