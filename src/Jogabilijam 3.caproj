@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -864,6 +865,9 @@
             <object-type name="Browser" sid="312802792330551">
                 <plugin id="Browser" />
             </object-type>
+            <object-type name="Mouse" sid="320934115157504">
+                <plugin id="Mouse" />
+            </object-type>
         </object-folder>
         <object-folder name="Guides">
             <object-type name="Scroller" sid="489470028667034">
@@ -1040,6 +1044,140 @@
             </object-type>
         </object-folder>
         <object-folder name="MainMenu">
+            <object-folder name="Credits">
+                <object-type name="Credits_Title" sid="824709202477932">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="723551606789366" speed="5">
+                            <frame duration="1" hotspotX="0.503546" hotspotY="0" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\credits-title.png">
+                                <collision-poly>
+                                    <point x="0.0496454" y="0.28" />
+                                    <point x="0.950355" y="0.28" />
+                                    <point x="0.929078" y="0.48" />
+                                    <point x="0.992908" y="0.96" />
+                                    <point x="0.496454" y="1" />
+                                    <point x="0.0070922" y="0.96" />
+                                    <point x="0" y="0.48" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Credits_DelRose" sid="359785888860890">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="851227850054131" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\credits-delrose.png">
+                                <collision-poly>
+                                    <point x="0.0176991" y="0.210526" />
+                                    <point x="0.982301" y="0.210526" />
+                                    <point x="1" y="0.473684" />
+                                    <point x="0.982301" y="0.789474" />
+                                    <point x="0.0176991" y="0.789474" />
+                                    <point x="0" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Credits_Fernando" sid="887296749950858">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326908155682176" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\credits-fernando.png">
+                                <collision-poly>
+                                    <point x="0.04" y="0.210526" />
+                                    <point x="0.96" y="0.210526" />
+                                    <point x="1" y="0.473684" />
+                                    <point x="0.96" y="0.789474" />
+                                    <point x="0.13" y="0.315789" />
+                                    <point x="0" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Credits_Patricia" sid="340349825238873">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="279751038642625" speed="5">
+                            <frame duration="1" hotspotX="0.505747" hotspotY="0" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\credits-patricia.png">
+                                <collision-poly>
+                                    <point x="0.045977" y="0.210526" />
+                                    <point x="0.954023" y="0.210526" />
+                                    <point x="1" y="0.473684" />
+                                    <point x="0.91954" y="0.631579" />
+                                    <point x="0.494253" y="0.526316" />
+                                    <point x="0.149425" y="0.315789" />
+                                    <point x="0" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Credits_Felipe" sid="784575845319657">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298646979434133" speed="5">
+                            <frame duration="1" hotspotX="0.507463" hotspotY="0" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\credits-felipe.png">
+                                <collision-poly>
+                                    <point x="0.0597015" y="0.210526" />
+                                    <point x="0.492537" y="0.684211" />
+                                    <point x="0.940298" y="0.210526" />
+                                    <point x="1" y="0.473684" />
+                                    <point x="0.940298" y="0.789474" />
+                                    <point x="0.492537" y="0.789474" />
+                                    <point x="0.19403" y="0.315789" />
+                                    <point x="0" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Credits_Thais" sid="557131920038851">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="878915508475860" speed="5">
+                            <frame duration="1" hotspotX="0.509091" hotspotY="0" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\credits-thais.png">
+                                <collision-poly>
+                                    <point x="0.0727273" y="0.210526" />
+                                    <point x="0.927273" y="0.210526" />
+                                    <point x="1" y="0.473684" />
+                                    <point x="0.927273" y="0.789474" />
+                                    <point x="0.490909" y="0.526316" />
+                                    <point x="0.2" y="0.421053" />
+                                    <point x="0.0363636" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Credits_Kenney" sid="124741140407572">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683945651945847" speed="5">
+                            <frame duration="1" hotspotX="0.506667" hotspotY="0" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\credits-kenney.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite" sid="178438239196578">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="134476511652209" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\press-any-button.png">
+                                <collision-poly>
+                                    <point x="0.00896861" y="0.210526" />
+                                    <point x="0.991031" y="0.210526" />
+                                    <point x="1" y="0.473684" />
+                                    <point x="0.984305" y="0.631579" />
+                                    <point x="0.029148" y="0.315789" />
+                                    <point x="0" y="0.473684" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="MainMenu_Start" sid="217372143346563">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -1335,6 +1473,7 @@
         </global-instance>
         <global-instance type="Function" uid="31" />
         <global-instance type="Browser" uid="32" />
+        <global-instance type="Mouse" uid="140" />
     </global-instances>
     <sounds-folder />
     <music-folder />

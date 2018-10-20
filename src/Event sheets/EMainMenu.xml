@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="MenuTotalItems" sid="632319005490008" static="0" type="number">0</variable>
         <variable constant="0" name="MenuCurrentItem" sid="938002425802546" static="0" type="number">0</variable>
+        <variable constant="0" name="IsOnCredits" sid="744607326026031" static="0" type="number">0</variable>
         <variable constant="0" name="MenuOptionWasSelected" sid="373220546158922" static="0" type="number">0</variable>
         <event-block sid="968749193018339">
             <conditions>
@@ -197,6 +198,22 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="730234112753300">
+                    <conditions>
+                        <condition id="0" name="On function" sid="576705575036412" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuCredits&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Scroll to X" sid="103977895172487" type="System">
+                            <param id="0" name="X">960</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="570879288628644" type="System">
+                            <param id="0" name="Variable">IsOnCredits</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="159716579534651">
                     <conditions>
                         <condition id="0" name="On function" sid="956842329910760" type="Function">
@@ -206,6 +223,106 @@
                     <actions>
                         <action id="1" name="Close" sid="243812235068743" type="Browser" />
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="230853437899365" title="Main menu credits">
+            <sub-events>
+                <event-block sid="322244388116414">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="171139360552176" type="System">
+                            <param id="0" name="Variable">IsOnCredits</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="386486363151380">
+                            <conditions>
+                                <condition id="1" name="On any key pressed" sid="880667865951613" type="Keyboard" />
+                                <condition id="3" name="Is button down" sid="869634833942092" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="855418453057562" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">1</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="727853254562925" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="293641207143700" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">3</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="977527513739196" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">8</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="926246269782982" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Scroll to X" sid="241691712835081" type="System">
+                                    <param id="0" name="X">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="259382452613176" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="472845993127010" type="System">
+                                    <param id="0" name="Variable">IsOnCredits</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="987322901793064" type="System">
+                                    <param id="0" name="Variable">MenuOptionWasSelected</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="289513890429363">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="975111140774619" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Credits_Kenney</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Open URL in new window" sid="152580903172492" type="Browser">
+                                    <param id="0" name="URL">&quot;https://www.kenney.nl/&quot;</param>
+                                    <param id="1" name="Tag">&quot;_blank&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="354568271729762">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="616030138769260" type="Mouse">
+                                    <param id="0" name="Object">Credits_Kenney</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="568444486678919" type="Mouse">
+                                    <param id="0" name="Cursor style">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="928811653715338">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Cursor is over object" sid="626470968494197" type="Mouse">
+                                    <param id="0" name="Object">Credits_Kenney</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set cursor style" sid="302250695651536" type="Mouse">
+                                    <param id="0" name="Cursor style">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
