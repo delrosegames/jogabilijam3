@@ -40,11 +40,14 @@
                         <Position>1</Position>
                         <OnSelectedFunction>MainMenuStart</OnSelectedFunction>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>320</x>
-                        <y>110</y>
+                        <y>160</y>
                         <z>0</z>
                         <width>190</width>
                         <height>35</height>
@@ -66,11 +69,14 @@
                         <Position>2</Position>
                         <OnSelectedFunction></OnSelectedFunction>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>320</x>
-                        <y>145</y>
+                        <y>195</y>
                         <z>0</z>
                         <width>190</width>
                         <height>35</height>
@@ -92,11 +98,14 @@
                         <Position>3</Position>
                         <OnSelectedFunction></OnSelectedFunction>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>320</x>
-                        <y>180</y>
+                        <y>230</y>
                         <z>0</z>
                         <width>190</width>
                         <height>35</height>
@@ -118,11 +127,14 @@
                         <Position>4</Position>
                         <OnSelectedFunction>MainMenuQuit</OnSelectedFunction>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>320</x>
-                        <y>215</y>
+                        <y>265</y>
                         <z>0</z>
                         <width>190</width>
                         <height>35</height>
@@ -144,13 +156,35 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>320</x>
-                        <y>75</y>
+                        <y>135</y>
                         <z>0</z>
                         <width>300</width>
                         <height>35</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MainMenu_Logo" uid="130">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>100</y>
+                        <z>0</z>
+                        <width>279</width>
+                        <height>44</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501792133</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

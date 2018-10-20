@@ -23,6 +23,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
@@ -45,7 +46,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>LLevel1</first-layout>
+    <first-layout>LMainMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -1186,6 +1187,21 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="MainMenu_Logo" sid="972900347497690">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830162490655063" speed="5">
+                        <frame duration="1" hotspotX="0.501792" hotspotY="0.5" original-source="C:\Users\ferhr\OneDrive\Dev\Game Dev\Assets\Jogabilijam3\menu\logo.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.989247" y="0.0681818" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
@@ -1267,6 +1283,11 @@
                 <instance-variable name="Position" sid="591319757759265" type="number" />
                 <instance-variable name="OnSelectedFunction" sid="742928812407110" type="string" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="945151399029662">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

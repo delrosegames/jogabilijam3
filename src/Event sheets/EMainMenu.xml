@@ -96,6 +96,18 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="580612315331481" type="System">
+                            <param id="0" name="Variable">MenuOptionWasSelected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="938755033956365" type="FMainMenuItem">
+                            <param id="0" name="&apos;On&apos; time">0.05</param>
+                            <param id="1" name="&apos;Off&apos; time">0.05</param>
+                            <param id="2" name="Duration">0.75</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="343571601164232" type="System">
+                            <param id="0" name="Seconds">0.75</param>
+                        </action>
                         <action id="0" name="Call function" sid="723339995457400" type="Function">
                             <param id="0" name="Name">FMainMenuItem.OnSelectedFunction</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -177,6 +189,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-16" name="Wait" sid="892953055571507" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="812566397248885" type="System">
                             <param id="0" name="Layout">LLevel1</param>
                         </action>
