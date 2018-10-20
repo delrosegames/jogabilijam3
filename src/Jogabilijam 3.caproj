@@ -1022,6 +1022,24 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="FaderIn" sid="243066911244979">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="986522921620766">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="FaderOut" sid="574254835599854">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="721959871110987">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Effects">
             <object-type name="Explosion1" sid="497103655062359">
@@ -1431,6 +1449,7 @@
     <layout-folder>
         <layout-folder name="Levels">
             <layout>LLevel1.xml</layout>
+            <layout>LInstructions.xml</layout>
         </layout-folder>
         <layout>LObjects.xml</layout>
         <layout>LUI.xml</layout>
