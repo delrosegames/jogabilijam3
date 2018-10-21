@@ -84,10 +84,14 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="289133293144142">
+                <event-block any="1" sid="289133293144142">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="121206770850179" type="Keyboard">
                             <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="795543621917918" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">13</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -101,10 +105,35 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="500500719458355">
+                <event-block sid="981190178388102">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="731230050251381" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">5</param>
+                            <param id="3" name="Value">50</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="563362428962593" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="467508231972911" type="System">
+                            <param id="0" name="Variable">MenuCurrentItem</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="349024701107415" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuItemChange&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="500500719458355">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="862450673218661" type="Keyboard">
                             <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="597416369103614" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">12</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -118,46 +147,82 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="281753077815673">
+                <event-block sid="649183692532543">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="796555710881242" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">-50</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="433312358362421" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="342295997385153" type="System">
+                            <param id="0" name="Variable">MenuCurrentItem</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="559823954700091" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuItemChange&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="281753077815673">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="642950951463031" type="Keyboard">
                             <param id="0" name="Key">13</param>
                         </condition>
-                        <condition id="-33" name="Pick by comparison" sid="966222418501868" type="System">
-                            <param id="0" name="Object">FMainMenuItem</param>
-                            <param id="1" name="Expression">FMainMenuItem.Position</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">MenuCurrentItem</param>
+                        <condition id="6" name="On button pressed" sid="634278883305615" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="181712343466964" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">9</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="25" name="Play at object" sid="770572760000548" type="Audio">
-                            <param id="0" name="Audio file">OK - 1</param>
-                            <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">0</param>
-                            <param id="3" name="Object">FMainMenuItem</param>
-                            <param id="4" name="Inner angle">360</param>
-                            <param id="5" name="Outer angle">360</param>
-                            <param id="6" name="Outer gain">0</param>
-                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="580612315331481" type="System">
-                            <param id="0" name="Variable">MenuOptionWasSelected</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="938755033956365" type="FMainMenuItem">
-                            <param id="0" name="&apos;On&apos; time">0.05</param>
-                            <param id="1" name="&apos;Off&apos; time">0.05</param>
-                            <param id="2" name="Duration">0.75</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="343571601164232" type="System">
-                            <param id="0" name="Seconds">0.75</param>
-                        </action>
-                        <action id="0" name="Call function" sid="723339995457400" type="Function">
-                            <param id="0" name="Name">FMainMenuItem.OnSelectedFunction</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="453127805099378">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="966222418501868" type="System">
+                                    <param id="0" name="Object">FMainMenuItem</param>
+                                    <param id="1" name="Expression">FMainMenuItem.Position</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">MenuCurrentItem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Play at object" sid="770572760000548" type="Audio">
+                                    <param id="0" name="Audio file">OK - 1</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">0</param>
+                                    <param id="3" name="Object">FMainMenuItem</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="580612315331481" type="System">
+                                    <param id="0" name="Variable">MenuOptionWasSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="938755033956365" type="FMainMenuItem">
+                                    <param id="0" name="&apos;On&apos; time">0.05</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                    <param id="2" name="Duration">0.75</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="343571601164232" type="System">
+                                    <param id="0" name="Seconds">0.75</param>
+                                </action>
+                                <action id="0" name="Call function" sid="723339995457400" type="Function">
+                                    <param id="0" name="Name">FMainMenuItem.OnSelectedFunction</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
