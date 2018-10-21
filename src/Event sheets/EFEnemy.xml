@@ -130,9 +130,14 @@
                     <param id="0" name="Instance variable">IsActive</param>
                 </condition>
                 <condition id="-3" inverted="1" name="Is on-screen" sid="352925714577158" type="FEnemy" />
+                <condition id="-14" name="Compare variable" sid="670497914995883" type="System">
+                    <param id="0" name="Variable">ShouldDestroyEnemiesOutsideLayout</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="641935637719303" type="FEnemy" />
+                <action disabled="1" id="-9" name="Destroy" sid="641935637719303" type="FEnemy" />
             </actions>
         </event-block>
         <event-block sid="494827338478258">

@@ -666,10 +666,14 @@
                         </event-group>
                         <event-group description="" sid="688883001254909" title="Player speed control">
                             <sub-events>
-                                <event-block sid="208182587513897">
+                                <event-block any="1" sid="208182587513897">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="126791700301033" type="Keyboard">
                                             <param id="0" name="Key">65</param>
+                                        </condition>
+                                        <condition id="6" name="On button pressed" sid="782948903851064" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">4</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -683,10 +687,14 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="460327002842385">
+                                <event-block any="1" sid="460327002842385">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="251561586615529" type="Keyboard">
                                             <param id="0" name="Key">68</param>
+                                        </condition>
+                                        <condition id="6" name="On button pressed" sid="752544252835687" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">5</param>
                                         </condition>
                                     </conditions>
                                     <actions>

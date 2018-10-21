@@ -23,15 +23,6 @@
         <comment>Level control</comment>
         <variable constant="0" name="ScrollSpeed" sid="710629510946635" static="0" type="number">0.75</variable>
         <variable constant="0" name="CurrentTimeScale" sid="782817559483352" static="0" type="number">1</variable>
-        <event-group description="" disabled="1" sid="567921609121908" title="Global events">
-            <sub-events>
-                <event-block disabled="1" sid="615186741972482">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="139042032078277" type="FaderIn" />
-                    </conditions>
-                    <actions />
-                </event-block>
-            </sub-events>
-        </event-group>
+        <variable constant="0" name="ShouldDestroyEnemiesOutsideLayout" sid="654827206847237" static="0" type="number">1</variable>
     </events>
 </c2eventsheet>

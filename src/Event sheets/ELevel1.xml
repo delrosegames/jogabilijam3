@@ -15,6 +15,10 @@
                     <param id="3" name="Volume">-15</param>
                     <param id="1" name="Tag (optional)">&quot;Level1Music&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="872901165806099" type="System">
+                    <param id="0" name="Variable">ShouldDestroyEnemiesOutsideLayout</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="268249816520873">
